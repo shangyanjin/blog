@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 	"time"
@@ -24,32 +25,51 @@ var (
 type ConfigSection map[string]interface{}
 
 func Init() {
-	// Initialize DynamicConfig
-	DynamicConfig = make(map[string]interface{})
-
-	// Load configuration from config.ini
-	cfg, err := ini.Load("config.ini")
-	if err != nil {
-		log.Printf("Failed to read config file: %v, using default configuration", err)
-		// Set default configuration
-		DynamicConfig["server"] = ConfigSection{
-			"port": ":8080",
-		}
-		DynamicConfig["database"] = ConfigSection{
-			"path": "blog.db",
-		}
-	} else {
-		// Read server configuration
-		DynamicConfig["server"] = ConfigSection{
-			"port": cfg.Section("server").Key("port").MustString(":8080"),
-		}
-		DynamicConfig["database"] = ConfigSection{
-			"path": cfg.Section("database").Key("path").MustString("blog.db"),
-		}
+	// Initialize configuration
+	if err := InitConfig(); err != nil {
+		log.Fatal("Failed to initialize configuration:", err)
 	}
 
 	// Initialize database connection
 	initDB()
+}
+
+// InitConfig loads and parses the configuration file
+func InitConfig() error {
+	conf := "config.ini"
+	cfg, err := ini.Load(conf)
+	if err != nil {
+		return fmt.Errorf("failed to load config file: %w", err)
+	}
+
+	DynamicConfig = make(map[string]interface{})
+
+	for _, section := range cfg.Sections() {
+		sectionName := section.Name()
+		if sectionName == ini.DefaultSection {
+			continue
+		}
+
+		sectionMap := make(ConfigSection)
+		for _, key := range section.Keys() {
+			sectionMap[key.Name()] = key.String()
+		}
+		DynamicConfig[sectionName] = sectionMap
+	}
+
+	// Ensure public path is absolute
+	publicPath := GetString("server.public")
+	if publicPath != "" && !path.IsAbs(publicPath) {
+		workingDir, err := os.Getwd()
+		if err != nil {
+			return fmt.Errorf("failed to get working directory: %w", err)
+		}
+		if sectionMap, ok := DynamicConfig["server"].(ConfigSection); ok {
+			sectionMap["public"] = path.Join(workingDir, publicPath)
+		}
+	}
+
+	return nil
 }
 
 func initDB() {
