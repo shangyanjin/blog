@@ -1,0 +1,28 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<title>The Buddha Way - Discover the wisdom of Buddhism</title>
+	<meta name="description" content="{{if .Config}}{{.Config.SeoDescription}}{{end}}">
+	<meta name="keywords" content="{{if .Config}}{{.Config.SeoKeyword}}{{end}}">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+	<link rel="icon" href="{{if .Config}}{{.Config.SiteFavicon}}{{end}}">
+
+	<link rel="stylesheet" href="/static/css/font-awesome.5.13.min.css" />
+	<link rel="stylesheet" href="/static/css/tailwind.min.css">
+
+
+	<link rel="stylesheet" href="/static/css/highlight.min.css">
+	<script src="/static/js/highlight.min.js"></script>
+
+
+	<script src="/static/js/axios.min.js"></script>
+	<script src="/static/js/request.js"></script>
+	<script src="/static/js/tailwindcss.min.js"></script>
+	<script src="/static/js/alpine.min.js" defer></script>
+</head>
+ {{template "navbar" .}}
+{{end}}

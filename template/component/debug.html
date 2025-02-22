@@ -1,0 +1,23 @@
+{{define "debug"}}
+<div class="container mx-auto px-4 py-8">
+    <!-- Debug Output -->
+    <div class="relative max-w-7xl mx-auto">
+        <button onclick="copyDebugOutput()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+            <i class="fas fa-copy"></i>
+        </button>
+        <pre id="debugOutput" class="px-6 py-4 bg-gray-100 text-sm overflow-auto whitespace-pre-line break-words">
+            {{printf "%#v" .}}
+        </pre>
+    </div>
+</div>
+
+<script>
+function copyDebugOutput() {
+    const debugText = document.getElementById('debugOutput').innerText;
+    navigator.clipboard.writeText(debugText).then(() => {
+        // Optional: Add some visual feedback
+        showToast('Debug output copied to clipboard!');
+    });
+}
+</script>
+{{end}}
