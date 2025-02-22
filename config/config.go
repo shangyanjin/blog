@@ -14,6 +14,7 @@ import (
 	"gopkg.in/ini.v1"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+	"gorm.io/gorm/schema"
 )
 
 var (
@@ -76,7 +77,7 @@ func initDB() {
 	var err error
 
 	// Ensure database directory exists
-	dbDir := "./data"
+	dbDir := "./data/db"
 	if _, err := os.Stat(dbDir); os.IsNotExist(err) {
 		err = os.MkdirAll(dbDir, 0755)
 		if err != nil {
@@ -84,8 +85,18 @@ func initDB() {
 		}
 	}
 
-	dbPath := fmt.Sprintf("%s/%s", dbDir, GetString("database.path"))
-	DB, err = gorm.Open(sqlite.Open(dbPath), &gorm.Config{})
+	// Get database path from config or use default
+	dbPath := path.Join(dbDir, GetString("database.path", "blog.db"))
+
+	// Configure GORM to use singular table names
+	config := &gorm.Config{
+		NamingStrategy: schema.NamingStrategy{
+			SingularTable: true, // Use singular table names
+			TablePrefix:   "",   // Add prefix to table names prefix_
+		},
+	}
+
+	DB, err = gorm.Open(sqlite.Open(dbPath), config)
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
 	}
@@ -102,7 +113,7 @@ func initDB() {
 		log.Fatal("Failed to auto migrate database:", err)
 	}
 
-	log.Println("Database initialized successfully")
+	log.Println("Database initialized successfully at", dbPath)
 }
 
 // get retrieves a value from the configuration using dot notation (section.key)

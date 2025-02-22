@@ -1,6 +1,7 @@
 package middleware
 
 import (
+	"blog/config"
 	"errors"
 	"net/http"
 	"strings"
@@ -12,7 +13,7 @@ import (
 
 var (
 	// Change this secret in production
-	secretKey = []byte("your-secret-key")
+	secretKey = []byte(config.GetString("jwt.secret", "your-secret-key"))
 
 	// ErrMissingAuthHeader is returned when auth header is missing
 	ErrMissingAuthHeader = errors.New("missing authorization header")

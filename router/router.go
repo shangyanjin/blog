@@ -1,8 +1,6 @@
 package router
 
 import (
-	"blog/middleware"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,14 +12,4 @@ func SetupRouter(app *gin.Engine) {
 		})
 	})
 
-	// Protected routes
-	protected := app.Group("/api")
-	protected.Use(middleware.JWTAuth())
-	{
-		protected.GET("/profile", func(c *gin.Context) {
-			userID := middleware.GetUserID(c)
-			role := middleware.GetUserRole(c)
-			// Handle protected route...
-		})
-	}
 }

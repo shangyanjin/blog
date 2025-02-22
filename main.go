@@ -24,5 +24,5 @@ func main() {
 	router.SetupRouter(app)
 
 	// Run server
-	app.Run(config.AppConfig.ServerPort)
+	app.Run(config.GetString("server.port", ":8080"))
 }
