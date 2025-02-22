@@ -1,2 +1,2 @@
 # blog
-An open-source self-host blog system base on gin &amp; gorm &amp; sqlite &amp; tailwindcss
+Open-source blog system with Gin, GORM, SQLite, JWT middleware backend, and Tailwind CSS frontend. Features admin dashboard, comments, tags, categories. Simple, fast, self-hosted, customizable.
