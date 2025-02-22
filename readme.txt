@@ -10,8 +10,9 @@ blog/
 │   └── post.go            # Blog post service
 ├── pkg/                   # Reusable packages
 │   ├── database/         # Database connection and utils
-│   ├── logger/           # Logging package
-│   └── middleware/       # Custom middleware
+│   └── logger/           # Logging package
+├── middleware/           # Custom middleware
+│   └── jwt.go            # JWT authentication middleware
 ├── template/              # HTML template files
 │   ├── layout/            # Layout templates
 │   │   └── base.html      # Base layout
@@ -42,10 +43,11 @@ Directory Structure:
 4. model: Data model definitions
 5. service: Business logic implementation
 6. pkg: Reusable packages and components
-7. template: HTML template files
-8. static: Static resource files
-9. data: Data storage directory
-10. util: Utility functions
+7. middleware: Authentication and other middleware components
+8. template: HTML template files
+9. static: Static resource files
+10. data: Data storage directory
+11. util: Utility functions
 
 Tech Stack:
 - Gin: Web framework
@@ -53,6 +55,6 @@ Tech Stack:
 - GORM: ORM framework
 - HTML Template: Template engine
 - TailwindCSS: CSS framework 
-- Custom middleware support
+- JWT middleware for authentication
 - Configuration management with INI file
-- JWT-based authentication
+
