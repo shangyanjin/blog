@@ -1,0 +1,58 @@
+blog/
+├── main.go                # Main application entry
+├── config/                # Configuration directory
+│   └── config.go          # Config structure and loading logic
+├── router/                # Router layer for request handling
+│   └── post.go            # Blog post related routes
+├── model/                 # Data model layer
+│   └── post.go            # Blog post model
+├── service/               # Business logic layer
+│   └── post.go            # Blog post service
+├── pkg/                   # Reusable packages
+│   ├── database/         # Database connection and utils
+│   ├── logger/           # Logging package
+│   └── middleware/       # Custom middleware
+├── template/              # HTML template files
+│   ├── layout/            # Layout templates
+│   │   └── base.html      # Base layout
+│   └── post/              # Post related pages
+│       ├── list.html      # Post list page
+│       └── detail.html    # Post detail page
+├── static/                # Static resource files
+│   ├── css/              # Style files
+│   │   └── style.css     # Compiled TailwindCSS file
+│   ├── js/               # JavaScript files
+│   └── img/              # Image resources
+├── data/                  # Data storage directory
+│   ├── db/               # Database files (SQLite)
+│   ├── upload/           # Upload files storage
+│   ├── temp/             # Temporary files
+│   └── log/              # Application log files
+├── util/                  # Utility functions
+│   └── tools.go          # Common tools and utilities
+├── go.mod                 # Go module file
+├── go.sum                 # Go dependency lockfile
+├── package.json           # Node.js package config (for TailwindCSS)
+└── tailwind.config.js     # TailwindCSS configuration
+
+Directory Structure:
+1. main.go: Application entry point, initialization and server startup
+2. config: Configuration files and loading logic
+3. router: Route definitions and request handling
+4. model: Data model definitions
+5. service: Business logic implementation
+6. pkg: Reusable packages and components
+7. template: HTML template files
+8. static: Static resource files
+9. data: Data storage directory
+10. util: Utility functions
+
+Tech Stack:
+- Gin: Web framework
+- SQLite: Database
+- GORM: ORM framework
+- HTML Template: Template engine
+- TailwindCSS: CSS framework 
+- Custom middleware support
+- Configuration management with INI file
+- JWT-based authentication
