@@ -36,7 +36,7 @@ func initTemplate(r *gin.Engine) {
 	// Get the default theme from the configuration
 	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
 
-	//load templates with root and subdir
+	//release mode: load templates with root and subdir
 	//tmplFiles := template.New("")
 	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
 	//	logrus.Error("Error loading root templates:", err)
