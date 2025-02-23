@@ -1,7 +1,6 @@
 package config
 
 import (
-	"blog/model"
 	"fmt"
 	"log"
 	"os"
@@ -12,13 +11,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"gopkg.in/ini.v1"
-	"gorm.io/driver/sqlite"
-	"gorm.io/gorm"
-	"gorm.io/gorm/schema"
 )
 
 var (
-	DB *gorm.DB
 	// DynamicConfig stores all configuration settings loaded from config.ini
 	DynamicConfig map[string]interface{}
 )
@@ -31,8 +26,8 @@ func Init() {
 		log.Fatal("Failed to initialize configuration:", err)
 	}
 
-	// Initialize database connection
-	initDB()
+	// Initialize database
+	InitDB()
 }
 
 // InitConfig loads and parses the configuration file
@@ -71,49 +66,6 @@ func InitConfig() error {
 	}
 
 	return nil
-}
-
-func initDB() {
-	var err error
-
-	// Ensure database directory exists
-	dbDir := "./data/db"
-	if _, err := os.Stat(dbDir); os.IsNotExist(err) {
-		err = os.MkdirAll(dbDir, 0755)
-		if err != nil {
-			log.Fatal("Failed to create database directory:", err)
-		}
-	}
-
-	// Get database path from config or use default
-	dbPath := path.Join(dbDir, GetString("database.path", "blog.db"))
-
-	// Configure GORM to use singular table names
-	config := &gorm.Config{
-		NamingStrategy: schema.NamingStrategy{
-			SingularTable: true, // Use singular table names
-			TablePrefix:   "",   // Add prefix to table names prefix_
-		},
-	}
-
-	DB, err = gorm.Open(sqlite.Open(dbPath), config)
-	if err != nil {
-		log.Fatal("Failed to connect to database:", err)
-	}
-
-	// Auto migrate database schema
-	err = DB.AutoMigrate(
-		&model.User{},
-		&model.Post{},
-		&model.Category{},
-		&model.Tag{},
-		&model.Setting{},
-	)
-	if err != nil {
-		log.Fatal("Failed to auto migrate database:", err)
-	}
-
-	log.Println("Database initialized successfully at", dbPath)
 }
 
 // get retrieves a value from the configuration using dot notation (section.key)

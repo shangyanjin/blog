@@ -9,21 +9,22 @@ blog/
 ├── service/               # Business logic layer
 │   └── post.go            # Blog post service
 ├── pkg/                   # Reusable packages
-│   ├── database/         # Database connection and utils
+│   ├── cache/            # Cache management package
 │   └── logger/           # Logging package
 ├── middleware/           # Custom middleware
 │   └── jwt.go            # JWT authentication middleware
 ├── template/              # HTML template files
-│   ├── layout/            # Layout templates
-│   │   └── base.html      # Base layout
-│   └── post/              # Post related pages
-│       ├── list.html      # Post list page
-│       └── detail.html    # Post detail page
-├── static/                # Static resource files
-│   ├── css/              # Style files
-│   │   └── style.css     # Compiled TailwindCSS file
-│   ├── js/               # JavaScript files
-│   └── img/              # Image resources
+│   └── default/          # Default theme
+│       ├── layout/       # Layout templates
+│       │   └── base.html # Base layout
+│       ├── post/         # Post related pages
+│       │   ├── list.html # Post list page
+│       │   └── detail.html # Post detail page
+│       └── static/       # Static resource files
+│           ├── css/      # Style files
+│           │   └── style.css # Compiled TailwindCSS file
+│           ├── js/       # JavaScript files
+│           └── img/      # Image resources
 ├── data/                  # Data storage directory
 │   ├── db/               # Database files (SQLite)
 │   ├── upload/           # Upload files storage
@@ -43,6 +44,7 @@ Directory Structure:
 4. model: Data model definitions
 5. service: Business logic implementation
 6. pkg: Reusable packages and components
+   - cache: Redis cache management
 7. middleware: Authentication and other middleware components
 8. template: HTML template files
 9. static: Static resource files
@@ -52,7 +54,8 @@ Directory Structure:
 Tech Stack:
 - Gin: Web framework
 - SQLite: Database
-- GORM: ORM framework
+- Redis: External cache system + Built-in cache
+- GORM: ORM framework for database operations
 - HTML Template: Template engine
 - TailwindCSS: CSS framework 
 - JWT middleware for authentication

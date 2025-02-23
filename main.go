@@ -17,9 +17,6 @@ func main() {
 	// Initialize templates
 	initTemplate(app)
 
-	// Initialize static files
-	initStatic(app)
-
 	// Initialize routes
 	initRouter(app)
 
@@ -32,14 +29,17 @@ func initConfig() {
 	config.Init()
 }
 
-// initTemplate initializes templates
+// initTemplate initializes templates and static files
 func initTemplate(app *gin.Engine) {
-	app.LoadHTMLGlob("template/**/*")
-}
+	// Get the default template directory from the configuration
+	defaultTemplate := config.GetString("template.dir", "template")
+	// Get the default theme from the configuration
+	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
+	// Load HTML templates from configured theme directory
+	app.LoadHTMLGlob(defaultTheme + "/**/*.html")
 
-// initStatic initializes static files
-func initStatic(app *gin.Engine) {
-	app.Static("/static", "./static")
+	// Serve static files from configured theme
+	app.Static("/static", defaultTheme+"/static")
 }
 
 // initRouter initializes routes
