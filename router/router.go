@@ -7,7 +7,7 @@ import (
 func SetupRouter(app *gin.Engine) {
 	// Public routes
 	app.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index.html", gin.H{
+		c.HTML(200, "index", gin.H{
 			"title": "Blog Home",
 		})
 	})

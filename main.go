@@ -3,8 +3,10 @@ package main
 import (
 	"blog/config"
 	"blog/router"
+	"html/template"
 
 	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -12,16 +14,16 @@ func main() {
 	initConfig()
 
 	// Create gin engine
-	app := gin.Default()
+	r := gin.Default()
 
 	// Initialize templates
-	initTemplate(app)
+	initTemplate(r)
 
 	// Initialize routes
-	initRouter(app)
+	initRouter(r)
 
 	// Start server
-	runServer(app)
+	runServer(r)
 }
 
 // initConfig initializes configuration
@@ -30,24 +32,35 @@ func initConfig() {
 }
 
 // initTemplate initializes templates and static files
-func initTemplate(app *gin.Engine) {
+func initTemplate(r *gin.Engine) {
 	// Get the default template directory from the configuration
 	defaultTemplate := config.GetString("template.dir", "template")
 	// Get the default theme from the configuration
 	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
-	// Load HTML templates from configured theme directory
-	app.LoadHTMLGlob(defaultTheme + "/**/*.html")
+
+	//load templates with root and subdir
+	tmplFiles := template.New("")
+	if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
+		logrus.Error("Error loading root templates:", err)
+	}
+	if _, err := tmplFiles.ParseGlob(defaultTheme + "/**/*.html"); err != nil {
+		logrus.Error("Error loading subdir templates:", err)
+	}
+	r.SetHTMLTemplate(tmplFiles)
+
+	//load templates from subdir
+	//r.LoadHTMLGlob(defaultTheme + "/**/*.html")
 
 	// Serve static files from configured theme
-	app.Static("/static", defaultTheme+"/static")
+	r.Static("/static", defaultTheme+"/static")
 }
 
 // initRouter initializes routes
-func initRouter(app *gin.Engine) {
-	router.SetupRouter(app)
+func initRouter(r *gin.Engine) {
+	router.SetupRouter(r)
 }
 
 // runServer starts the server
-func runServer(app *gin.Engine) {
-	app.Run(config.GetString("server.port", ":8080"))
+func runServer(r *gin.Engine) {
+	r.Run(config.GetString("server.port", ":8080"))
 }
