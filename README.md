@@ -1,47 +1,49 @@
 # blog
+
+> 🚧 **Status**: Under active development. Features are being added and refined.
+
 Open-source blog system with Gin, GORM, SQLite, JWT middleware backend, and Tailwind CSS frontend. Features admin dashboard, comments, tags, categories. Simple, fast, self-hosted, customizable.
 
 ![Blog Screenshot](screenshot.png)
 
-blog/  
-├── main.go  
-├── config/                              # Configuration directory    
-│   └── config.go  
-├── router/                              # Router layer for request handling    
-│   └── post.go  
-├── model/                               # Data model layer  
-│   └── post.go  
-├── service/                             # Business logic layer  
-│   └── post.go  
-├── pkg/                                 # Reusable packages  
-│   ├── cache/                          # Cache management package  
-│   └── logger/                         # Logging package  
-├── middleware/                          # Custom middleware  
-│   └── jwt.go  
-├── template/                            # HTML template files  
-│   └── default/                        # Default theme  
-│       ├── layout/                     # Layout templates  
-│       │   └── base.html  
-│       ├── post/                       # Post related pages  
-│       │   ├── list.html  
-│       │   └── detail.html  
-│       └── static/                     # Static resource files  
-│           ├── css/                    # Style files  
-│           │   └── style.css  
-│           ├── js/                     # JavaScript files  
-│           └── img/                    # Image resources  
-├── data/                               # Data storage directory  
-│   ├── db/                            # Database files (SQLite)  
-│   ├── upload/                        # Upload files storage  
-│   ├── temp/                          # Temporary files  
-│   └── log/                           # Application log files  
-├── util/                               # Utility functions  
-│   └── tools.go  
-├── go.mod  
-├── go.sum  
-├── package.json  
-└── tailwind.config.js  
-
+blog/
+├── main.go                # Main application entry
+├── config/               # Configuration directory
+│   └── config.go         # Config structure and loading logic
+├── router/               # Router layer for request handling
+│   └── post.go          # Blog post related routes
+├── model/               # Data model layer
+│   └── post.go          # Blog post model
+├── service/             # Business logic layer
+│   └── post.go          # Blog post service
+├── pkg/                 # Reusable packages
+│   ├── cache/          # Cache management package
+│   └── logger/         # Logging package
+├── middleware/          # Custom middleware
+│   └── jwt.go          # JWT authentication middleware
+├── template/            # HTML template files
+│   └── default/        # Default theme
+│       ├── layout/     # Layout templates
+│       │   └── base.html # Base layout
+│       ├── post/       # Post related pages
+│       │   ├── list.html # Post list page
+│       │   └── detail.html # Post detail page
+│       └── static/     # Static resource files
+│           ├── css/    # Style files
+│           │   └── style.css # Compiled TailwindCSS file
+│           ├── js/     # JavaScript files
+│           └── img/    # Image resources
+├── data/               # Data storage directory
+│   ├── db/            # Database files (SQLite)
+│   ├── upload/        # Upload files storage
+│   ├── temp/          # Temporary files
+│   └── log/           # Application log files
+├── util/              # Utility functions
+│   └── tools.go       # Common tools and utilities
+├── go.mod             # Go module file
+├── go.sum             # Go dependency lockfile
+├── package.json       # Node.js package config (for TailwindCSS)
+└── tailwind.config.js # TailwindCSS configuration
 
 Directory Structure:
 1. main.go: Application entry point, initialization and server startup
@@ -66,4 +68,8 @@ Tech Stack:
 - TailwindCSS: CSS framework 
 - JWT middleware for authentication
 - Configuration management with INI file
+
+## License
+
+This project is free and open source software for non-commercial use only. Commercial use is strictly prohibited. You can use it for personal projects, learning purposes, or non-profit organizations.
 
