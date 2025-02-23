@@ -3,6 +3,7 @@ package main
 import (
 	"blog/config"
 	"blog/router"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -45,7 +46,7 @@ func initTemplate(r *gin.Engine) {
 	//}
 	//r.SetHTMLTemplate(tmplFiles)
 
-	//load templates only from subdir
+	//debug mode: load templates from disk every time and only support subdir
 	r.LoadHTMLGlob(defaultTheme + "/**/*.html")
 
 	// Serve static files from configured theme
