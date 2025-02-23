@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - MaterialHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                        </div>
+                    </div>
+                    <!-- Checkout Steps -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 text-white text-sm">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="ml-2 text-sm font-medium text-gray-900">Information</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-green-500 text-white text-sm">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="ml-2 text-sm font-medium text-gray-900">Payment</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-blue-500 text-white text-sm">3</span>
+                            <span class="ml-2 text-sm font-medium text-gray-900">Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Success Message -->
+            <div class="text-center mb-12">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-2xl text-green-500"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Thank You for Your Purchase!</h1>
+                <p class="text-gray-600">Order #12345 has been successfully placed</p>
+            </div>
+
+            <!-- Order Details -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-gray-900 mb-6">Order Details</h2>
+                    
+                    <!-- Order Items -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Business UI Kit Pro</h3>
+                                <p class="text-sm text-gray-500">Standard License</p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-900">$79.00</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Icon Pack Pro</h3>
+                                <p class="text-sm text-gray-500">Standard License</p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-900">$49.00</span>
+                        </div>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Illustration Pack</h3>
+                                <p class="text-sm text-gray-500">Standard License</p>
+                            </div>
+                            <span class="text-sm font-medium text-gray-900">$29.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Subtotal</span>
+                            <span class="text-sm font-medium text-gray-900">$157.00</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-600">Tax (10%)</span>
+                            <span class="text-sm font-medium text-gray-900">$15.70</span>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <div class="flex items-center justify-between">
+                                <span class="text-base font-medium text-gray-900">Total</span>
+                                <span class="text-base font-medium text-gray-900">$172.70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Instructions -->
+            <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-gray-900 mb-6">Download Instructions</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-sm font-medium text-blue-600">1</span>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-sm font-medium text-gray-900">Check Your Email</h3>
+                                <p class="mt-1 text-sm text-gray-600">
+                                    We've sent download instructions to your email address
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-sm font-medium text-blue-600">2</span>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-sm font-medium text-gray-900">Access Downloads</h3>
+                                <p class="mt-1 text-sm text-gray-600">
+                                    Visit your downloads page to access your purchased items
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                                    <span class="text-sm font-medium text-blue-600">3</span>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-sm font-medium text-gray-900">Get Support</h3>
+                                <p class="mt-1 text-sm text-gray-600">
+                                    If you need help, our support team is available 24/7
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center justify-between">
+                <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-200">
+                    <i class="fas fa-download mr-2"></i>
+                    View Downloads
+                </button>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                    Continue Shopping
+                </button>
+            </div>
+
+            <!-- Support Information -->
+            <div class="mt-12 text-center">
+                <p class="text-sm text-gray-600">
+                    Need help? Contact our support team at 
+                    <a href="mailto:support@materialhub.com" class="text-blue-500 hover:text-blue-600">support@materialhub.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

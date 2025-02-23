@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>eBooks - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="audio.html">Audio</a>
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="ebooks.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="about.html">About</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page header -->
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900">eBook Library</h1>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-6">
+                <!-- Left column - Featured and eBooks -->
+                <div class="lg:w-3/4">
+                    <!-- Featured eBook -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Featured eBook</h2>
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <img src="https://via.placeholder.com/200x300" alt="Book cover" class="w-48 rounded-lg shadow-md">
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold mb-2">Modern Web Development</h3>
+                                <p class="text-gray-600 mb-4">A comprehensive guide to building modern web applications using the latest technologies and best practices.</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-user mr-2"></i>
+                                        <span>By John Doe</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-book mr-2"></i>
+                                        <span>350 pages</span>
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-download mr-2"></i>
+                                        <span>2.5k downloads</span>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Download
+                                    </a>
+                                    <a href="#" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors inline-flex items-center">
+                                        <i class="fas fa-eye mr-2"></i>
+                                        Preview
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- eBooks Grid -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- eBook Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <div class="flex gap-4">
+                                    <img src="https://via.placeholder.com/120x180" alt="Book cover" class="w-24 rounded shadow">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold mb-2">JavaScript Fundamentals</h3>
+                                        <p class="text-gray-600 text-sm mb-2">Learn JavaScript from scratch with practical examples.</p>
+                                        <div class="text-xs text-gray-500 space-y-1 mb-3">
+                                            <div><i class="fas fa-user mr-1"></i> Sarah Smith</div>
+                                            <div><i class="fas fa-book mr-1"></i> 250 pages</div>
+                                            <div><i class="fas fa-download mr-1"></i> 1.8k downloads</div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">Download</a>
+                                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-200">Preview</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- eBook Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <div class="flex gap-4">
+                                    <img src="https://via.placeholder.com/120x180" alt="Book cover" class="w-24 rounded shadow">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold mb-2">CSS Mastery</h3>
+                                        <p class="text-gray-600 text-sm mb-2">Advanced CSS techniques and modern layouts.</p>
+                                        <div class="text-xs text-gray-500 space-y-1 mb-3">
+                                            <div><i class="fas fa-user mr-1"></i> Mike Johnson</div>
+                                            <div><i class="fas fa-book mr-1"></i> 200 pages</div>
+                                            <div><i class="fas fa-download mr-1"></i> 1.2k downloads</div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">Download</a>
+                                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-200">Preview</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- eBook Card 3 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <div class="flex gap-4">
+                                    <img src="https://via.placeholder.com/120x180" alt="Book cover" class="w-24 rounded shadow">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold mb-2">React Essentials</h3>
+                                        <p class="text-gray-600 text-sm mb-2">Building modern UIs with React and Hooks.</p>
+                                        <div class="text-xs text-gray-500 space-y-1 mb-3">
+                                            <div><i class="fas fa-user mr-1"></i> Alex Brown</div>
+                                            <div><i class="fas fa-book mr-1"></i> 280 pages</div>
+                                            <div><i class="fas fa-download mr-1"></i> 2.1k downloads</div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">Download</a>
+                                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-200">Preview</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- eBook Card 4 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="p-4">
+                                <div class="flex gap-4">
+                                    <img src="https://via.placeholder.com/120x180" alt="Book cover" class="w-24 rounded shadow">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold mb-2">Node.js in Action</h3>
+                                        <p class="text-gray-600 text-sm mb-2">Server-side JavaScript programming guide.</p>
+                                        <div class="text-xs text-gray-500 space-y-1 mb-3">
+                                            <div><i class="fas fa-user mr-1"></i> David Wilson</div>
+                                            <div><i class="fas fa-book mr-1"></i> 320 pages</div>
+                                            <div><i class="fas fa-download mr-1"></i> 1.5k downloads</div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="#" class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700">Download</a>
+                                            <a href="#" class="bg-gray-100 text-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-200">Preview</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-6 flex justify-center">
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Right column - Sidebar -->
+                <div class="lg:w-1/4 space-y-6">
+                    <!-- Search Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Search eBooks</h3>
+                        <form class="flex gap-2">
+                            <input type="search" 
+                                   class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                   placeholder="Search eBooks...">
+                            <button type="submit" 
+                                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Categories Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
+                        <div class="space-y-2">
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">15</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">Programming</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">12</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">Design</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">8</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">Business</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">5</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Popular eBooks Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular eBooks</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/60x90" alt="Book cover" class="w-12 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Web Development Basics</h4>
+                                    <p class="text-sm text-gray-500">2.5k downloads</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/60x90" alt="Book cover" class="w-12 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">JavaScript Guide</h4>
+                                    <p class="text-sm text-gray-500">1.8k downloads</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/60x90" alt="Book cover" class="w-12 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">CSS Mastery</h4>
+                                    <p class="text-sm text-gray-500">1.2k downloads</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">JavaScript</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">React</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">CSS</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">HTML</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">Python</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">Node.js</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Banner -->
+            <div class="bg-[#dee2e6] rounded-lg shadow-md mt-8 p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0 md:mr-8">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Stay Updated!</h3>
+                        <p class="text-gray-600">Get notified about new eBooks and updates.</p>
+                    </div>
+                    <form class="flex w-full md:w-auto">
+                        <input type="email" 
+                               class="flex-1 md:w-64 p-3 rounded-l border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white" 
+                               placeholder="Enter your email"
+                               required />
+                        <button type="submit" 
+                                class="bg-blue-600 text-white px-6 py-3 rounded-r font-medium hover:bg-blue-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer-->
+        <footer class="py-12 bg-gray-800 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-white">Copyright 2023 Your Website</p>
+            </div>
+        </footer>
+    </body>
+</html>

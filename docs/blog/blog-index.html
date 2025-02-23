@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TechInsights - Technology Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('mobileMenu');
+                const overlay = document.getElementById('menuOverlay');
+                const menuContent = document.getElementById('menuContent');
+                menu.classList.toggle('hidden');
+                if (!menu.classList.contains('hidden')) {
+                    // Show menu
+                    overlay.classList.remove('opacity-0', 'invisible');
+                    overlay.classList.add('opacity-100', 'visible');
+                    menuContent.classList.remove('-translate-x-full');
+                    menuContent.classList.add('translate-x-0');
+                } else {
+                    // Hide menu
+                    overlay.classList.add('opacity-0', 'invisible');
+                    overlay.classList.remove('opacity-100', 'visible');
+                    menuContent.classList.add('-translate-x-full');
+                    menuContent.classList.remove('translate-x-0');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="bg-gray-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="blog-index.html">TechInsights</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="blog-index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-audio-detail.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-ebook.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-login.html">Login</a>
+                    </div>
+                    <button class="md:hidden text-white p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-200" 
+                            type="button" 
+                            onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Mobile menu -->
+                <div id="mobileMenu" class="hidden fixed inset-0 z-50">
+                    <!-- Overlay -->
+                    <div id="menuOverlay" 
+                         class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out opacity-0 invisible" 
+                         onclick="toggleMenu()"></div>
+                    
+                    <!-- Menu content -->
+                    <div id="menuContent" 
+                         class="fixed inset-y-0 left-0 w-64 bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+                        <div class="flex justify-between items-center px-4 py-3 border-b border-gray-700">
+                            <span class="text-white font-bold text-lg">Menu</span>
+                            <button class="text-gray-400 hover:text-white transition-colors duration-200" onclick="toggleMenu()">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="px-2 py-4">
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-index.html">Home</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-videos.html">Videos</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-audio-detail.html">Audio</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-ebook.html">eBooks</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-downloads.html">Downloads</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-library.html">Library</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-categories.html">Categories</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-tags.html">Tags</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-archives.html">Archives</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-about.html">About</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1 flex items-center" href="blog-login.html">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                                </svg>
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-8 sm:py-12 bg-gray-100 border-b border-gray-200 mb-6 sm:mb-8">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center my-8 sm:my-12">
+                    <h1 class="text-3xl sm:text-4xl font-bold">Welcome to TechInsights!</h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mt-2">Your source for the latest technology insights and trends</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap lg:flex-nowrap lg:space-x-8">
+                <!-- Blog entries-->
+                <div class="w-full lg:w-3/4">
+                    <!-- Featured blog meta-->
+                    <div class="bg-white rounded-lg shadow-md mb-8">
+                        <div class="relative">
+                            <img class="w-full h-[350px] object-cover rounded-t-lg" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=850&h=350" alt="AI Technology" />
+                            <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm">Artificial Intelligence</div>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold mb-2">
+                                <a href="#" class="text-gray-900 hover:text-blue-600">The Future of AI: Transforming Industries in 2025</a>
+                            </h2>
+                            <p class="text-gray-600 mb-4">Explore how artificial intelligence is revolutionizing various sectors, from healthcare to finance, and what we can expect in the coming years.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="text-sm text-gray-500">January 21, 2025</div>
+                                <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <!-- Blog post 1 -->
+                        <div class="bg-white rounded-lg shadow-md">
+                            <div class="relative">
+                                <img class="w-full h-48 object-cover rounded-t-lg" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&h=350" alt="Cybersecurity" />
+                                <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm">Cybersecurity</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="#" class="text-gray-900 hover:text-blue-600">Essential Cybersecurity Practices for 2025</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Learn about the latest cybersecurity threats and how to protect your digital assets effectively.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-sm text-gray-500">January 20, 2025</div>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blog post 2 -->
+                        <div class="bg-white rounded-lg shadow-md">
+                            <div class="relative">
+                                <img class="w-full h-48 object-cover rounded-t-lg" src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=700&h=350" alt="Cloud Computing" />
+                                <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Cloud Computing</div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="#" class="text-gray-900 hover:text-blue-600">Cloud-Native Architecture: Best Practices</a>
+                                </h3>
+                                <p class="text-gray-600 mb-4">Discover the latest trends in cloud computing and how to build scalable applications.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="text-sm text-gray-500">January 19, 2025</div>
+                                    <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Banner -->
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg shadow-md mb-8 p-8">
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <div class="mb-4 md:mb-0 text-white">
+                                <h3 class="text-xl font-bold mb-2">Stay Updated with Tech Trends</h3>
+                                <p>Get the latest technology insights delivered to your inbox</p>
+                            </div>
+                            <div class="flex w-full md:w-auto">
+                                <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-lg w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <button class="bg-gray-900 text-white px-6 py-2 rounded-r-lg hover:bg-gray-800 transition-colors">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination-->
+                    <nav class="flex justify-center">
+                        <ul class="flex space-x-2">
+                            <li>
+                                <a class="px-4 py-2 bg-white text-gray-500 rounded-lg hover:bg-gray-50 border" href="#!">Newer</a>
+                            </li>
+                            <li>
+                                <a class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" href="#!">1</a>
+                            </li>
+                            <li>
+                                <a class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-50 border" href="#!">2</a>
+                            </li>
+                            <li>
+                                <a class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-50 border" href="#!">3</a>
+                            </li>
+                            <li>
+                                <a class="px-4 py-2 bg-white text-gray-500 rounded-lg hover:bg-gray-50 border" href="#!">Older</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Side widgets-->
+                <div class="w-full lg:w-1/4 mt-6 lg:mt-0 space-y-6">
+                    <!-- Search widget-->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Search</h4>
+                        <div class="flex">
+                            <input class="flex-1 p-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="Enter search term..." aria-label="Enter search term..." />
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700 transition-colors" type="button">Go!</button>
+                        </div>
+                    </div>
+
+                    <!-- Popular Posts -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Popular Posts</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 object-cover rounded" src="https://dummyimage.com/600x400/dee2e6/6c757d.jpg" alt="Post thumbnail">
+                                <div class="ml-4">
+                                    <h5 class="font-medium text-gray-900 hover:text-blue-600">
+                                        <a href="#!">10 Tips for Better Web Design</a>
+                                    </h5>
+                                    <p class="text-sm text-gray-500">Dec 25, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 object-cover rounded" src="https://dummyimage.com/600x400/dee2e6/6c757d.jpg" alt="Post thumbnail">
+                                <div class="ml-4">
+                                    <h5 class="font-medium text-gray-900 hover:text-blue-600">
+                                        <a href="#!">Getting Started with JavaScript</a>
+                                    </h5>
+                                    <p class="text-sm text-gray-500">Dec 24, 2023</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="w-16 h-16 object-cover rounded" src="https://dummyimage.com/600x400/dee2e6/6c757d.jpg" alt="Post thumbnail">
+                                <div class="ml-4">
+                                    <h5 class="font-medium text-gray-900 hover:text-blue-600">
+                                        <a href="#!">CSS Grid vs Flexbox</a>
+                                    </h5>
+                                    <p class="text-sm text-gray-500">Dec 23, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories widget-->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                        <div class="flex flex-wrap">
+                            <div class="w-1/2 mb-2">
+                                <a class="text-blue-600 hover:underline" href="#!">Web Design</a>
+                            </div>
+                            <div class="w-1/2 mb-2">
+                                <a class="text-blue-600 hover:underline" href="#!">HTML</a>
+                            </div>
+                            <div class="w-1/2 mb-2">
+                                <a class="text-blue-600 hover:underline" href="#!">JavaScript</a>
+                            </div>
+                            <div class="w-1/2 mb-2">
+                                <a class="text-blue-600 hover:underline" href="#!">CSS</a>
+                            </div>
+                            <div class="w-1/2 mb-2">
+                                <a class="text-blue-600 hover:underline" href="#!">Tutorials</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Tags-->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Popular Tags</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">AI</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">Machine Learning</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">Cloud Computing</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">Cybersecurity</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">DevOps</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">Web3</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">Blockchain</a>
+                            <a href="#!" class="px-3 py-1 bg-gray-100 text-sm text-gray-700 rounded-full hover:bg-gray-200">IoT</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                        <p class="text-gray-600 mb-4">Subscribe to our newsletter and get the latest updates right in your inbox.</p>
+                        <form class="space-y-3">
+                            <input type="email" 
+                                   class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                   placeholder="Enter your email"
+                                   required />
+                            <button type="submit" 
+                                    class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Recent Comments -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Recent Comments</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <img class="w-8 h-8 rounded-full" src="https://dummyimage.com/100x100/dee2e6/6c757d.jpg" alt="User avatar">
+                                <div class="ml-3">
+                                    <p class="font-medium text-gray-900">John Doe</p>
+                                    <p class="text-sm text-gray-600">Great article! This helped me understand...</p>
+                                    <p class="text-xs text-gray-500 mt-1">On: Getting Started with JavaScript</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <img class="w-8 h-8 rounded-full" src="https://dummyimage.com/100x100/dee2e6/6c757d.jpg" alt="User avatar">
+                                <div class="ml-3">
+                                    <p class="font-medium text-gray-900">Jane Smith</p>
+                                    <p class="text-sm text-gray-600">Thanks for sharing these CSS techniques...</p>
+                                    <p class="text-xs text-gray-500 mt-1">On: CSS Grid vs Flexbox</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Archives -->
+                    <div class="bg-white rounded-lg shadow-md p-4">
+                        <h4 class="text-lg font-semibold mb-4">Archives</h4>
+                        <div class="space-y-2">
+                            <a href="#!" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>December 2023</span>
+                                <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">15</span>
+                            </a>
+                            <a href="#!" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>November 2023</span>
+                                <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">23</span>
+                            </a>
+                            <a href="#!" class="flex items-center justify-between text-gray-600 hover:text-blue-600">
+                                <span>October 2023</span>
+                                <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">18</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-12 bg-gray-800 mt-12">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-white">Copyright 2025 TechInsights. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

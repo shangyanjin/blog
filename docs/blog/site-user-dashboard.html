@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-full px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-blog text-blue-500 mr-2"></i>
+                            My Site
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-3">
+                        <img class="h-8 w-8 rounded-full" src="https://ui-avatars.com/api/?name=John+Doe" alt="User avatar">
+                        <span class="text-gray-700">John Doe</span>
+                    </div>
+                    <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="fixed inset-y-0 left-0 w-64 bg-white pt-16 border-r border-gray-200">
+        <nav class="mt-5 px-2">
+            <!-- Dashboard -->
+            <a href="#" class="group flex items-center px-2 py-2 text-base font-medium rounded-md bg-blue-50 text-blue-600">
+                <i class="fas fa-home mr-4 text-blue-500"></i>
+                Dashboard
+            </a>
+
+            <!-- Profile -->
+            <div class="mt-1">
+                <div class="px-2 py-2 text-base font-medium text-gray-900">
+                    <i class="fas fa-user mr-4 text-gray-500"></i>
+                    Profile
+                </div>
+                <div class="pl-8">
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Edit Profile
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Change Password
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Notifications
+                    </a>
+                </div>
+            </div>
+
+            <!-- My Content -->
+            <div class="mt-1">
+                <div class="px-2 py-2 text-base font-medium text-gray-900">
+                    <i class="fas fa-file-alt mr-4 text-gray-500"></i>
+                    My Content
+                </div>
+                <div class="pl-8">
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        My Posts
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Drafts
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Comments
+                    </a>
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:bg-gray-50">
+                <i class="fas fa-envelope mr-4 text-gray-500"></i>
+                Messages
+                <span class="ml-auto bg-red-100 text-red-600 py-0.5 px-2 rounded-full text-xs">3</span>
+            </a>
+
+            <!-- Bookmarks -->
+            <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:bg-gray-50">
+                <i class="fas fa-bookmark mr-4 text-gray-500"></i>
+                Bookmarks
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pl-64 pt-16">
+        <!-- Header Section -->
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+                <!-- Posts Stats -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-pencil-alt text-2xl text-blue-500"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">Total Posts</dt>
+                                    <dd class="text-lg font-semibold text-gray-900">25</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Stats -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-comments text-2xl text-green-500"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">Comments</dt>
+                                    <dd class="text-lg font-semibold text-gray-900">142</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Likes Stats -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-heart text-2xl text-red-500"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">Total Likes</dt>
+                                    <dd class="text-lg font-semibold text-gray-900">358</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Views Stats -->
+                <div class="bg-white overflow-hidden shadow rounded-lg">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-eye text-2xl text-purple-500"></i>
+                            </div>
+                            <div class="ml-5 w-0 flex-1">
+                                <dl>
+                                    <dt class="text-sm font-medium text-gray-500 truncate">Post Views</dt>
+                                    <dd class="text-lg font-semibold text-gray-900">2.4K</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Posts and Activity Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Recent Posts -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-medium text-gray-900">Recent Posts</h2>
+                            <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-500">View all</a>
+                        </div>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="px-4 py-4 sm:px-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-sm font-medium text-blue-600 hover:text-blue-700">
+                                        <a href="#">Getting Started with Web Development</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Published on Dec 24, 2023</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-eye mr-1"></i>
+                                        245
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-comment mr-1"></i>
+                                        12
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-4 sm:px-6">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-sm font-medium text-blue-600 hover:text-blue-700">
+                                        <a href="#">10 Tips for Better Coding</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">Published on Dec 20, 2023</p>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-eye mr-1"></i>
+                                        189
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-500">
+                                        <i class="fas fa-comment mr-1"></i>
+                                        8
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
+                        <h2 class="text-lg font-medium text-gray-900">Recent Activity</h2>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="px-4 py-4 sm:px-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
+                                        <i class="fas fa-comment text-blue-500"></i>
+                                    </div>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-sm text-gray-800">
+                                        You commented on <a href="#" class="font-medium text-blue-600">How to Build a Blog</a>
+                                    </p>
+                                    <p class="text-sm text-gray-500">2 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-4 sm:px-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
+                                        <i class="fas fa-pencil-alt text-green-500"></i>
+                                    </div>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-sm text-gray-800">
+                                        You published a new post <a href="#" class="font-medium text-blue-600">Getting Started with Web Development</a>
+                                    </p>
+                                    <p class="text-sm text-gray-500">1 day ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 py-4 sm:px-6">
+                            <div class="flex items-center space-x-3">
+                                <div class="flex-shrink-0">
+                                    <div class="h-8 w-8 rounded-full bg-red-100 flex items-center justify-center">
+                                        <i class="fas fa-heart text-red-500"></i>
+                                    </div>
+                                </div>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-sm text-gray-800">
+                                        You liked <a href="#" class="font-medium text-blue-600">Modern CSS Techniques</a>
+                                    </p>
+                                    <p class="text-sm text-gray-500">2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

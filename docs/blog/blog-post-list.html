@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Posts - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('mobileMenu');
+                const overlay = document.getElementById('menuOverlay');
+                const menuContent = document.getElementById('menuContent');
+                menu.classList.toggle('hidden');
+                if (!menu.classList.contains('hidden')) {
+                    overlay.classList.remove('opacity-0', 'invisible');
+                    overlay.classList.add('opacity-100', 'visible');
+                    menuContent.classList.remove('-translate-x-full');
+                    menuContent.classList.add('translate-x-0');
+                } else {
+                    overlay.classList.add('opacity-0', 'invisible');
+                    overlay.classList.remove('opacity-100', 'visible');
+                    menuContent.classList.add('-translate-x-full');
+                    menuContent.classList.remove('translate-x-0');
+                }
+            }
+
+            function toggleView(view) {
+                const gridView = document.getElementById('gridView');
+                const listView = document.getElementById('listView');
+                const gridBtn = document.getElementById('gridBtn');
+                const listBtn = document.getElementById('listBtn');
+
+                if (view === 'grid') {
+                    gridView.classList.remove('hidden');
+                    listView.classList.add('hidden');
+                    gridBtn.classList.add('bg-gray-200');
+                    listBtn.classList.remove('bg-gray-200');
+                } else {
+                    listView.classList.remove('hidden');
+                    gridView.classList.add('hidden');
+                    listBtn.classList.add('bg-gray-200');
+                    gridBtn.classList.remove('bg-gray-200');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="blog-index.html">My Blog</a>
+                    <button class="md:hidden text-white p-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white transition-colors duration-200" 
+                            type="button" 
+                            onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="blog-index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-audio-detail.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-ebook.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-login.html">Login</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu -->
+                <div id="mobileMenu" class="hidden fixed inset-0 z-50">
+                    <!-- Standard mobile menu content -->
+                    <div class="px-2 py-4">
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-index.html">Home</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-videos.html">Videos</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-audio-detail.html">Audio</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-ebook.html">eBooks</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-downloads.html">Downloads</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-library.html">Library</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-categories.html">Categories</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-tags.html">Tags</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-archives.html">Archives</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-about.html">About</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1 flex items-center" href="blog-login.html">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                            </svg>
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page header-->
+        <header class="py-8 sm:py-12 bg-gray-100 border-b border-gray-200">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center my-8 sm:my-12">
+                    <h1 class="text-3xl sm:text-4xl font-bold">Blog Posts</h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mt-2">Latest articles and updates</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Filters and view toggle -->
+            <div class="flex flex-wrap justify-between items-center mb-8">
+                <!-- Filters -->
+                <div class="flex flex-wrap gap-4 mb-4 sm:mb-0">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>All Categories</option>
+                        <option>Technology</option>
+                        <option>Design</option>
+                        <option>Development</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Sort by Date</option>
+                        <option>Sort by Title</option>
+                        <option>Sort by Views</option>
+                    </select>
+                </div>
+                
+                <!-- View toggle -->
+                <div class="flex rounded-lg overflow-hidden border border-gray-300">
+                    <button id="gridBtn" 
+                            class="px-4 py-2 bg-gray-200 hover:bg-gray-300 transition-colors duration-200 flex items-center"
+                            onclick="toggleView('grid')">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                    </svg>
+                </button>
+                <button id="listBtn" 
+                        class="px-4 py-2 hover:bg-gray-300 transition-colors duration-200 flex items-center"
+                        onclick="toggleView('list')">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Grid view -->
+            <div id="gridView" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Grid meta card -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <span class="mr-3">Dec 20, 2023</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">
+                            <a href="blog-post-detail.html" class="hover:text-blue-600">Getting Started with Web Development</a>
+                        </h2>
+                        <p class="text-gray-600 mb-4">Learn the fundamentals of web development and start building your first website...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                <span class="text-sm text-gray-700">John Doe</span>
+                            </div>
+                            <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More grid meta cards -->
+                <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <span class="mr-3">Dec 18, 2023</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">
+                            <a href="blog-post-detail.html" class="hover:text-blue-600">Modern CSS Techniques</a>
+                        </h2>
+                        <p class="text-gray-600 mb-4">Explore modern CSS features and techniques for better web design...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                <span class="text-sm text-gray-700">Jane Smith</span>
+                            </div>
+                            <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-600 mb-2">
+                            <span class="mr-3">Dec 15, 2023</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2">
+                            <a href="blog-post-detail.html" class="hover:text-blue-600">JavaScript Best Practices</a>
+                        </h2>
+                        <p class="text-gray-600 mb-4">Learn the best practices for writing clean and efficient JavaScript code...</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                <span class="text-sm text-gray-700">Mike Johnson</span>
+                            </div>
+                            <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- List view (hidden by default) -->
+            <div id="listView" class="hidden space-y-6">
+                <!-- List meta item -->
+                <article class="bg-white rounded-lg shadow-md p-6">
+                    <div class="md:flex">
+                        <img class="w-full md:w-48 h-48 object-cover rounded-lg md:mr-6 mb-4 md:mb-0" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                        <div class="flex-1">
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <span class="mr-3">Dec 20, 2023</span>
+                                <span>5 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">
+                                <a href="blog-post-detail.html" class="hover:text-blue-600">Getting Started with Web Development</a>
+                            </h2>
+                            <p class="text-gray-600 mb-4">Learn the fundamentals of web development and start building your first website. This comprehensive guide covers HTML, CSS, and JavaScript basics...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                    <span class="text-sm text-gray-700">John Doe</span>
+                                </div>
+                                <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- More list meta items -->
+                <article class="bg-white rounded-lg shadow-md p-6">
+                    <div class="md:flex">
+                        <img class="w-full md:w-48 h-48 object-cover rounded-lg md:mr-6 mb-4 md:mb-0" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                        <div class="flex-1">
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <span class="mr-3">Dec 18, 2023</span>
+                                <span>4 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">
+                                <a href="blog-post-detail.html" class="hover:text-blue-600">Modern CSS Techniques</a>
+                            </h2>
+                            <p class="text-gray-600 mb-4">Explore modern CSS features and techniques for better web design. Learn about Flexbox, Grid, and other modern layout techniques...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                    <span class="text-sm text-gray-700">Jane Smith</span>
+                                </div>
+                                <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-lg shadow-md p-6">
+                    <div class="md:flex">
+                        <img class="w-full md:w-48 h-48 object-cover rounded-lg md:mr-6 mb-4 md:mb-0" src="https://via.placeholder.com/400x300" alt="Post thumbnail">
+                        <div class="flex-1">
+                            <div class="flex items-center text-sm text-gray-600 mb-2">
+                                <span class="mr-3">Dec 15, 2023</span>
+                                <span>6 min read</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">
+                                <a href="blog-post-detail.html" class="hover:text-blue-600">JavaScript Best Practices</a>
+                            </h2>
+                            <p class="text-gray-600 mb-4">Learn the best practices for writing clean and efficient JavaScript code. Improve your code quality and maintainability...</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center">
+                                    <img class="w-8 h-8 rounded-full mr-2" src="https://via.placeholder.com/150" alt="Author">
+                                    <span class="text-sm text-gray-700">Mike Johnson</span>
+                                </div>
+                                <a href="blog-post-detail.html" class="text-blue-600 hover:underline text-sm">Read more →</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">Previous</a>
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-white bg-blue-600 hover:bg-blue-700">1</a>
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">2</a>
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">3</a>
+                    <span class="px-3 py-2 text-gray-700">...</span>
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">10</a>
+                    <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100">Next</a>
+                </nav>
+            </div>
+        </main>
+
+        <!-- Footer-->
+        <footer class="py-12 bg-gray-900 mt-12">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-white">Copyright 2023 My Blog</p>
+            </div>
+        </footer>
+    </body>
+</html>

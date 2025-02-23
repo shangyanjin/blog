@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Followers - Creator Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm">
+            <!-- Logo -->
+            <div class="px-6 py-4 border-b border-gray-100">
+                <a href="material-index.html" class="flex items-center">
+                    <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="px-4 py-4">
+                <div class="space-y-1">
+                    <a href="material-creator-dashboard.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-chart-line w-5 mr-2"></i>
+                        Dashboard
+                    </a>
+                    <a href="material-dashboard-resources.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-cube w-5 mr-2"></i>
+                        Resources
+                    </a>
+                    <a href="material-dashboard-collections.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-folder w-5 mr-2"></i>
+                        Collections
+                    </a>
+                    <a href="#" class="flex items-center px-2 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md group">
+                        <i class="fas fa-users w-5 mr-2"></i>
+                        Followers
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Bar -->
+            <header class="bg-white shadow-sm">
+                <div class="px-6 py-4">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-lg font-medium text-gray-900">Followers</h1>
+                        <div class="flex items-center space-x-4">
+                            <select class="text-sm border border-gray-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                            <div class="relative">
+                                <input type="text" 
+                                       placeholder="Search followers..." 
+                                       class="w-64 px-4 py-1.5 pl-10 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="px-6 py-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Total Followers</p>
+                                <h3 class="text-2xl font-semibold text-gray-900 mt-1">8,549</h3>
+                                <p class="text-sm text-green-600 mt-1">+15% from last month</p>
+                            </div>
+                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-users text-blue-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">New Followers</p>
+                                <h3 class="text-2xl font-semibold text-gray-900 mt-1">245</h3>
+                                <p class="text-sm text-green-600 mt-1">+8% from last week</p>
+                            </div>
+                            <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-user-plus text-green-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Active Followers</p>
+                                <h3 class="text-2xl font-semibold text-gray-900 mt-1">65%</h3>
+                                <p class="text-sm text-green-600 mt-1">+5% from last month</p>
+                            </div>
+                            <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chart-bar text-purple-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Avg. Engagement</p>
+                                <h3 class="text-2xl font-semibold text-gray-900 mt-1">4.2</h3>
+                                <p class="text-sm text-gray-500 mt-1">Actions per user</p>
+                            </div>
+                            <div class="w-12 h-12 bg-yellow-50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-star text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Followers -->
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
+                        <h2 class="text-lg font-medium text-gray-900">Recent Followers</h2>
+                        <button class="text-sm text-blue-600 hover:text-blue-700">View All</button>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <!-- Follower Card -->
+                            <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50">
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Sarah Johnson</h3>
+                                            <p class="text-sm text-gray-500">Followed 2 hours ago</p>
+                                        </div>
+                                        <button class="px-3 py-1 text-xs font-medium text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50">
+                                            Follow Back
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Follower Card -->
+                            <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50">
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Michael Chen</h3>
+                                            <p class="text-sm text-gray-500">Followed 5 hours ago</p>
+                                        </div>
+                                        <button class="px-3 py-1 text-xs font-medium text-gray-500 bg-gray-100 rounded-full">
+                                            Following
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Follower Card -->
+                            <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50">
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Emily Wilson</h3>
+                                            <p class="text-sm text-gray-500">Followed 1 day ago</p>
+                                        </div>
+                                        <button class="px-3 py-1 text-xs font-medium text-blue-600 border border-blue-200 rounded-full hover:bg-blue-50">
+                                            Follow Back
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Follower Card -->
+                            <div class="flex items-center p-4 border border-gray-100 rounded-lg hover:bg-gray-50">
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">David Kim</h3>
+                                            <p class="text-sm text-gray-500">Followed 2 days ago</p>
+                                        </div>
+                                        <button class="px-3 py-1 text-xs font-medium text-gray-500 bg-gray-100 rounded-full">
+                                            Following
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Followers -->
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="px-6 py-4 border-b border-gray-100">
+                        <h2 class="text-lg font-medium text-gray-900">Top Followers</h2>
+                    </div>
+                    <div class="p-6">
+                        <div class="space-y-4">
+                            <!-- Top Follower -->
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-sm font-medium text-gray-600 w-8">#1</div>
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Alex Thompson</h3>
+                                            <p class="text-sm text-gray-500">245 interactions</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Premium User
+                                            </span>
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                                Top Supporter
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Top Follower -->
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-sm font-medium text-gray-600 w-8">#2</div>
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Maria Garcia</h3>
+                                            <p class="text-sm text-gray-500">198 interactions</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                                Premium User
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Top Follower -->
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 text-sm font-medium text-gray-600 w-8">#3</div>
+                                <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded-full">
+                                <div class="ml-4 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">James Wilson</h3>
+                                            <p class="text-sm text-gray-500">167 interactions</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                Active User
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Follower Growth -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="px-6 py-4 border-b border-gray-100">
+                        <h2 class="text-lg font-medium text-gray-900">Follower Growth</h2>
+                    </div>
+                    <div class="p-6">
+                        <!-- Placeholder for growth chart -->
+                        <div class="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500">Growth Chart Placeholder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Item - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">My Site</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="site-index.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="site-video.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Videos</a>
+                        <a href="site-audio.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Audio</a>
+                        <a href="site-download.html" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Downloads</a>
+                        <a href="site-library.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Library</a>
+                        <a href="site-article.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Articles</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="site-index.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Home</a>
+                    <a href="site-video.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Videos</a>
+                    <a href="site-audio.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Audio</a>
+                    <a href="site-download.html" class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 text-base font-medium">Downloads</a>
+                    <a href="site-library.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Library</a>
+                    <a href="site-article.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Articles</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Download Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-500 mb-4">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="site-download.html" class="hover:text-gray-700">Downloads</a>
+                        <svg class="h-5 w-5 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </li>
+                    <li class="text-gray-700">JavaScript Development Kit</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Download Content -->
+            <div class="lg:col-span-2">
+                <!-- Download Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-file-archive text-3xl text-blue-600"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-bold text-gray-900">JavaScript Development Kit</h1>
+                                <p class="text-gray-500 mt-1">Complete development toolkit for modern JavaScript applications</p>
+                            </div>
+                        </div>
+
+                        <!-- Download Stats -->
+                        <div class="grid grid-cols-3 gap-4 mb-6">
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-900">2.5K</div>
+                                <div class="text-sm text-gray-500">Downloads</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-900">4.8</div>
+                                <div class="text-sm text-gray-500">Rating</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-lg p-4 text-center">
+                                <div class="text-2xl font-bold text-gray-900">v2.1.0</div>
+                                <div class="text-sm text-gray-500">Version</div>
+                            </div>
+                        </div>
+
+                        <!-- Download Button -->
+                        <div class="flex justify-center mb-6">
+                            <button class="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                <i class="fas fa-download mr-2"></i>
+                                Download Now (125 MB)
+                            </button>
+                        </div>
+
+                        <!-- File Information -->
+                        <div class="border-t border-gray-200 pt-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">File Information</h3>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-gray-500">File Type:</span>
+                                    <span class="ml-2 text-gray-900">ZIP Archive</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-500">Size:</span>
+                                    <span class="ml-2 text-gray-900">125 MB</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-500">Last Updated:</span>
+                                    <span class="ml-2 text-gray-900">December 26, 2024</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-500">License:</span>
+                                    <span class="ml-2 text-gray-900">MIT License</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="border-t border-gray-200 pt-6 mt-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Description</h3>
+                            <div class="prose max-w-none">
+                                <p class="text-gray-600 mb-4">
+                                    The JavaScript Development Kit is a comprehensive collection of tools, libraries, and resources 
+                                    designed to streamline your JavaScript development workflow. This kit includes everything you 
+                                    need to build modern, scalable web applications.
+                                </p>
+                                <h4 class="text-lg font-medium text-gray-900 mt-4 mb-2">Key Features:</h4>
+                                <ul class="list-disc pl-5 text-gray-600">
+                                    <li>Development environment setup scripts</li>
+                                    <li>Popular JavaScript libraries and frameworks</li>
+                                    <li>Code snippets and templates</li>
+                                    <li>Documentation and best practices guide</li>
+                                    <li>Performance optimization tools</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- System Requirements -->
+                        <div class="border-t border-gray-200 pt-6 mt-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">System Requirements</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Node.js 14.0 or higher
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        npm 6.0 or higher
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        4GB RAM minimum
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        500MB free disk space
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Installation Guide -->
+                        <div class="border-t border-gray-200 pt-6 mt-6">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Installation Guide</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <pre class="text-sm text-gray-600 overflow-x-auto">
+# Extract the ZIP file
+unzip javascript-dev-kit.zip
+
+# Install dependencies
+cd javascript-dev-kit
+npm install
+
+# Start the development server
+npm start</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="mt-8 bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-semibold text-gray-900">Reviews</h3>
+                        <button class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Write a Review
+                        </button>
+                    </div>
+
+                    <!-- Review List -->
+                    <div class="space-y-6">
+                        <!-- Review Item -->
+                        <div class="border-b border-gray-200 pb-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/100x100" alt="Reviewer avatar">
+                                    <div class="ml-3">
+                                        <h4 class="text-sm font-medium text-gray-900">Alex Johnson</h4>
+                                        <div class="flex items-center">
+                                            <div class="flex text-yellow-400">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="ml-2 text-sm text-gray-500">5.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="text-sm text-gray-500">2 days ago</span>
+                            </div>
+                            <p class="text-gray-600">
+                                Excellent development kit! The documentation is comprehensive and the included tools 
+                                have significantly improved my development workflow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Similar Downloads -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Similar Downloads</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="block hover:bg-gray-50 rounded-lg p-2">
+                            <div class="flex items-center">
+                                <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-file-code text-purple-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900">React Starter Kit</h4>
+                                    <p class="text-sm text-gray-500 mt-1">1.2K downloads</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block hover:bg-gray-50 rounded-lg p-2">
+                            <div class="flex items-center">
+                                <div class="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-file-code text-green-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900">Node.js Toolkit</h4>
+                                    <p class="text-sm text-gray-500 mt-1">890 downloads</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
+                            <span class="text-gray-600">Development Tools</span>
+                            <span class="text-sm text-gray-500">45</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
+                            <span class="text-gray-600">Frameworks</span>
+                            <span class="text-sm text-gray-500">32</span>
+                        </a>
+                        <a href="#" class="flex items-center justify-between p-2 rounded-lg hover:bg-gray-50">
+                            <span class="text-gray-600">Templates</span>
+                            <span class="text-sm text-gray-500">28</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Need Help?</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fas fa-book mr-2"></i>
+                            Documentation
+                        </a>
+                        <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fas fa-question-circle mr-2"></i>
+                            FAQs
+                        </a>
+                        <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Contact Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">About Us</h3>
+                    <p class="text-gray-600">Providing valuable educational resources to help you learn and grow in your development journey.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Latest Downloads</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Categories</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <p class="text-center text-gray-500">&copy; 2024 My Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

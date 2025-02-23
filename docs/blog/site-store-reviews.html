@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Store Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm hidden md:block">
+            <div class="h-16 flex items-center px-6">
+                <a href="site-store-dashboard.html" class="text-xl font-bold text-gray-800">Store Admin</a>
+            </div>
+            <nav class="mt-4">
+                <div class="space-y-1">
+                    <!-- Dashboard -->
+                    <a href="site-store-dashboard.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                        <i class="fas fa-home w-5"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+
+                    <!-- Products Section -->
+                    <div>
+                        <a href="site-store-products.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                            <i class="fas fa-shopping-bag w-5"></i>
+                            <span class="ml-3">Products</span>
+                        </a>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div>
+                        <a href="site-store-orders.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                            <i class="fas fa-shopping-cart w-5"></i>
+                            <span class="ml-3">Orders</span>
+                        </a>
+                    </div>
+
+                    <!-- Customers Section -->
+                    <div>
+                        <a href="site-store-customers.html" class="flex items-center px-6 py-3 bg-gray-50 text-gray-900">
+                            <i class="fas fa-users w-5"></i>
+                            <span class="ml-3">Customers</span>
+                        </a>
+                        <div class="pl-14 space-y-1">
+                            <a href="site-store-customers.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">All Customers</a>
+                            <a href="site-store-reviews.html" class="block py-2 text-sm text-gray-900 font-medium">Reviews</a>
+                            <a href="site-store-messages.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="h-16 flex items-center justify-between px-6">
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-auto flex items-center space-x-4">
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center text-gray-600 hover:text-gray-900">
+                                <span class="mr-2">Admin</span>
+                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="p-6">
+                <!-- Header -->
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-gray-900">Customer Reviews</h1>
+                </div>
+
+                <!-- Review Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-500 text-sm">Total Reviews</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-2xl font-semibold text-gray-900">487</p>
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-blue-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-500 text-sm">Average Rating</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <p class="text-2xl font-semibold text-gray-900 mr-2">4.5</p>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-500 text-sm">Pending Reviews</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-2xl font-semibold text-gray-900">12</p>
+                            <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-yellow-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-gray-500 text-sm">Response Rate</h3>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-2xl font-semibold text-gray-900">92%</p>
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-reply text-green-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <input type="text" placeholder="Search reviews..." class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <option>All Ratings</option>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <option>All Status</option>
+                        <option>Published</option>
+                        <option>Pending</option>
+                        <option>Spam</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                        <option>Sort By: Latest</option>
+                        <option>Sort By: Rating High to Low</option>
+                        <option>Sort By: Rating Low to High</option>
+                    </select>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="space-y-6">
+                    <!-- Review Item -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-start space-x-4">
+                                <div class="h-12 w-12 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <h3 class="text-sm font-medium text-gray-900 mr-2">John Doe</h3>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mb-2">Reviewed: Smartphone X</p>
+                                    <p class="text-sm text-gray-600 mb-2">Great product! The battery life is amazing and the camera quality exceeds my expectations. Highly recommended!</p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <span class="text-gray-500">Dec 27, 2024</span>
+                                        <span class="text-gray-500">Verified Purchase</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-reply"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Admin Response -->
+                        <div class="mt-4 ml-16 p-4 bg-gray-50 rounded-lg">
+                            <div class="flex items-start space-x-4">
+                                <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user-shield text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <h4 class="text-sm font-medium text-gray-900">Store Admin</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600">Thank you for your wonderful review! We're glad you're enjoying your new Smartphone X. Your feedback helps us maintain our high standards.</p>
+                                    <span class="text-sm text-gray-500 mt-2 block">Replied: Dec 27, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Item -->
+                    <div class="bg-white rounded-lg shadow-sm p-6">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-start space-x-4">
+                                <div class="h-12 w-12 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <div>
+                                    <div class="flex items-center mb-1">
+                                        <h3 class="text-sm font-medium text-gray-900 mr-2">Jane Smith</h3>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mb-2">Reviewed: Wireless Earbuds Pro</p>
+                                    <p class="text-sm text-gray-600 mb-2">Sound quality is excellent, but the battery life could be better. Otherwise, a solid product.</p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <span class="text-gray-500">Dec 26, 2024</span>
+                                        <span class="text-gray-500">Verified Purchase</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-reply"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-6">
+                    <div class="bg-white px-4 py-3 flex items-center justify-between border border-gray-200 rounded-lg sm:px-6">
+                        <div class="flex-1 flex justify-between sm:hidden">
+                            <button class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                                Previous
+                            </button>
+                            <button class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                                Next
+                            </button>
+                        </div>
+                        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                            <div>
+                                <p class="text-sm text-gray-700">
+                                    Showing <span class="font-medium">1</span> to <span class="font-medium">10</span> of <span class="font-medium">97</span> results
+                                </p>
+                            </div>
+                            <div>
+                                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                                    <button class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <span class="sr-only">Previous</span>
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                        1
+                                    </button>
+                                    <button class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-gray-50 text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                        2
+                                    </button>
+                                    <button class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                        3
+                                    </button>
+                                    <button class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                        <span class="sr-only">Next</span>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

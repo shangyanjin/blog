@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center - MaterialHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="ml-3 relative">
+                            <div class="flex items-center">
+                                <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="">
+                                <span class="ml-2 text-sm text-gray-700">John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Header with Search -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">How can we help you?</h1>
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input type="text" 
+                               placeholder="Search for help..." 
+                               class="w-full px-4 py-3 pl-12 text-lg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="grid grid-cols-3 gap-6 mb-12">
+                <a href="material-dashboard-support-new.html" class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-ticket-alt text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">Submit a Ticket</h3>
+                            <p class="text-gray-500">Get help from our support team</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#my-tickets" class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-purple-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">My Tickets</h3>
+                            <p class="text-gray-500">View your support history</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#live-chat" class="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-comments text-green-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-medium text-gray-900">Live Chat</h3>
+                            <p class="text-gray-500">Chat with support agent</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Popular Topics -->
+            <div class="bg-white rounded-lg shadow-sm mb-8">
+                <div class="px-6 py-4 border-b border-gray-100">
+                    <h2 class="text-lg font-medium text-gray-900">Popular Topics</h2>
+                </div>
+                <div class="p-6 grid grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-medium text-gray-900 mb-4">Getting Started</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-file-alt w-5"></i>
+                                    <span>How to create an account</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-download w-5"></i>
+                                    <span>Downloading resources</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-folder w-5"></i>
+                                    <span>Managing collections</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-gray-900 mb-4">Account & Billing</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-credit-card w-5"></i>
+                                    <span>Subscription plans</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-key w-5"></i>
+                                    <span>Password reset</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-shield-alt w-5"></i>
+                                    <span>Account security</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- My Tickets -->
+            <div id="my-tickets" class="bg-white rounded-lg shadow-sm mb-8">
+                <div class="px-6 py-4 border-b border-gray-100">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-lg font-medium text-gray-900">My Tickets</h2>
+                        <a href="material-dashboard-support-new.html" class="text-sm text-blue-600 hover:text-blue-700">New Ticket</a>
+                    </div>
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <!-- Ticket -->
+                    <div class="p-6 hover:bg-gray-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                    In Progress
+                                </span>
+                                <h3 class="text-sm font-medium text-gray-900">Download issue with UI Kit</h3>
+                            </div>
+                            <span class="text-sm text-gray-500">2 hours ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Having trouble downloading the latest UI Kit package...</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-xs text-gray-500">Ticket #12345</span>
+                            <span class="text-xs text-gray-500">Last updated: 30 min ago</span>
+                        </div>
+                    </div>
+
+                    <!-- Ticket -->
+                    <div class="p-6 hover:bg-gray-50">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="flex items-center space-x-3">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    Resolved
+                                </span>
+                                <h3 class="text-sm font-medium text-gray-900">Billing inquiry</h3>
+                            </div>
+                            <span class="text-sm text-gray-500">2 days ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Question about monthly subscription charges...</p>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-xs text-gray-500">Ticket #12344</span>
+                            <span class="text-xs text-gray-500">Last updated: 1 day ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="px-6 py-4 border-b border-gray-100">
+                    <h2 class="text-lg font-medium text-gray-900">Frequently Asked Questions</h2>
+                </div>
+                <div class="p-6">
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <button class="flex items-center justify-between w-full text-left">
+                                <h3 class="text-sm font-medium text-gray-900">How do I download my purchased items?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                            <div class="mt-2 text-sm text-gray-600">
+                                After purchase, go to your downloads page. Click the download button next to your item. The file will begin downloading automatically.
+                            </div>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <button class="flex items-center justify-between w-full text-left">
+                                <h3 class="text-sm font-medium text-gray-900">What payment methods do you accept?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                            <div class="mt-2 text-sm text-gray-600">
+                                We accept all major credit cards, PayPal, and bank transfers for Enterprise plans.
+                            </div>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <button class="flex items-center justify-between w-full text-left">
+                                <h3 class="text-sm font-medium text-gray-900">How do I request a refund?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </button>
+                            <div class="mt-2 text-sm text-gray-600">
+                                Contact our support team within 30 days of purchase. We'll review your request and process eligible refunds within 5-7 business days.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Options -->
+            <div class="mt-8 grid grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-blue-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Email Support</h3>
+                        <p class="text-gray-600 mb-4">Get help via email within 24 hours</p>
+                        <a href="mailto:support@materialhub.com" class="text-blue-600 hover:text-blue-700">support@materialhub.com</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone-alt text-green-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Phone Support</h3>
+                        <p class="text-gray-600 mb-4">Available Mon-Fri, 9am-5pm</p>
+                        <a href="tel:+1-800-123-4567" class="text-blue-600 hover:text-blue-700">+1 (800) 123-4567</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mx-auto mb-4">
+                            <i class="fab fa-discord text-purple-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Community</h3>
+                        <p class="text-gray-600 mb-4">Join our Discord community</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-700">Join Discord</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

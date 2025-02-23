@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Categories - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="video.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="audio.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="ebook.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="login.html">Login</a>
+                    </div>
+                    <div class="md:hidden">
+                        <div class="px-2 py-4">
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="index.html">Home</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="video.html">Videos</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="audio.html">Audio</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="ebook.html">eBooks</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="downloads.html">Downloads</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="library.html">Library</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="categories.html">Categories</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="tags.html">Tags</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="archives.html">Archives</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="about.html">About</a>
+                            <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1 flex items-center" href="login.html">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+                                </svg>
+                                Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Main content-->
+                <div class="lg:w-3/4">
+                    <h1 class="text-3xl font-bold mb-6">Categories</h1>
+                    
+                    <!-- Categories Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Category Card -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-semibold mb-4">Technology</h2>
+                            <p class="text-gray-600 mb-4">Articles about the latest tech trends and innovations</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">25 articles</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">View all →</a>
+                            </div>
+                        </div>
+
+                        <!-- Category Card -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-semibold mb-4">Programming</h2>
+                            <p class="text-gray-600 mb-4">Tutorials and guides for developers</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">18 articles</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">View all →</a>
+                            </div>
+                        </div>
+
+                        <!-- Category Card -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-semibold mb-4">Design</h2>
+                            <p class="text-gray-600 mb-4">UI/UX design principles and best practices</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">15 articles</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">View all →</a>
+                            </div>
+                        </div>
+
+                        <!-- Category Card -->
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h2 class="text-xl font-semibold mb-4">Business</h2>
+                            <p class="text-gray-600 mb-4">Insights on entrepreneurship and management</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">12 articles</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-700">View all →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:w-1/4">
+                    <!-- Search Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">Search</h2>
+                        <div class="relative">
+                            <input type="text" placeholder="Search categories..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <button class="absolute right-2 top-2 text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Popular Categories Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 class="text-xl font-semibold mb-4">Popular Categories</h2>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Technology</a>
+                                <span class="text-sm text-gray-500">25</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Programming</a>
+                                <span class="text-sm text-gray-500">18</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Design</a>
+                                <span class="text-sm text-gray-500">15</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-700">Business</a>
+                                <span class="text-sm text-gray-500">12</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-xl font-semibold mb-4">Recent Posts</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://via.placeholder.com/80" alt="Post thumbnail" class="w-20 h-20 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="font-medium mb-1">
+                                        <a href="#" class="hover:text-blue-600">Getting Started with React</a>
+                                    </h3>
+                                    <p class="text-sm text-gray-500">2 days ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <img src="https://via.placeholder.com/80" alt="Post thumbnail" class="w-20 h-20 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="font-medium mb-1">
+                                        <a href="#" class="hover:text-blue-600">UI Design Trends 2024</a>
+                                    </h3>
+                                    <p class="text-sm text-gray-500">4 days ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <img src="https://via.placeholder.com/80" alt="Post thumbnail" class="w-20 h-20 rounded-lg object-cover">
+                                <div>
+                                    <h3 class="font-medium mb-1">
+                                        <a href="#" class="hover:text-blue-600">Python Best Practices</a>
+                                    </h3>
+                                    <p class="text-sm text-gray-500">1 week ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="bg-gray-800 text-white py-12 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center">Copyright &copy; Your Website 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>

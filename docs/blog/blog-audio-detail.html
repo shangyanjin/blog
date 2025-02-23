@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Audio Detail - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+        <!-- Plyr Audio Player -->
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+        <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="blog-index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="blog-index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-audio-detail.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-ebook.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Audio Player and Details -->
+                <div class="lg:col-span-2">
+                    <!-- Audio Player -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <img src="https://via.placeholder.com/200" alt="Album cover" class="w-32 h-32 rounded-lg shadow-md">
+                            <div>
+                                <h1 class="text-2xl font-bold mb-2">The Future of Web Development</h1>
+                                <p class="text-gray-600 mb-2">Tech Talk Podcast - Episode 45</p>
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <span class="mr-4"><i class="far fa-clock mr-1"></i> 45:20</span>
+                                    <span><i class="far fa-calendar mr-1"></i> Dec 26, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <audio id="player" class="w-full">
+                            <source src="path/to/audio.mp3" type="audio/mp3" />
+                        </audio>
+                        <div class="flex items-center justify-between mt-4">
+                            <div class="flex items-center space-x-4">
+                                <button class="text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-blue-600 text-xl">
+                                    <i class="fas fa-play-circle"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <button class="text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-random"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-blue-600">
+                                    <i class="fas fa-redo"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Details -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+                                <i class="far fa-heart"></i>
+                                <span>Like</span>
+                            </button>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+                                <i class="far fa-share-square"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+                                <i class="far fa-bookmark"></i>
+                                <span>Save</span>
+                            </button>
+                            <button class="flex items-center space-x-2 text-blue-600 hover:text-blue-700">
+                                <i class="fas fa-download"></i>
+                                <span>Download</span>
+                            </button>
+                        </div>
+                        <div class="border-t border-gray-200 pt-6">
+                            <h2 class="text-lg font-semibold mb-4">Episode Description</h2>
+                            <p class="text-gray-600 mb-4">
+                                In this episode, we discuss the future of web development with industry experts. Topics include 
+                                WebAssembly, Edge Computing, and the evolution of JavaScript frameworks. Our guests share their 
+                                insights on upcoming trends and technologies that will shape the web development landscape.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">#WebDev</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">#Technology</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">#Programming</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">#Future</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transcript -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 class="text-lg font-semibold mb-4">Transcript</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-gray-500 text-sm mb-1">[00:00] Host:</p>
+                                <p class="text-gray-600">Welcome to another episode of Tech Talk Podcast...</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm mb-1">[02:15] Guest:</p>
+                                <p class="text-gray-600">When we look at the future of web development...</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-sm mb-1">[05:30] Host:</p>
+                                <p class="text-gray-600">That's an interesting perspective on WebAssembly...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-lg font-semibold mb-6">Comments (8)</h2>
+                        
+                        <!-- Comment Form -->
+                        <div class="mb-6">
+                            <textarea class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                      rows="3"
+                                      placeholder="Add a comment..."></textarea>
+                            <div class="flex justify-end mt-2">
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                    Post Comment
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Comments List -->
+                        <div class="space-y-6">
+                            <!-- Comment 1 -->
+                            <div class="flex space-x-4">
+                                <img src="https://via.placeholder.com/40" alt="User avatar" class="w-10 h-10 rounded-full">
+                                <div class="flex-1">
+                                    <div class="flex items-center mb-1">
+                                        <h3 class="font-medium mr-2">Sarah Johnson</h3>
+                                        <span class="text-gray-500 text-sm">1 hour ago</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-2">
+                                        Really insightful discussion about WebAssembly. Looking forward to more episodes!
+                                    </p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <button class="text-gray-500 hover:text-blue-600">
+                                            <i class="far fa-thumbs-up mr-1"></i> 12
+                                        </button>
+                                        <button class="text-gray-500 hover:text-blue-600">Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Comment 2 -->
+                            <div class="flex space-x-4">
+                                <img src="https://via.placeholder.com/40" alt="User avatar" class="w-10 h-10 rounded-full">
+                                <div class="flex-1">
+                                    <div class="flex items-center mb-1">
+                                        <h3 class="font-medium mr-2">Mike Chen</h3>
+                                        <span class="text-gray-500 text-sm">3 hours ago</span>
+                                    </div>
+                                    <p class="text-gray-600 mb-2">
+                                        Could you do an episode about Edge Computing in more detail?
+                                    </p>
+                                    <div class="flex items-center space-x-4 text-sm">
+                                        <button class="text-gray-500 hover:text-blue-600">
+                                            <i class="far fa-thumbs-up mr-1"></i> 8
+                                        </button>
+                                        <button class="text-gray-500 hover:text-blue-600">Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <!-- Podcast Info -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex items-center mb-4">
+                            <img src="https://via.placeholder.com/60" alt="Podcast avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h3 class="font-medium">Tech Talk Podcast</h3>
+                                <p class="text-gray-500 text-sm">25K subscribers</p>
+                            </div>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors mb-4">
+                            Subscribe
+                        </button>
+                        <p class="text-gray-600 text-sm">
+                            Weekly discussions about the latest trends in technology and web development.
+                        </p>
+                    </div>
+
+                    <!-- More Episodes -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h2 class="text-lg font-semibold mb-4">More Episodes</h2>
+                        <div class="space-y-4">
+                            <!-- Episode 1 -->
+                            <div class="flex space-x-3">
+                                <div class="flex-shrink-0 w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                                    <img src="https://via.placeholder.com/80" alt="Episode thumbnail" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium mb-1">The Rise of AI in Development</h3>
+                                    <p class="text-gray-500 text-xs">Tech Talk Podcast</p>
+                                    <p class="text-gray-500 text-xs">10K listens • 1 week ago</p>
+                                </div>
+                            </div>
+
+                            <!-- Episode 2 -->
+                            <div class="flex space-x-3">
+                                <div class="flex-shrink-0 w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                                    <img src="https://via.placeholder.com/80" alt="Episode thumbnail" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium mb-1">Cloud Computing Trends</h3>
+                                    <p class="text-gray-500 text-xs">Tech Talk Podcast</p>
+                                    <p class="text-gray-500 text-xs">15K listens • 2 weeks ago</p>
+                                </div>
+                            </div>
+
+                            <!-- Episode 3 -->
+                            <div class="flex space-x-3">
+                                <div class="flex-shrink-0 w-20 h-20 bg-gray-100 rounded-lg overflow-hidden">
+                                    <img src="https://via.placeholder.com/80" alt="Episode thumbnail" class="w-full h-full object-cover">
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-sm font-medium mb-1">DevOps Best Practices</h3>
+                                    <p class="text-gray-500 text-xs">Tech Talk Podcast</p>
+                                    <p class="text-gray-500 text-xs">12K listens • 3 weeks ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-12 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center">Copyright 2023 Your Website</p>
+            </div>
+        </footer>
+
+        <!-- Initialize Plyr -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const player = new Plyr('#player', {
+                    controls: [
+                        'play',
+                        'progress',
+                        'current-time',
+                        'mute',
+                        'volume'
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>

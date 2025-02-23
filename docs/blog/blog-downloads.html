@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Downloads</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById('mobileMenu');
+                const overlay = document.getElementById('menuOverlay');
+                const menuContent = document.getElementById('menuContent');
+                menu.classList.toggle('hidden');
+                if (!menu.classList.contains('hidden')) {
+                    overlay.classList.remove('opacity-0', 'invisible');
+                    overlay.classList.add('opacity-100', 'visible');
+                    menuContent.classList.remove('-translate-x-full');
+                    menuContent.classList.add('translate-x-0');
+                } else {
+                    overlay.classList.add('opacity-0', 'invisible');
+                    overlay.classList.remove('opacity-100', 'visible');
+                    menuContent.classList.add('-translate-x-full');
+                    menuContent.classList.remove('translate-x-0');
+                }
+            }
+        </script>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="blog-index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-audio-detail.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-ebook.html">eBooks</a>
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="blog-downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-login.html">Login</a>
+                    </div>
+                    <button class="md:hidden text-gray-400 hover:text-white transition-colors duration-200" onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden fixed inset-0 z-50">
+                <!-- Overlay -->
+                <div id="menuOverlay" 
+                     class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ease-in-out opacity-0 invisible" 
+                     onclick="toggleMenu()"></div>
+                
+                <!-- Menu content -->
+                <div id="menuContent" 
+                     class="fixed inset-y-0 left-0 w-64 bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out">
+                    <div class="flex justify-between items-center px-4 py-3 border-b border-gray-700">
+                        <span class="text-white font-bold text-lg">Menu</span>
+                        <button class="text-gray-400 hover:text-white transition-colors duration-200" onclick="toggleMenu()">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="px-2 py-4">
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-index.html">Home</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-videos.html">Videos</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-audio-detail.html">Audio</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-ebook.html">eBooks</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-downloads.html">Downloads</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-library.html">Library</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-categories.html">Categories</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-tags.html">Tags</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-archives.html">Archives</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-about.html">About</a>
+                        <a class="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md text-base font-medium transition-all duration-200 mb-1" href="blog-login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page content-->
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold mb-8">Downloads</h1>
+            
+            <!-- Downloads grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Download item -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">Web Development Starter Kit</h2>
+                    <p class="text-gray-600 mb-4">A comprehensive collection of tools and resources for web developers.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">Size: 25MB</span>
+                        <a href="blog-download-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download</a>
+                    </div>
+                </div>
+                
+                <!-- Download item -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">CSS Framework Templates</h2>
+                    <p class="text-gray-600 mb-4">Ready-to-use CSS templates for modern web applications.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">Size: 15MB</span>
+                        <a href="blog-download-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download</a>
+                    </div>
+                </div>
+                
+                <!-- Download item -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">JavaScript Code Snippets</h2>
+                    <p class="text-gray-600 mb-4">Common JavaScript patterns and utility functions.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">Size: 5MB</span>
+                        <a href="blog-download-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download</a>
+                    </div>
+                </div>
+                
+                <!-- Download item -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-semibold mb-4">React Component Library</h2>
+                    <p class="text-gray-600 mb-4">Reusable React components for rapid development.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500">Size: 30MB</span>
+                        <a href="blog-download-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="py-12 bg-gray-900 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-white">Copyright 2023 My Blog</p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Settings - Store Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm hidden md:block">
+            <div class="h-16 flex items-center px-6">
+                <a href="site-store-dashboard.html" class="text-xl font-bold text-gray-800">Store Admin</a>
+            </div>
+            <nav class="mt-4">
+                <div class="space-y-1">
+                    <!-- Dashboard -->
+                    <a href="site-store-dashboard.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                        <i class="fas fa-home w-5"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+
+                    <!-- Settings Section -->
+                    <div>
+                        <a href="site-store-settings.html" class="flex items-center px-6 py-3 bg-gray-50 text-gray-900">
+                            <i class="fas fa-cog w-5"></i>
+                            <span class="ml-3">Settings</span>
+                        </a>
+                        <div class="pl-14 space-y-1">
+                            <a href="site-store-settings.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">Store Settings</a>
+                            <a href="site-store-payment.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">Payment</a>
+                            <a href="site-store-shipping.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">Shipping</a>
+                            <a href="site-store-notifications.html" class="block py-2 text-sm text-gray-900 font-medium">Notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="h-16 flex items-center justify-between px-6">
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-auto flex items-center space-x-4">
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center text-gray-600 hover:text-gray-900">
+                                <span class="mr-2">Admin</span>
+                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="p-6">
+                <!-- Header -->
+                <div class="mb-6">
+                    <h1 class="text-2xl font-bold text-gray-900">Notification Settings</h1>
+                </div>
+
+                <!-- Email Notifications -->
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="p-6">
+                        <h2 class="text-lg font-medium text-gray-900 mb-4">Email Notifications</h2>
+                        
+                        <!-- Email Settings -->
+                        <div class="mb-6 pb-6 border-b border-gray-200">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Host</label>
+                                    <input type="text" placeholder="smtp.example.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Port</label>
+                                    <input type="text" placeholder="587" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Username</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">SMTP Password</label>
+                                    <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                </div>
+                            </div>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200">
+                                Test Email Connection
+                            </button>
+                        </div>
+
+                        <!-- Email Templates -->
+                        <div>
+                            <h3 class="text-sm font-medium text-gray-900 mb-4">Email Templates</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between py-2 px-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-900">Order Confirmation</h4>
+                                        <p class="text-sm text-gray-500">Sent when a customer places an order</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-gray-600 hover:text-gray-900">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer" checked>
+                                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between py-2 px-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-900">Shipping Confirmation</h4>
+                                        <p class="text-sm text-gray-500">Sent when an order is shipped</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-gray-600 hover:text-gray-900">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer" checked>
+                                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between py-2 px-4 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-900">Order Status Update</h4>
+                                        <p class="text-sm text-gray-500">Sent when order status changes</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="text-gray-600 hover:text-gray-900">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" class="sr-only peer" checked>
+                                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Push Notifications -->
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="p-6">
+                        <h2 class="text-lg font-medium text-gray-900 mb-4">Push Notifications</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-sm font-medium text-gray-900">New Order Notifications</h3>
+                                    <p class="text-sm text-gray-500">Get notified when new orders are placed</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer" checked>
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-sm font-medium text-gray-900">Low Stock Alerts</h3>
+                                    <p class="text-sm text-gray-500">Get notified when products are low in stock</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer" checked>
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                </label>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h3 class="text-sm font-medium text-gray-900">Customer Reviews</h3>
+                                    <p class="text-sm text-gray-500">Get notified when customers leave reviews</p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer">
+                                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SMS Notifications -->
+                <div class="bg-white rounded-lg shadow-sm mb-6">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h2 class="text-lg font-medium text-gray-900">SMS Notifications</h2>
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" class="sr-only peer">
+                                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gray-100"></div>
+                            </label>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Twilio Account SID</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Twilio Auth Token</label>
+                                <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">From Phone Number</label>
+                                <input type="text" placeholder="+1234567890" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Admin Phone Number</label>
+                                <input type="text" placeholder="+1234567890" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Save Button -->
+                <div class="flex justify-end">
+                    <button type="submit" class="px-6 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

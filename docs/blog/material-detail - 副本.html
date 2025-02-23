@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaterialHub - Resource Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="material-index.html" class="flex items-center">
+                        <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for templates, graphics, icons..." 
+                               class="w-full px-4 py-2 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex items-center space-x-6">
+                    <a href="material-categories.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">Categories</a>
+                    <a href="material-category-list.html?category=Popular" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">Popular</a>
+                    <a href="material-category-list.html?category=New" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">New</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="cart.html" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="profile.html" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <nav class="flex text-sm text-gray-500">
+                <a href="material-index.html" class="hover:text-gray-700">Home</a>
+                <span class="mx-2">/</span>
+                <a href="material-categories.html" class="hover:text-gray-700">Templates</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Modern Presentation Template</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Preview Section -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Preview Image -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[56.25%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-file-powerpoint text-8xl text-gray-200"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview Thumbnails -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500">
+                        <div class="relative pb-[75%] bg-gray-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-image text-3xl text-gray-200"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500">
+                        <div class="relative pb-[75%] bg-gray-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-chart-bar text-3xl text-gray-200"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500">
+                        <div class="relative pb-[75%] bg-gray-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-table text-3xl text-gray-200"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-500">
+                        <div class="relative pb-[75%] bg-gray-100">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <i class="fas fa-chart-pie text-3xl text-gray-200"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-semibold text-gray-900 mb-4">Description</h2>
+                    <div class="prose max-w-none text-gray-600">
+                        <p class="mb-4">
+                            A modern and professional presentation template perfect for business proposals, pitch decks, and corporate presentations. This template includes everything you need to create a stunning presentation.
+                        </p>
+                        <h3 class="text-base font-medium text-gray-900 mt-6 mb-2">Features</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>50+ unique slides</li>
+                            <li>Fully editable shapes and elements</li>
+                            <li>Modern color schemes</li>
+                            <li>Free fonts used</li>
+                            <li>Master slides included</li>
+                            <li>Easy to customize</li>
+                        </ul>
+                        <h3 class="text-base font-medium text-gray-900 mt-6 mb-2">Compatibility</h3>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>PowerPoint 2013 or later</li>
+                            <li>Google Slides</li>
+                            <li>Keynote</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Resource Info -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h1 class="text-xl font-semibold text-gray-900 mb-4">Modern Presentation Template</h1>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                        <span class="text-sm text-gray-500">Updated 2 days ago</span>
+                    </div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="font-medium">4.8</span>
+                            <span class="text-gray-500 ml-1">(128)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-download text-gray-400 mr-1"></i>
+                            <span class="text-gray-500">2.5k downloads</span>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <button class="w-full px-4 py-2 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            Download Now
+                        </button>
+                        <button class="w-full px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            Add to Collection
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Creator Info -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-user text-xl text-gray-300"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-gray-900">DesignStudio</h3>
+                            <p class="text-sm text-gray-500">Premium Creator</p>
+                        </div>
+                    </div>
+                    <button class="w-full px-4 py-2 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        View Profile
+                    </button>
+                </div>
+
+                <!-- License Info -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-sm font-medium text-gray-900 mb-4">License Information</h3>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Commercial use allowed</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Lifetime access</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Free updates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-sm font-medium text-gray-900 mb-4">Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">presentation</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">business</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">modern</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">corporate</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">clean</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Resources -->
+        <section class="mt-12">
+            <h2 class="text-xl font-semibold text-gray-900 mb-6">Related Resources</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Related Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-file-alt text-4xl text-gray-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Business Proposal Template</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Professional business template</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">1.2k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-4xl text-gray-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Marketing Slides Pack</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Complete marketing toolkit</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">980</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-rocket text-4xl text-gray-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Startup Pitch Deck</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Perfect for startups</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">750</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-chart-pie text-4xl text-gray-200"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Annual Report Template</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Professional report design</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">620</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">About</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Company</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Careers</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Help Center</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">Terms of Service</a></li>
+                        <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900">License</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-600">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t">
+                <p class="text-sm text-gray-600 text-center">&copy; 2024 MaterialHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

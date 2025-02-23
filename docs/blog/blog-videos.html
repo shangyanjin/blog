@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Videos - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="blog-index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-white bg-gray-900 px-3 py-2 rounded-md text-sm font-medium" href="blog-index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-videos.html">Videos</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-audio-detail.html">Audio</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-ebook.html">eBooks</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-library.html">Library</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="blog-login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page header -->
+        <header class="bg-white shadow">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <h1 class="text-3xl font-bold text-gray-900">Video Tutorials</h1>
+            </div>
+        </header>
+
+        <!-- Main content -->
+        <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-6">
+                <!-- Left column - Videos -->
+                <div class="lg:w-3/4">
+                    <!-- Featured Video -->
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Featured Video</h2>
+                        <div class="aspect-w-16 aspect-h-9 mb-4">
+                            <iframe class="w-full h-[400px] rounded-lg" 
+                                    src="https://www.youtube.com/embed/example" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Getting Started with Web Development</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide to modern web development practices and tools.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4"><i class="far fa-eye mr-1"></i> 2.5k views</span>
+                            <span class="mr-4"><i class="far fa-clock mr-1"></i> 15:30</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> Dec 25, 2023</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Grid -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Video Card 1 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img src="https://via.placeholder.com/400x225" alt="Video thumbnail" class="w-full">
+                                <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">12:45</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold mb-2">JavaScript ES6 Features</h3>
+                                <p class="text-gray-600 text-sm mb-3">Learn about the latest JavaScript features and how to use them.</p>
+                                <div class="flex items-center text-xs text-gray-500">
+                                    <span class="mr-3"><i class="far fa-eye mr-1"></i> 1.8k</span>
+                                    <span><i class="far fa-calendar-alt mr-1"></i> Dec 20, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 2 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img src="https://via.placeholder.com/400x225" alt="Video thumbnail" class="w-full">
+                                <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">18:30</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold mb-2">CSS Grid Layout Tutorial</h3>
+                                <p class="text-gray-600 text-sm mb-3">Master CSS Grid layout with practical examples.</p>
+                                <div class="flex items-center text-xs text-gray-500">
+                                    <span class="mr-3"><i class="far fa-eye mr-1"></i> 1.2k</span>
+                                    <span><i class="far fa-calendar-alt mr-1"></i> Dec 18, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 3 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img src="https://via.placeholder.com/400x225" alt="Video thumbnail" class="w-full">
+                                <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">22:15</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold mb-2">React Hooks Deep Dive</h3>
+                                <p class="text-gray-600 text-sm mb-3">Understanding React Hooks with real-world applications.</p>
+                                <div class="flex items-center text-xs text-gray-500">
+                                    <span class="mr-3"><i class="far fa-eye mr-1"></i> 2.1k</span>
+                                    <span><i class="far fa-calendar-alt mr-1"></i> Dec 15, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 4 -->
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                            <div class="relative">
+                                <img src="https://via.placeholder.com/400x225" alt="Video thumbnail" class="w-full">
+                                <span class="absolute bottom-2 right-2 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-sm">15:45</span>
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-semibold mb-2">Responsive Design Tips</h3>
+                                <p class="text-gray-600 text-sm mb-3">Essential tips for creating responsive websites.</p>
+                                <div class="flex items-center text-xs text-gray-500">
+                                    <span class="mr-3"><i class="far fa-eye mr-1"></i> 1.5k</span>
+                                    <span><i class="far fa-calendar-alt mr-1"></i> Dec 12, 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-6 flex justify-center">
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">2</a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Right column - Sidebar -->
+                <div class="lg:w-1/4 space-y-6">
+                    <!-- Search Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Search Videos</h3>
+                        <form class="flex gap-2">
+                            <input type="search" 
+                                   class="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                   placeholder="Search videos...">
+                            <button type="submit" 
+                                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Categories Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Video Categories</h3>
+                        <div class="space-y-2">
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">Web Development</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">15</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">JavaScript</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">12</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">UI/UX Design</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">8</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg transition-colors">
+                                <span class="text-gray-800">DevOps</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">5</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Popular Videos Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Videos</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/100x56" alt="Thumbnail" class="w-24 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Getting Started with React</h4>
+                                    <p class="text-sm text-gray-500">2.5k views • 15:30</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/100x56" alt="Thumbnail" class="w-24 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">CSS Grid Layout</h4>
+                                    <p class="text-sm text-gray-500">1.8k views • 12:45</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex gap-3 hover:bg-gray-50 rounded-lg p-2 transition-colors">
+                                <img src="https://via.placeholder.com/100x56" alt="Thumbnail" class="w-24 rounded">
+                                <div>
+                                    <h4 class="font-medium text-gray-900">JavaScript ES6</h4>
+                                    <p class="text-sm text-gray-500">1.2k views • 18:20</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags Card -->
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">JavaScript</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">React</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">CSS</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">HTML</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">Python</a>
+                            <a href="#" class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm hover:bg-gray-200 transition-colors">DevOps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Banner -->
+            <div class="bg-[#dee2e6] rounded-lg shadow-md mt-8 p-8">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0 md:mr-8">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">Stay Updated!</h3>
+                        <p class="text-gray-600">Get notified about new video tutorials and updates.</p>
+                    </div>
+                    <form class="flex w-full md:w-auto">
+                        <input type="email" 
+                               class="flex-1 md:w-64 p-3 rounded-l border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white" 
+                               placeholder="Enter your email"
+                               required />
+                        <button type="submit" 
+                                class="bg-blue-600 text-white px-6 py-3 rounded-r font-medium hover:bg-blue-700 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer-->
+        <footer class="py-12 bg-gray-800 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-white">Copyright &copy; Your Website 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>

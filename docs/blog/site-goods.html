@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">My Site</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="site-index.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="site-goods.html" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Goods</a>
+                        <a href="site-video.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Videos</a>
+                        <a href="site-audio.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Audio</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="site-index.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Home</a>
+                    <a href="site-goods.html" class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 text-base font-medium">Goods</a>
+                    <a href="site-video.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Videos</a>
+                    <a href="site-audio.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Audio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold text-gray-900">Goods Collection</h1>
+                <p class="mt-2 text-sm text-gray-600">Browse through our curated collection of goods</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content Area -->
+            <div class="lg:col-span-2">
+                <!-- Layout Switch and Categories -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="flex flex-wrap gap-4">
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">All</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Category 1</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Category 2</button>
+                            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">Category 3</button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="switchLayout('grid3')" class="p-2 text-gray-500 hover:text-gray-700" id="grid3Btn" title="Three columns">
+                                <i class="fas fa-grip-horizontal"></i>
+                            </button>
+                            <button onclick="switchLayout('grid')" class="p-2 text-gray-500 hover:text-gray-700" id="gridBtn" title="Two columns">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button onclick="switchLayout('list')" class="p-2 text-gray-500 hover:text-gray-700" id="listBtn" title="List view">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Goods Grid -->
+                <div id="goodsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Grid Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 1</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$99.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 2</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$79.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Item 3 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 3</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$89.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Item 4 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 4</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$69.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Item 5 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 5</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$109.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Item 6 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <div class="relative">
+                            <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-image text-6xl text-gray-200"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Product Title 6</h3>
+                            <p class="mt-1 text-sm text-gray-500">Product description goes here...</p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <span class="text-blue-600 font-semibold">$129.99</span>
+                                <button class="px-3 py-1.5 bg-gray-100 text-gray-600 text-sm rounded-lg hover:bg-gray-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-8">
+                    <nav class="flex justify-center">
+                        <ul class="flex space-x-2">
+                            <li>
+                                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-blue-600">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50">3</a>
+                            </li>
+                            <li>
+                                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 bg-white hover:bg-gray-50">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Search Widget -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Search Goods</h3>
+                    <div class="flex">
+                        <input type="text" placeholder="Search..." class="flex-1 px-4 py-2 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <button class="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Price Range</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1">Min Price</label>
+                            <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="0">
+                        </div>
+                        <div>
+                            <label class="block text-sm text-gray-600 mb-1">Max Price</label>
+                            <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="1000">
+                        </div>
+                        <button class="w-full px-4 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200">
+                            Apply Filter
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Fashion</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Shoes</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Accessories</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Electronics</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Books</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500">&copy; 2024 My Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function switchLayout(type) {
+            const container = document.getElementById('goodsContainer');
+            const grid3Btn = document.getElementById('grid3Btn');
+            const gridBtn = document.getElementById('gridBtn');
+            const listBtn = document.getElementById('listBtn');
+
+            // Reset all buttons to default state
+            grid3Btn.className = 'p-2 text-gray-500 hover:text-gray-700';
+            gridBtn.className = 'p-2 text-gray-500 hover:text-gray-700';
+            listBtn.className = 'p-2 text-gray-500 hover:text-gray-700';
+
+            if (type === 'grid3') {
+                container.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6';
+                grid3Btn.className = 'p-2 text-blue-600';
+            } else if (type === 'grid') {
+                container.className = 'grid grid-cols-1 sm:grid-cols-2 gap-6';
+                gridBtn.className = 'p-2 text-blue-600';
+            } else {
+                container.className = 'space-y-6';
+                listBtn.className = 'p-2 text-blue-600';
+            }
+        }
+    </script>
+</body>
+</html>

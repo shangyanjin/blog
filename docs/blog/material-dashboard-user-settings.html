@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - MaterialHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="ml-3 relative">
+                            <div class="flex items-center">
+                                <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="">
+                                <span class="ml-2 text-sm text-gray-700">John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex space-x-8">
+                <!-- Settings Navigation -->
+                <div class="w-64">
+                    <nav class="space-y-1">
+                        <a href="#profile" class="bg-blue-50 text-blue-600 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-user w-6"></i>
+                            Profile Settings
+                        </a>
+                        <a href="#account" class="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-cog w-6"></i>
+                            Account Settings
+                        </a>
+                        <a href="#billing" class="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-credit-card w-6"></i>
+                            Billing & Plans
+                        </a>
+                        <a href="#notifications" class="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-bell w-6"></i>
+                            Notifications
+                        </a>
+                        <a href="#security" class="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-shield-alt w-6"></i>
+                            Security
+                        </a>
+                        <a href="#integrations" class="text-gray-600 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                            <i class="fas fa-plug w-6"></i>
+                            Integrations
+                        </a>
+                    </nav>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="flex-1 space-y-8">
+                    <!-- Profile Settings -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Profile Settings</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-8">
+                                <img src="https://via.placeholder.com/80" alt="" class="w-20 h-20 rounded-full">
+                                <div class="ml-6">
+                                    <button class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                                        Change Photo
+                                    </button>
+                                    <button class="ml-3 px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50">
+                                        Remove
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        First Name
+                                    </label>
+                                    <input type="text" value="John" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Last Name
+                                    </label>
+                                    <input type="text" value="Doe" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Email
+                                    </label>
+                                    <input type="email" value="john.doe@example.com" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Phone
+                                    </label>
+                                    <input type="tel" value="+1 (555) 123-4567" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Settings -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Account Settings</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Username
+                                    </label>
+                                    <input type="text" value="johndoe" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Language
+                                    </label>
+                                    <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>English (US)</option>
+                                        <option>Spanish</option>
+                                        <option>French</option>
+                                        <option>German</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">
+                                        Time Zone
+                                    </label>
+                                    <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option>Pacific Time (PT)</option>
+                                        <option>Mountain Time (MT)</option>
+                                        <option>Central Time (CT)</option>
+                                        <option>Eastern Time (ET)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Billing & Plans -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Billing & Plans</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="mb-6">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-sm font-medium text-gray-900">Current Plan</h3>
+                                        <p class="text-sm text-gray-500">Free Plan</p>
+                                    </div>
+                                    <a href="material-dashboard-upgrade.html" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                                        Upgrade Plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="border-t border-gray-100 pt-6">
+                                <h3 class="text-sm font-medium text-gray-900 mb-4">Payment Methods</h3>
+                                <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50">
+                                    <i class="fas fa-plus mr-2"></i>
+                                    Add Payment Method
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Notifications</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-sm font-medium text-gray-900">Email Notifications</h3>
+                                        <p class="text-sm text-gray-500">Receive email updates about your account</p>
+                                    </div>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-sm font-medium text-gray-900">Push Notifications</h3>
+                                        <p class="text-sm text-gray-500">Receive push notifications on your devices</p>
+                                    </div>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600" checked>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h3 class="text-sm font-medium text-gray-900">Marketing Communications</h3>
+                                        <p class="text-sm text-gray-500">Receive updates about new features and promotions</p>
+                                    </div>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox h-4 w-4 text-blue-600">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Security</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-sm font-medium text-gray-900 mb-4">Change Password</h3>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                                Current Password
+                                            </label>
+                                            <input type="password" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                                New Password
+                                            </label>
+                                            <input type="password" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-1">
+                                                Confirm New Password
+                                            </label>
+                                            <input type="password" class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-100 pt-6">
+                                    <h3 class="text-sm font-medium text-gray-900 mb-4">Two-Factor Authentication</h3>
+                                    <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50">
+                                        Enable 2FA
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integrations -->
+                    <div class="bg-white shadow-sm rounded-lg">
+                        <div class="px-6 py-4 border-b border-gray-100">
+                            <h2 class="text-lg font-medium text-gray-900">Integrations</h2>
+                        </div>
+                        <div class="p-6">
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-github text-2xl text-gray-700 mr-4"></i>
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">GitHub</h3>
+                                            <p class="text-sm text-gray-500">Connect your GitHub account</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50">
+                                        Connect
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-google text-2xl text-gray-700 mr-4"></i>
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Google</h3>
+                                            <p class="text-sm text-gray-500">Connect your Google account</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-4 py-2 bg-gray-100 text-gray-500 rounded-md text-sm font-medium">
+                                        Connected
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                                    <div class="flex items-center">
+                                        <i class="fab fa-slack text-2xl text-gray-700 mr-4"></i>
+                                        <div>
+                                            <h3 class="text-sm font-medium text-gray-900">Slack</h3>
+                                            <p class="text-sm text-gray-500">Connect your Slack workspace</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50">
+                                        Connect
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

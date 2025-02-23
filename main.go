@@ -3,10 +3,7 @@ package main
 import (
 	"blog/config"
 	"blog/router"
-	"html/template"
-
 	"github.com/gin-gonic/gin"
-	"github.com/sirupsen/logrus"
 )
 
 func main() {
@@ -39,17 +36,17 @@ func initTemplate(r *gin.Engine) {
 	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
 
 	//load templates with root and subdir
-	tmplFiles := template.New("")
-	if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
-		logrus.Error("Error loading root templates:", err)
-	}
-	if _, err := tmplFiles.ParseGlob(defaultTheme + "/**/*.html"); err != nil {
-		logrus.Error("Error loading subdir templates:", err)
-	}
-	r.SetHTMLTemplate(tmplFiles)
+	//tmplFiles := template.New("")
+	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
+	//	logrus.Error("Error loading root templates:", err)
+	//}
+	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/**/*.html"); err != nil {
+	//	logrus.Error("Error loading subdir templates:", err)
+	//}
+	//r.SetHTMLTemplate(tmplFiles)
 
-	//load templates from subdir
-	//r.LoadHTMLGlob(defaultTheme + "/**/*.html")
+	//load templates only from subdir
+	r.LoadHTMLGlob(defaultTheme + "/**/*.html")
 
 	// Serve static files from configured theme
 	r.Static("/static", defaultTheme+"/static")

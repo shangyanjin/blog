@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-full px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-blog text-blue-500 mr-2"></i>
+                            My Site
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-3">
+                        <img class="h-8 w-8 rounded-full" src="https://ui-avatars.com/api/?name=John+Doe" alt="User avatar">
+                        <span class="text-gray-700">John Doe</span>
+                    </div>
+                    <button class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="fixed inset-y-0 left-0 w-64 bg-white pt-16 border-r border-gray-200">
+        <nav class="mt-5 px-2">
+            <!-- Dashboard -->
+            <a href="site-user-dashboard.html" class="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-600 hover:bg-gray-50">
+                <i class="fas fa-home mr-4 text-gray-500"></i>
+                Dashboard
+            </a>
+
+            <!-- Projects -->
+            <div class="mt-1">
+                <div class="px-2 py-2 text-base font-medium text-gray-900">
+                    <i class="fas fa-project-diagram mr-4 text-gray-500"></i>
+                    Projects
+                </div>
+                <div class="pl-8">
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-blue-600 rounded-md bg-blue-50">
+                        All Projects
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Active
+                    </a>
+                    <a href="#" class="group flex items-center px-2 py-1.5 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50">
+                        Completed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Other Menu Items -->
+            <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-600 hover:bg-gray-50">
+                <i class="fas fa-tasks mr-4 text-gray-500"></i>
+                Tasks
+            </a>
+
+            <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-600 hover:bg-gray-50">
+                <i class="fas fa-calendar mr-4 text-gray-500"></i>
+                Calendar
+            </a>
+
+            <a href="#" class="mt-1 group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-600 hover:bg-gray-50">
+                <i class="fas fa-file-alt mr-4 text-gray-500"></i>
+                Documents
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="pl-64 pt-16">
+        <!-- Header Section -->
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-3xl font-bold text-gray-900">Projects</h1>
+                    <button class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700">
+                        <i class="fas fa-plus mr-2"></i>
+                        New Project
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Project List -->
+        <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+            <!-- Filters -->
+            <div class="bg-white shadow rounded-lg mb-6">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-1">
+                            <input type="text" placeholder="Search projects..." class="shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <select class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                                <option>All Status</option>
+                                <option>Active</option>
+                                <option>Completed</option>
+                                <option>On Hold</option>
+                            </select>
+                            <select class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md">
+                                <option>Sort by</option>
+                                <option>Date</option>
+                                <option>Name</option>
+                                <option>Status</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Project Card 1 -->
+                <div class="bg-white shadow rounded-lg hover:shadow-md transition-shadow">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                Active
+                            </span>
+                            <div class="flex items-center">
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <a href="site-project-detail.html" class="hover:text-blue-600">E-commerce Website Redesign</a>
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4">Modernizing the online shopping experience with a fresh design and improved user interface.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-1"></i>
+                                Due Mar 15
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tasks mr-1"></i>
+                                12/20 tasks
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <div class="flex -space-x-2">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=John+Doe" alt="">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Jane+Smith" alt="">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Bob+Johnson" alt="">
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    65% complete
+                                </div>
+                            </div>
+                            <div class="mt-2 relative pt-1">
+                                <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                                    <div style="width: 65%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white shadow rounded-lg hover:shadow-md transition-shadow">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                On Hold
+                            </span>
+                            <div class="flex items-center">
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <a href="site-project-detail.html" class="hover:text-blue-600">Mobile App Development</a>
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4">Creating a cross-platform mobile application for content management.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-1"></i>
+                                Due Apr 30
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tasks mr-1"></i>
+                                8/15 tasks
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <div class="flex -space-x-2">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Alice+Brown" alt="">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=David+Wilson" alt="">
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    45% complete
+                                </div>
+                            </div>
+                            <div class="mt-2 relative pt-1">
+                                <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                                    <div style="width: 45%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white shadow rounded-lg hover:shadow-md transition-shadow">
+                    <div class="px-4 py-5 sm:p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                Completed
+                            </span>
+                            <div class="flex items-center">
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">
+                            <a href="site-project-detail.html" class="hover:text-blue-600">Blog Platform Migration</a>
+                        </h3>
+                        <p class="text-sm text-gray-500 mb-4">Successfully migrated the blog platform to a new content management system.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-500">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-1"></i>
+                                Completed
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-tasks mr-1"></i>
+                                15/15 tasks
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-200">
+                            <div class="flex justify-between items-center">
+                                <div class="flex -space-x-2">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Sarah+Lee" alt="">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Mike+Chen" alt="">
+                                    <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Emma+Davis" alt="">
+                                </div>
+                                <div class="text-sm text-gray-500">
+                                    100% complete
+                                </div>
+                            </div>
+                            <div class="mt-2 relative pt-1">
+                                <div class="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                                    <div style="width: 100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

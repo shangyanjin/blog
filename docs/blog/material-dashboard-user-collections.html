@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collections - MaterialHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                            <i class="fas fa-bookmark"></i>
+                        </button>
+                        <div class="relative">
+                            <div class="flex items-center">
+                                <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="">
+                                <span class="ml-2 text-sm text-gray-700">John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">My Collections</h1>
+                    <p class="text-gray-600 mt-1">Organize and manage your saved resources</p>
+                </div>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                    <i class="fas fa-plus mr-2"></i>
+                    New Collection
+                </button>
+            </div>
+
+            <!-- Collections Grid -->
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[60%] bg-gray-100">
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-medium text-gray-900">UI Design Resources</h3>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Essential UI kits and design assets</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">24 items</span>
+                            <span class="text-sm text-gray-500">Updated 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[60%] bg-gray-100">
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-medium text-gray-900">Icon Collections</h3>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Premium icon sets and packs</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">12 items</span>
+                            <span class="text-sm text-gray-500">Updated 1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[60%] bg-gray-100">
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-medium text-gray-900">Templates</h3>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Website and app templates</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">8 items</span>
+                            <span class="text-sm text-gray-500">Updated 3 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[60%] bg-gray-100">
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-medium text-gray-900">Illustrations</h3>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Vector illustrations and graphics</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">16 items</span>
+                            <span class="text-sm text-gray-500">Updated yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[60%] bg-gray-100">
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1 p-2">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                            <img src="https://via.placeholder.com/200" alt="" class="w-full h-full object-cover rounded">
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="text-lg font-medium text-gray-900">Design Inspiration</h3>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Inspiring design examples</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">32 items</span>
+                            <span class="text-sm text-gray-500">Updated 5 days ago</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Collection Card -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden border-2 border-dashed border-gray-300">
+                    <div class="flex flex-col items-center justify-center h-full p-8">
+                        <button class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-plus text-blue-500 text-xl"></i>
+                        </button>
+                        <h3 class="text-lg font-medium text-gray-900">Create Collection</h3>
+                        <p class="text-sm text-gray-500 text-center mt-2">
+                            Organize your resources into a new collection
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recently Added -->
+            <div class="mt-12">
+                <h2 class="text-lg font-medium text-gray-900 mb-6">Recently Added</h2>
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Business UI Kit</h3>
+                                <p class="text-sm text-gray-500">Added to UI Design Resources</p>
+                            </div>
+                            <span class="text-sm text-gray-500">2 hours ago</span>
+                        </div>
+                        <div class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Icon Pack Pro</h3>
+                                <p class="text-sm text-gray-500">Added to Icon Collections</p>
+                            </div>
+                            <span class="text-sm text-gray-500">1 day ago</span>
+                        </div>
+                        <div class="p-4 flex items-center">
+                            <img src="https://via.placeholder.com/48" alt="" class="w-12 h-12 rounded object-cover">
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Landing Page Template</h3>
+                                <p class="text-sm text-gray-500">Added to Templates</p>
+                            </div>
+                            <span class="text-sm text-gray-500">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

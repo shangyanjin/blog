@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Support Ticket - Creator Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm">
+            <!-- Logo -->
+            <div class="px-6 py-4 border-b border-gray-100">
+                <a href="material-index.html" class="flex items-center">
+                    <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="px-4 py-4">
+                <div class="space-y-1">
+                    <a href="material-creator-dashboard.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-chart-line w-5 mr-2"></i>
+                        Dashboard
+                    </a>
+                    <a href="material-dashboard-resources.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-cube w-5 mr-2"></i>
+                        Resources
+                    </a>
+                    <a href="material-dashboard-collections.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-folder w-5 mr-2"></i>
+                        Collections
+                    </a>
+                    <a href="material-dashboard-support.html" class="flex items-center px-2 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md group">
+                        <i class="fas fa-headset w-5 mr-2"></i>
+                        Support
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Bar -->
+            <header class="bg-white shadow-sm">
+                <div class="px-6 py-4">
+                    <div class="flex items-center">
+                        <a href="material-dashboard-support.html" class="text-gray-400 hover:text-gray-500 mr-4">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h1 class="text-lg font-medium text-gray-900">New Support Ticket</h1>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="px-6 py-6 max-w-3xl">
+                <!-- Common Solutions -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Before Creating a Ticket</h2>
+                    <p class="text-gray-600 mb-4">Check these common solutions that might help resolve your issue quickly:</p>
+                    
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-download text-blue-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Download Troubleshooting Guide</h3>
+                                <p class="text-sm text-gray-500">Common solutions for download issues</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400"></i>
+                        </a>
+
+                        <a href="#" class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-book text-green-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">Resource Documentation</h3>
+                                <p class="text-sm text-gray-500">Detailed guides for using our resources</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400"></i>
+                        </a>
+
+                        <a href="#" class="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50">
+                            <div class="w-8 h-8 bg-purple-50 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-question-circle text-purple-500"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-medium text-gray-900">FAQ</h3>
+                                <p class="text-sm text-gray-500">Frequently asked questions and answers</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ticket Form -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Create New Ticket</h2>
+                    
+                    <form>
+                        <div class="space-y-6">
+                            <!-- Subject -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">
+                                    Subject
+                                </label>
+                                <input type="text" 
+                                       class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       placeholder="Brief description of your issue">
+                            </div>
+
+                            <!-- Related Resource -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">
+                                    Related Resource
+                                </label>
+                                <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option>Select a resource</option>
+                                    <option>Business Template Pack</option>
+                                    <option>UI Design Kit</option>
+                                    <option>Social Media Pack</option>
+                                </select>
+                            </div>
+
+                            <!-- Issue Type -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Issue Type
+                                </label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="issue_type" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                        <div class="ml-3">
+                                            <span class="block text-sm font-medium text-gray-900">Technical Issue</span>
+                                            <span class="block text-sm text-gray-500">Problems with downloads or usage</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="issue_type" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                        <div class="ml-3">
+                                            <span class="block text-sm font-medium text-gray-900">Billing Issue</span>
+                                            <span class="block text-sm text-gray-500">Questions about payments</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="issue_type" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                        <div class="ml-3">
+                                            <span class="block text-sm font-medium text-gray-900">Feature Request</span>
+                                            <span class="block text-sm text-gray-500">Suggestions for improvements</span>
+                                        </div>
+                                    </label>
+                                    <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                        <input type="radio" name="issue_type" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300">
+                                        <div class="ml-3">
+                                            <span class="block text-sm font-medium text-gray-900">Other</span>
+                                            <span class="block text-sm text-gray-500">General questions or feedback</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Priority -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">
+                                    Priority
+                                </label>
+                                <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option>Low - General question or feedback</option>
+                                    <option>Medium - Minor issue affecting usage</option>
+                                    <option>High - Serious issue affecting work</option>
+                                    <option>Urgent - Critical issue blocking work</option>
+                                </select>
+                            </div>
+
+                            <!-- Description -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">
+                                    Description
+                                </label>
+                                <textarea rows="6" 
+                                          class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                          placeholder="Please provide as much detail as possible about your issue..."></textarea>
+                            </div>
+
+                            <!-- Attachments -->
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Attachments
+                                </label>
+                                <div class="flex items-center justify-center p-6 border-2 border-gray-300 border-dashed rounded-lg">
+                                    <div class="text-center">
+                                        <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                                        <div class="text-sm text-gray-600">
+                                            <label for="file-upload" class="relative cursor-pointer">
+                                                <span class="text-blue-600 hover:text-blue-700">Upload files</span>
+                                                <span class="text-gray-500"> or drag and drop</span>
+                                                <input id="file-upload" type="file" class="sr-only" multiple>
+                                            </label>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">
+                                            PNG, JPG, GIF up to 10MB
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit Buttons -->
+                            <div class="flex items-center justify-end space-x-4">
+                                <button type="button" class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                    Save as Draft
+                                </button>
+                                <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                                    Submit Ticket
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

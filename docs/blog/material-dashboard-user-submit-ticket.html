@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Ticket - MaterialHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Top Navigation -->
+        <nav class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="p-2 rounded-full text-gray-500 hover:text-gray-600">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="ml-3 relative">
+                            <div class="flex items-center">
+                                <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/32" alt="">
+                                <span class="ml-2 text-sm text-gray-700">John Doe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Submit a Support Ticket</h1>
+                <p class="text-gray-600">Fill out the form below to get help from our support team.</p>
+            </div>
+
+            <!-- Common Solutions -->
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <h2 class="text-lg font-medium text-gray-900 mb-4">Before submitting a ticket</h2>
+                <p class="text-gray-600 mb-4">Check if your issue is covered in our common solutions:</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                        <i class="fas fa-download text-blue-500 w-6"></i>
+                        <span class="text-gray-700">Download Issues</span>
+                    </a>
+                    <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                        <i class="fas fa-credit-card text-blue-500 w-6"></i>
+                        <span class="text-gray-700">Billing Questions</span>
+                    </a>
+                    <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                        <i class="fas fa-key text-blue-500 w-6"></i>
+                        <span class="text-gray-700">Account Access</span>
+                    </a>
+                    <a href="#" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                        <i class="fas fa-file-alt text-blue-500 w-6"></i>
+                        <span class="text-gray-700">License Issues</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ticket Form -->
+            <div class="bg-white rounded-lg shadow-sm">
+                <div class="p-6">
+                    <form>
+                        <!-- Subject -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Subject
+                            </label>
+                            <input type="text" 
+                                   placeholder="Brief description of your issue" 
+                                   class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+
+                        <!-- Related Resource -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Related Resource (Optional)
+                            </label>
+                            <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select a resource</option>
+                                <option value="1">Business UI Kit</option>
+                                <option value="2">Icon Pack Pro</option>
+                                <option value="3">Illustration Pack</option>
+                            </select>
+                        </div>
+
+                        <!-- Issue Type -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Issue Type
+                            </label>
+                            <select class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select issue type</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="billing">Billing Issue</option>
+                                <option value="account">Account Issue</option>
+                                <option value="download">Download Problem</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Priority -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Priority
+                            </label>
+                            <div class="grid grid-cols-3 gap-4">
+                                <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="priority" class="text-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">Low</span>
+                                </label>
+                                <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="priority" class="text-blue-500" checked>
+                                    <span class="ml-2 text-sm text-gray-700">Medium</span>
+                                </label>
+                                <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="priority" class="text-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">High</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Description
+                            </label>
+                            <textarea rows="6" 
+                                      placeholder="Detailed description of your issue..." 
+                                      class="w-full px-4 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            <p class="mt-2 text-sm text-gray-500">
+                                Please provide as much detail as possible to help us assist you better.
+                            </p>
+                        </div>
+
+                        <!-- Attachments -->
+                        <div class="mb-6">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Attachments (Optional)
+                            </label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <i class="fas fa-cloud-upload-alt text-gray-400 text-3xl mb-3"></i>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500">
+                                            <span>Upload files</span>
+                                            <input id="file-upload" name="file-upload" type="file" class="sr-only" multiple>
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">
+                                        PNG, JPG, GIF up to 10MB
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex items-center justify-end space-x-4">
+                            <button type="button" class="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                Cancel
+                            </button>
+                            <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-medium hover:bg-blue-600">
+                                Submit Ticket
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

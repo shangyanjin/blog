@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaterialHub - Your Creative Resource Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="material-index.html" class="flex items-center">
+                        <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search for templates, graphics, icons..." 
+                               class="w-full px-4 py-2 pl-10 pr-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="flex items-center space-x-6">
+                    <a href="material-categories.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">Categories</a>
+                    <a href="material-category-list.html?category=Popular" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">Popular</a>
+                    <a href="material-category-list.html?category=New" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-blue-500 inline-flex items-center px-1 pt-1 text-sm font-medium">New</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="cart.html" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="profile.html" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="relative z-10">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Discover Premium Creative Resources</h1>
+                <p class="text-xl text-gray-500 mb-8">Access thousands of high-quality templates, graphics, and design assets</p>
+                <a href="material-browse.html" class="inline-block bg-blue-500 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition duration-150">
+                    Start Exploring
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Materials -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900">Featured Resources</h2>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <button onclick="setGridView('grid-5')" class="text-gray-500 hover:text-blue-500" title="5 columns">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button onclick="setGridView('grid-3')" class="text-gray-500 hover:text-blue-500" title="3 columns">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button onclick="setGridView('list')" class="text-gray-500 hover:text-blue-500" title="List view">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    <select class="px-3 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Downloads</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Featured Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" id="featured-grid">
+                <!-- Featured Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center group hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-file-powerpoint text-5xl text-gray-200 group-hover:text-gray-300 transition-colors"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Modern Presentation Template</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Clean and professional slides</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center justify-end min-w-[40px]">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">2.5k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center group hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-icons text-5xl text-gray-200 group-hover:text-gray-300 transition-colors"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Essential Icon Pack</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">500+ versatile icons</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center justify-end min-w-[40px] ml-auto">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">5k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center group hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-share-alt text-5xl text-gray-200 group-hover:text-gray-300 transition-colors"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Social Media Templates</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Instagram & Facebook posts</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center justify-end min-w-[40px]">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">3.2k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center group hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-layer-group text-5xl text-gray-200 group-hover:text-gray-300 transition-colors"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">Modern UI Kit</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Complete design system</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center justify-end min-w-[40px]">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">1.8k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Item 5 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="relative pb-[62.5%] bg-gray-100">
+                        <div class="absolute inset-0 flex items-center justify-center group hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-cube text-5xl text-gray-200 group-hover:text-gray-300 transition-colors"></i>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900 truncate">3D Device Mockups</h3>
+                        <p class="text-xs text-gray-500 truncate mt-0.5 mb-2">Realistic device presentations</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs bg-blue-50 text-blue-500 px-2 py-0.5 rounded">Premium</span>
+                            <div class="flex items-center justify-end min-w-[40px]">
+                                <i class="fas fa-download text-gray-400 text-xs"></i>
+                                <span class="text-xs text-gray-500 ml-1">2.1k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Browse by Category</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+                <!-- Templates -->
+                <a href="material-category-list.html?category=Templates" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mb-3">
+                        <i class="fas fa-file-alt text-blue-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">Templates</span>
+                </a>
+
+                <!-- Graphics -->
+                <a href="material-category-list.html?category=Graphics" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 mb-3">
+                        <i class="fas fa-palette text-blue-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">Graphics</span>
+                </a>
+
+                <!-- Icons -->
+                <a href="material-category-list.html?category=Icons" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 mb-3">
+                        <i class="fas fa-icons text-green-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">Icons</span>
+                </a>
+
+                <!-- UI Kits -->
+                <a href="material-category-list.html?category=UI-Kits" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-pink-100 mb-3">
+                        <i class="fas fa-layer-group text-pink-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">UI Kits</span>
+                </a>
+
+                <!-- Mockups -->
+                <a href="material-category-list.html?category=Mockups" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-yellow-100 mb-3">
+                        <i class="fas fa-mobile-alt text-yellow-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">Mockups</span>
+                </a>
+
+                <!-- Fonts -->
+                <a href="material-category-list.html?category=Fonts" class="flex flex-col items-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 mb-3">
+                        <i class="fas fa-font text-red-500 text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">Fonts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Quality -->
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-gem text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Premium Quality</h3>
+                    <p class="text-gray-500">Curated collection of high-quality design resources</p>
+                </div>
+
+                <!-- Updates -->
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-sync text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Regular Updates</h3>
+                    <p class="text-gray-500">New resources added weekly to keep you inspired</p>
+                </div>
+
+                <!-- Support -->
+                <div class="text-center">
+                    <div class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-headset text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">24/7 Support</h3>
+                    <p class="text-gray-500">Dedicated support team to help you succeed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">About</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">About Us</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Support</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Help Center</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Contact Us</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Legal</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Terms of Service</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">License</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">Connect</h3>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8">
+                <p class="text-base text-gray-400">&copy; 2024 MaterialHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setGridView(view) {
+            const container = document.querySelector('#featured-grid');
+            const items = container.querySelectorAll('.product-item');
+            
+            items.forEach(item => {
+                const link = item.querySelector('a');
+                
+                // 获取必要的元素
+                let imgContainer, imgDiv, badge, contentSection;
+                
+                if (view === 'list') {
+                    // 转换为列表视图
+                    imgContainer = item.querySelector('.img-container');
+                    imgDiv = imgContainer.querySelector('div');
+                    badge = imgContainer.querySelector('.absolute');
+                    contentSection = item.querySelector('.p-4');
+                    
+                    // 设置列表视图样式
+                    item.className = 'product-item bg-white rounded-lg shadow-sm overflow-hidden';
+                    link.className = 'flex items-center p-4 hover:bg-gray-50';
+                    
+                    // 创建左侧图片区域
+                    const leftSection = document.createElement('div');
+                    leftSection.className = 'flex-shrink-0 relative';
+                    imgDiv.className = 'w-40 h-40 bg-gray-100 flex items-center justify-center group hover:bg-gray-200 transition-colors rounded-lg';
+                    leftSection.appendChild(imgDiv.cloneNode(true));
+                    if (badge) leftSection.appendChild(badge.cloneNode(true));
+                    
+                    // 创建右侧内容区域
+                    const rightSection = document.createElement('div');
+                    rightSection.className = 'flex-1 ml-6';
+                    rightSection.innerHTML = contentSection.innerHTML;
+                    
+                    // 重组内容
+                    link.innerHTML = '';
+                    link.appendChild(leftSection);
+                    link.appendChild(rightSection);
+                } else {
+                    // 转换为网格视图
+                    const currentLeftSection = link.querySelector('.flex-shrink-0');
+                    const currentRightSection = link.querySelector('.flex-1');
+                    
+                    if (currentLeftSection && currentRightSection) {
+                        // 从列表视图转换回网格视图
+                        item.className = 'product-item bg-white rounded-lg shadow-sm overflow-hidden';
+                        link.className = 'block';
+                        
+                        // 重建图片容器
+                        imgContainer = document.createElement('div');
+                        imgContainer.className = 'img-container relative';
+                        imgDiv = currentLeftSection.querySelector('div').cloneNode(true);
+                        imgDiv.className = 'w-full h-40 bg-gray-100 flex items-center justify-center group hover:bg-gray-200 transition-colors';
+                        badge = currentLeftSection.querySelector('.absolute');
+                        
+                        // 重建内容区域
+                        contentSection = document.createElement('div');
+                        contentSection.className = 'p-4';
+                        contentSection.innerHTML = currentRightSection.innerHTML;
+                        
+                        // 组装网格视图结构
+                        imgContainer.appendChild(imgDiv);
+                        if (badge) imgContainer.appendChild(badge.cloneNode(true));
+                        
+                        link.innerHTML = '';
+                        link.appendChild(imgContainer);
+                        link.appendChild(contentSection);
+                    }
+                }
+            });
+            
+            // 设置容器布局
+            switch(view) {
+                case 'grid-5':
+                    container.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6';
+                    break;
+                case 'grid-3':
+                    container.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6';
+                    break;
+                case 'list':
+                    container.className = 'space-y-4';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

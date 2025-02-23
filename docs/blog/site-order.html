@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">My Site</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="site-index.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="site-goods.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Goods</a>
+                        <a href="site-cart.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-gray-900">Order #12345</h1>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                    Order Confirmed
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Order Details -->
+            <div class="lg:col-span-2">
+                <!-- Order Status -->
+                <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                    <div class="space-y-8">
+                        <div class="relative">
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-center w-8 h-8 bg-green-100 rounded-full">
+                                    <i class="fas fa-check text-green-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-base font-medium text-gray-900">Order Confirmed</h3>
+                                    <p class="text-sm text-gray-500">Dec 27, 2024 12:00 PM</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-8 left-4 -ml-px h-full w-0.5 bg-gray-200"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+                                    <i class="fas fa-box text-gray-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-base font-medium text-gray-900">Processing</h3>
+                                    <p class="text-sm text-gray-500">Preparing your order</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-8 left-4 -ml-px h-full w-0.5 bg-gray-200"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+                                    <i class="fas fa-truck text-gray-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-base font-medium text-gray-900">Shipping</h3>
+                                    <p class="text-sm text-gray-500">Not yet shipped</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-8 left-4 -ml-px h-full w-0.5 bg-gray-200"></div>
+                        </div>
+                        <div class="relative">
+                            <div class="flex items-center">
+                                <div class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+                                    <i class="fas fa-flag-checkered text-gray-400"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-base font-medium text-gray-900">Delivered</h3>
+                                    <p class="text-sm text-gray-500">Estimated Dec 30, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Items -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6 border-b border-gray-200">
+                        <h2 class="text-lg font-medium text-gray-900">Order Items</h2>
+                    </div>
+                    <div class="divide-y divide-gray-200">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-image text-3xl text-gray-200"></i>
+                                </div>
+                                <div class="ml-6 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-lg font-medium text-gray-900">Product Title 1</h3>
+                                            <p class="mt-1 text-sm text-gray-500">Category</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="text-lg font-medium text-gray-900">$99.99</p>
+                                            <p class="mt-1 text-sm text-gray-500">Qty: 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-image text-3xl text-gray-200"></i>
+                                </div>
+                                <div class="ml-6 flex-1">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-lg font-medium text-gray-900">Product Title 2</h3>
+                                            <p class="mt-1 text-sm text-gray-500">Category</p>
+                                        </div>
+                                        <div class="text-right">
+                                            <p class="text-lg font-medium text-gray-900">$79.99</p>
+                                            <p class="mt-1 text-sm text-gray-500">Qty: 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- Shipping Information -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Shipping Information</h2>
+                    <div class="space-y-3">
+                        <p class="text-gray-900">John Doe</p>
+                        <p class="text-gray-600">123 Main Street</p>
+                        <p class="text-gray-600">Apt 4B</p>
+                        <p class="text-gray-600">New York, NY 10001</p>
+                        <p class="text-gray-600">United States</p>
+                        <p class="text-gray-600">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+
+                <!-- Payment Summary -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Payment Summary</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Subtotal</span>
+                            <span class="text-gray-900">$179.98</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Shipping</span>
+                            <span class="text-gray-900">$10.00</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-500">Tax</span>
+                            <span class="text-gray-900">$17.99</span>
+                        </div>
+                        <div class="border-t border-gray-200 pt-4 flex justify-between">
+                            <span class="text-base font-medium text-gray-900">Total</span>
+                            <span class="text-base font-medium text-gray-900">$207.97</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Need Help? -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-4">Need Help?</h2>
+                    <div class="space-y-4">
+                        <button class="w-full px-4 py-2 bg-gray-100 text-gray-600 text-left rounded-lg hover:bg-gray-200 flex items-center">
+                            <i class="fas fa-question-circle mr-2"></i>
+                            Contact Support
+                        </button>
+                        <button class="w-full px-4 py-2 bg-gray-100 text-gray-600 text-left rounded-lg hover:bg-gray-200 flex items-center">
+                            <i class="fas fa-times-circle mr-2"></i>
+                            Cancel Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-auto">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500">&copy; 2024 My Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

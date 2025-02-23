@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Creator Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm">
+            <!-- Logo -->
+            <div class="px-6 py-4 border-b border-gray-100">
+                <a href="material-index.html" class="flex items-center">
+                    <i class="fas fa-palette text-2xl text-blue-500 mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">MaterialHub</span>
+                </a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="px-4 py-4">
+                <div class="space-y-1">
+                    <a href="material-creator-dashboard.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-chart-line w-5 mr-2"></i>
+                        Dashboard
+                    </a>
+                    <a href="material-dashboard-resources.html" class="flex items-center px-2 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md group">
+                        <i class="fas fa-cube w-5 mr-2"></i>
+                        Resources
+                    </a>
+                    <a href="#" class="flex items-center px-2 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md group">
+                        <i class="fas fa-folder w-5 mr-2"></i>
+                        Collections
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Bar -->
+            <header class="bg-white shadow-sm">
+                <div class="px-6 py-4 flex items-center justify-between">
+                    <h1 class="text-lg font-medium text-gray-900">Collections</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 flex items-center">
+                            <i class="fas fa-plus mr-2"></i>
+                            New Collection
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content -->
+            <div class="p-6">
+                <!-- Filters and Search -->
+                <div class="bg-white rounded-lg shadow-sm p-4 mb-6">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center space-x-4">
+                            <select class="text-sm border border-gray-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                                <option>All Status</option>
+                                <option>Published</option>
+                                <option>Draft</option>
+                            </select>
+                            <select class="text-sm border border-gray-200 rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                                <option>Sort by: Latest</option>
+                                <option>Sort by: Name</option>
+                                <option>Sort by: Resources</option>
+                            </select>
+                        </div>
+                        <div class="relative">
+                            <input type="text" 
+                                   placeholder="Search collections..." 
+                                   class="w-64 px-4 py-1.5 pl-9 text-sm border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            >
+                            <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collections Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Collection Card -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100">
+                            <div class="p-4 bg-gradient-to-r from-blue-500 to-purple-500 h-full flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-folder-open text-4xl mb-2"></i>
+                                    <h3 class="text-lg font-medium">Business Templates</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    Published
+                                </span>
+                                <span class="text-sm text-gray-500">12 resources</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Professional business templates and presentation resources</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex -space-x-2">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs text-gray-500">+9</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="text-gray-400 hover:text-blue-500">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collection Card -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100">
+                            <div class="p-4 bg-gradient-to-r from-green-500 to-teal-500 h-full flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-paint-brush text-4xl mb-2"></i>
+                                    <h3 class="text-lg font-medium">UI Design Kit</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                                    Draft
+                                </span>
+                                <span class="text-sm text-gray-500">8 resources</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Complete UI kit with modern components and design system</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex -space-x-2">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs text-gray-500">+5</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="text-gray-400 hover:text-blue-500">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collection Card -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100">
+                            <div class="p-4 bg-gradient-to-r from-pink-500 to-red-500 h-full flex items-center justify-center">
+                                <div class="text-center text-white">
+                                    <i class="fas fa-images text-4xl mb-2"></i>
+                                    <h3 class="text-lg font-medium">Social Media Pack</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    Published
+                                </span>
+                                <span class="text-sm text-gray-500">15 resources</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-4">Social media templates and marketing materials</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex -space-x-2">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <img class="w-6 h-6 rounded-full border-2 border-white" src="https://via.placeholder.com/24" alt="">
+                                    <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs text-gray-500">+12</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="text-gray-400 hover:text-blue-500">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="text-gray-400 hover:text-red-500">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-8 flex justify-center">
+                    <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Previous</span>
+                            <i class="fas fa-chevron-left text-xs"></i>
+                        </a>
+                        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">1</a>
+                        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-blue-50 text-sm font-medium text-blue-600 hover:bg-blue-100">2</a>
+                        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">3</a>
+                        <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">...</span>
+                        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">8</a>
+                        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">9</a>
+                        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                            <span class="sr-only">Next</span>
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

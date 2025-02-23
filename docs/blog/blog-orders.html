@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>My Orders - My Blog</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body class="bg-gray-50">
+        <!-- Navigation-->
+        <nav class="bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a class="text-white font-bold text-xl" href="index.html">My Blog</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="index.html">Home</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="categories.html">Categories</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="tags.html">Tags</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="archives.html">Archives</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="downloads.html">Downloads</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="about.html">About</a>
+                        <a class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium" href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h1 class="text-2xl font-bold mb-6">My Orders</h1>
+
+                <!-- Order Filters -->
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        All Orders
+                    </button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                        Processing
+                    </button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                        Completed
+                    </button>
+                    <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                        Cancelled
+                    </button>
+                </div>
+
+                <!-- Orders List -->
+                <div class="space-y-6">
+                    <!-- Order 1 -->
+                    <div class="border rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-semibold text-lg">Order #12345</h3>
+                                <p class="text-gray-600">Placed on Dec 25, 2023</p>
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                Completed
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://via.placeholder.com/60" alt="Product" class="w-15 h-15 object-cover rounded">
+                                    <div>
+                                        <h4 class="font-semibold">Premium VIP Membership</h4>
+                                        <p class="text-sm text-gray-600">1 month subscription</p>
+                                    </div>
+                                </div>
+                                <span class="font-semibold">$19.99</span>
+                            </div>
+                        </div>
+                        <div class="border-t mt-4 pt-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold">Total: $19.99</p>
+                                <p class="text-sm text-gray-600">Paid with Credit Card</p>
+                            </div>
+                            <div class="space-x-2">
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                    View Details
+                                </button>
+                                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                                    Download Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order 2 -->
+                    <div class="border rounded-lg p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-semibold text-lg">Order #12344</h3>
+                                <p class="text-gray-600">Placed on Dec 24, 2023</p>
+                            </div>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                Processing
+                            </span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <img src="https://via.placeholder.com/60" alt="Product" class="w-15 h-15 object-cover rounded">
+                                    <div>
+                                        <h4 class="font-semibold">JavaScript Course</h4>
+                                        <p class="text-sm text-gray-600">Video Course</p>
+                                    </div>
+                                </div>
+                                <span class="font-semibold">$49.99</span>
+                            </div>
+                        </div>
+                        <div class="border-t mt-4 pt-4 flex justify-between items-center">
+                            <div>
+                                <p class="font-semibold">Total: $49.99</p>
+                                <p class="text-sm text-gray-600">Paid with PayPal</p>
+                            </div>
+                            <div class="space-x-2">
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                                    View Details
+                                </button>
+                                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                                    Download Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="flex justify-center mt-8">
+                    <nav class="flex items-center space-x-2">
+                        <button class="px-3 py-2 rounded-lg border hover:bg-gray-50">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="px-4 py-2 rounded-lg border bg-blue-600 text-white">1</button>
+                        <button class="px-4 py-2 rounded-lg border hover:bg-gray-50">2</button>
+                        <button class="px-4 py-2 rounded-lg border hover:bg-gray-50">3</button>
+                        <button class="px-3 py-2 rounded-lg border hover:bg-gray-50">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-12 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center">Copyright &copy; Your Website 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>

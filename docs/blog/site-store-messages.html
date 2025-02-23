@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Store Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white shadow-sm hidden md:block">
+            <div class="h-16 flex items-center px-6">
+                <a href="site-store-dashboard.html" class="text-xl font-bold text-gray-800">Store Admin</a>
+            </div>
+            <nav class="mt-4">
+                <div class="space-y-1">
+                    <!-- Dashboard -->
+                    <a href="site-store-dashboard.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                        <i class="fas fa-home w-5"></i>
+                        <span class="ml-3">Dashboard</span>
+                    </a>
+
+                    <!-- Products Section -->
+                    <div>
+                        <a href="site-store-products.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                            <i class="fas fa-shopping-bag w-5"></i>
+                            <span class="ml-3">Products</span>
+                        </a>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div>
+                        <a href="site-store-orders.html" class="flex items-center px-6 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900">
+                            <i class="fas fa-shopping-cart w-5"></i>
+                            <span class="ml-3">Orders</span>
+                        </a>
+                    </div>
+
+                    <!-- Customers Section -->
+                    <div>
+                        <a href="site-store-customers.html" class="flex items-center px-6 py-3 bg-gray-50 text-gray-900">
+                            <i class="fas fa-users w-5"></i>
+                            <span class="ml-3">Customers</span>
+                        </a>
+                        <div class="pl-14 space-y-1">
+                            <a href="site-store-customers.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">All Customers</a>
+                            <a href="site-store-reviews.html" class="block py-2 text-sm text-gray-600 hover:text-gray-900">Reviews</a>
+                            <a href="site-store-messages.html" class="block py-2 text-sm text-gray-900 font-medium">Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <!-- Top Navigation -->
+            <div class="bg-white shadow-sm">
+                <div class="h-16 flex items-center justify-between px-6">
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="ml-auto flex items-center space-x-4">
+                        <button class="text-gray-600 hover:text-gray-900">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center text-gray-600 hover:text-gray-900">
+                                <span class="mr-2">Admin</span>
+                                <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="flex h-[calc(100vh-4rem)]">
+                <!-- Message List -->
+                <div class="w-96 bg-white border-r border-gray-200">
+                    <!-- Search -->
+                    <div class="p-4 border-b border-gray-200">
+                        <input type="text" placeholder="Search messages..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    </div>
+
+                    <!-- Message List -->
+                    <div class="overflow-y-auto h-full">
+                        <!-- Active Conversation -->
+                        <div class="p-4 bg-gray-50 border-b border-gray-200 cursor-pointer">
+                            <div class="flex items-center justify-between mb-1">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-gray-400"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-sm font-medium text-gray-900">John Doe</h3>
+                                        <p class="text-sm text-gray-500">Order #12345</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-xs text-gray-500">12:30 PM</span>
+                                    <span class="block mt-1 text-xs bg-blue-500 text-white rounded-full px-2 py-1">2</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 truncate">When will my order be shipped?</p>
+                        </div>
+
+                        <!-- Other Conversations -->
+                        <div class="p-4 border-b border-gray-200 cursor-pointer hover:bg-gray-50">
+                            <div class="flex items-center justify-between mb-1">
+                                <div class="flex items-center">
+                                    <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-gray-400"></i>
+                                    </div>
+                                    <div class="ml-3">
+                                        <h3 class="text-sm font-medium text-gray-900">Jane Smith</h3>
+                                        <p class="text-sm text-gray-500">Product Inquiry</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs text-gray-500">Yesterday</span>
+                            </div>
+                            <p class="text-sm text-gray-600 truncate">Is this product available in blue?</p>
+                        </div>
+
+                        <!-- More conversations... -->
+                    </div>
+                </div>
+
+                <!-- Chat Window -->
+                <div class="flex-1 flex flex-col">
+                    <!-- Chat Header -->
+                    <div class="p-4 bg-white border-b border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="h-10 w-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user text-gray-400"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h3 class="text-sm font-medium text-gray-900">John Doe</h3>
+                                    <p class="text-sm text-gray-500">Order #12345 • Online</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-video"></i>
+                                </button>
+                                <button class="text-gray-600 hover:text-gray-900">
+                                    <i class="fas fa-info-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                        <!-- Customer Message -->
+                        <div class="flex items-end">
+                            <div class="h-8 w-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-2 max-w-xs md:max-w-md bg-gray-100 rounded-lg p-3">
+                                <p class="text-sm text-gray-800">Hi, I was wondering when my order #12345 will be shipped?</p>
+                                <span class="text-xs text-gray-500 mt-1 block">12:25 PM</span>
+                            </div>
+                        </div>
+
+                        <!-- Admin Message -->
+                        <div class="flex items-end justify-end">
+                            <div class="mr-2 max-w-xs md:max-w-md bg-blue-500 rounded-lg p-3">
+                                <p class="text-sm text-white">Hello! Your order is being processed and will be shipped within the next 24 hours. You'll receive a tracking number via email.</p>
+                                <span class="text-xs text-blue-100 mt-1 block">12:28 PM</span>
+                            </div>
+                            <div class="h-8 w-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user-shield text-gray-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Customer Message -->
+                        <div class="flex items-end">
+                            <div class="h-8 w-8 bg-gray-200 rounded-full flex items-center justify-center">
+                                <i class="fas fa-user text-gray-400"></i>
+                            </div>
+                            <div class="ml-2 max-w-xs md:max-w-md bg-gray-100 rounded-lg p-3">
+                                <p class="text-sm text-gray-800">Thank you! Can you also confirm if it will be delivered to my work address?</p>
+                                <span class="text-xs text-gray-500 mt-1 block">12:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="p-4 bg-white border-t border-gray-200">
+                        <div class="flex items-center space-x-4">
+                            <button class="text-gray-600 hover:text-gray-900">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="text" placeholder="Type a message..." class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200">
+                            <button class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

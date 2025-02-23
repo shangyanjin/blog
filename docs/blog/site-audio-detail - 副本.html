@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Title - My Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="site-index.html" class="text-xl font-bold text-gray-800">My Site</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="site-index.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                        <a href="site-video.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Videos</a>
+                        <a href="site-audio.html" class="border-b-2 border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Audio</a>
+                        <a href="site-download.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Downloads</a>
+                        <a href="site-library.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Library</a>
+                        <a href="site-article.html" class="border-b-2 border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 text-sm font-medium">Articles</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" onclick="toggleMobileMenu()">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="sm:hidden hidden" id="mobile-menu">
+                <div class="pt-2 pb-3 space-y-1">
+                    <a href="site-index.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Home</a>
+                    <a href="site-video.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Videos</a>
+                    <a href="site-audio.html" class="bg-blue-50 border-l-4 border-blue-500 text-blue-700 block pl-3 pr-4 py-2 text-base font-medium">Audio</a>
+                    <a href="site-download.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Downloads</a>
+                    <a href="site-library.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Library</a>
+                    <a href="site-article.html" class="border-l-4 border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 text-base font-medium">Articles</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Audio Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-gray-500 mb-4">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="site-audio.html" class="hover:text-gray-700">Audio</a>
+                        <svg class="h-5 w-5 text-gray-400 mx-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </li>
+                    <li class="text-gray-700">Podcast Episode Title</li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Audio Content -->
+            <div class="lg:col-span-2">
+                <!-- Audio Player -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-4 mb-6">
+                            <img class="h-24 w-24 rounded-lg object-cover" src="https://via.placeholder.com/200x200" alt="Podcast cover">
+                            <div class="flex-1">
+                                <h1 class="text-2xl font-bold text-gray-900">Understanding Modern JavaScript Development</h1>
+                                <p class="text-gray-500 mt-1">Episode 42 of JavaScript Weekly Podcast</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Audio Controls -->
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <audio class="w-full" controls>
+                                <source src="audio.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="flex items-center justify-between mt-4 text-sm text-gray-500">
+                                <div class="flex items-center space-x-4">
+                                    <button class="hover:text-blue-600">
+                                        <i class="fas fa-step-backward"></i>
+                                    </button>
+                                    <button class="hover:text-blue-600">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="hover:text-blue-600">
+                                        <i class="fas fa-step-forward"></i>
+                                    </button>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="hover:text-blue-600">
+                                        <i class="fas fa-volume-up"></i>
+                                    </button>
+                                    <span>1x</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-4">
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                        JavaScript
+                                    </span>
+                                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                        Development
+                                    </span>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="text-gray-500 hover:text-blue-600">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button class="text-gray-500 hover:text-blue-600">
+                                        <i class="far fa-bookmark"></i>
+                                    </button>
+                                    <button class="text-gray-500 hover:text-blue-600">
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="prose max-w-none">
+                                <p class="text-gray-600">
+                                    In this episode, we dive deep into modern JavaScript development practices, exploring the latest tools, 
+                                    frameworks, and best practices that are shaping the way we build web applications today.
+                                </p>
+                                <div class="mt-4">
+                                    <h3 class="text-lg font-semibold text-gray-900">Episode Notes:</h3>
+                                    <ul class="list-disc pl-5 mt-2 text-gray-600">
+                                        <li>Introduction to modern JavaScript ecosystem</li>
+                                        <li>Popular frameworks and their use cases</li>
+                                        <li>Best practices for scalable applications</li>
+                                        <li>Performance optimization techniques</li>
+                                        <li>Q&A from listeners</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 pt-6 border-t border-gray-200">
+                                <div class="flex items-center">
+                                    <img class="h-12 w-12 rounded-full" src="https://via.placeholder.com/100x100" alt="Host avatar">
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-gray-900">Sarah Johnson</h3>
+                                        <p class="text-gray-600">Host & Senior JavaScript Developer</p>
+                                    </div>
+                                    <button class="ml-auto px-4 py-2 border border-blue-500 rounded-md text-blue-500 hover:bg-blue-50">
+                                        Follow
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transcript Section -->
+                <div class="mt-8 bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Transcript</h3>
+                    <div class="space-y-4">
+                        <div class="flex space-x-4">
+                            <span class="text-sm text-gray-500 w-16">00:00</span>
+                            <p class="text-gray-600 flex-1">Welcome to another episode of JavaScript Weekly Podcast...</p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <span class="text-sm text-gray-500 w-16">01:23</span>
+                            <p class="text-gray-600 flex-1">Today we're going to discuss modern JavaScript development...</p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <span class="text-sm text-gray-500 w-16">03:45</span>
+                            <p class="text-gray-600 flex-1">Let's start by looking at the current state of JavaScript frameworks...</p>
+                        </div>
+                    </div>
+                    <button class="mt-4 text-blue-600 hover:text-blue-800 text-sm">
+                        Show full transcript
+                    </button>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="mt-8 bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-6">Comments (8)</h3>
+                    
+                    <!-- Comment Form -->
+                    <div class="mb-8">
+                        <textarea rows="3" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Leave a comment..."></textarea>
+                        <div class="mt-3 flex justify-end">
+                            <button class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                Post Comment
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Comment List -->
+                    <div class="space-y-6">
+                        <!-- Comment -->
+                        <div class="flex space-x-4">
+                            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/100x100" alt="Commenter avatar">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <h4 class="text-sm font-medium text-gray-900">Mike Wilson</h4>
+                                    <span class="text-sm text-gray-500">1 hour ago</span>
+                                </div>
+                                <p class="mt-1 text-sm text-gray-600">
+                                    Really enjoyed this episode! The section about performance optimization was particularly helpful.
+                                </p>
+                                <div class="mt-2 flex items-center space-x-4">
+                                    <button class="text-sm text-gray-500 hover:text-gray-700">
+                                        <i class="far fa-thumbs-up mr-1"></i>
+                                        Like
+                                    </button>
+                                    <button class="text-sm text-gray-500 hover:text-gray-700">
+                                        <i class="far fa-comment mr-1"></i>
+                                        Reply
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1 space-y-8">
+                <!-- More Episodes -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">More Episodes</h3>
+                    <div class="space-y-4">
+                        <a href="#" class="block hover:bg-gray-50 rounded-lg p-2">
+                            <div class="flex items-center">
+                                <img class="h-16 w-16 object-cover rounded" src="https://via.placeholder.com/150x150" alt="Episode thumbnail">
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900">React Hooks Deep Dive</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Episode 41 • 45 min</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="block hover:bg-gray-50 rounded-lg p-2">
+                            <div class="flex items-center">
+                                <img class="h-16 w-16 object-cover rounded" src="https://via.placeholder.com/150x150" alt="Episode thumbnail">
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-medium text-gray-900">TypeScript Best Practices</h4>
+                                    <p class="text-sm text-gray-500 mt-1">Episode 40 • 38 min</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Topics -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Topics</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">JavaScript</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">React</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Node.js</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">TypeScript</a>
+                        <a href="#" class="px-3 py-1 bg-gray-100 text-sm text-gray-600 rounded-full hover:bg-gray-200">Web Development</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Subscribe to Newsletter</h3>
+                    <p class="text-sm text-gray-600 mb-4">Get notified about new episodes and exclusive content.</p>
+                    <form class="space-y-3">
+                        <input type="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your email">
+                        <button type="submit" class="w-full px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">About Us</h3>
+                    <p class="text-gray-600">Providing valuable educational resources to help you learn and grow in your development journey.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Latest Episodes</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Popular Series</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <p class="text-center text-gray-500">&copy; 2024 My Site. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
