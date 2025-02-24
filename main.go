@@ -25,8 +25,6 @@ func main() {
 	initDb()
 	// Initialize cache
 	initCache()
-	// Initialize types for session storage
-	initSession()
 	// Run as daemon if specified
 	runDaemon()
 	// Run delayed tasks
@@ -42,11 +40,6 @@ func initLogger() {
 	if gin.Mode() == gin.DebugMode {
 		logrus.SetLevel(logrus.DebugLevel)
 	}
-}
-
-// initSession initializes the types for session storage
-func initSession() {
-	//gob.Register(www.CartType{})
 }
 
 // initConfig initializes the application configuration

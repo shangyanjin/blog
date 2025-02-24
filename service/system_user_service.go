@@ -53,7 +53,7 @@ type UserEditReq struct {
 // Service function - Creates a new instance of the service
 func NewUserService() *UserService {
 	return &UserService{
-		DB: model.GetDb(),
+		DB: model.DB,
 	}
 }
 

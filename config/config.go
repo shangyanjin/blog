@@ -12,27 +12,25 @@ import (
 
 var (
 	// DynamicConfig stores all configuration settings loaded from config.ini
-	DynamicConfig map[string]interface{}
+	DynamicConfig = make(map[string]interface{})
+	configFile    = "config.ini"
 )
 
 func init() {
-	// Initialize configuration
-	// logrus.Info("--------------------------------------- Initializing configuration ---------------------------------------")
-	// if err := InitConfig(); err != nil {
-	// 	log.Fatal("Failed to initialize configuration:", err)
-	// }
+	//Initialize configuration
+	logrus.Info("--------------------------------------- Initializing configuration ---------------------------------------")
+	if err := InitConfig(); err != nil {
+		logrus.Warnf("Failed to initialize configuration:", err)
+	}
 
 }
 
 // InitConfig loads and parses the configuration file
 func InitConfig() error {
-	conf := "config.ini"
-	cfg, err := ini.Load(conf)
+	cfg, err := ini.Load(configFile)
 	if err != nil {
 		return fmt.Errorf("failed to load config file: %w", err)
 	}
-
-	DynamicConfig = make(map[string]interface{})
 
 	for _, section := range cfg.Sections() {
 		sectionName := section.Name()

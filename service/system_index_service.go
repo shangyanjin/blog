@@ -23,7 +23,7 @@ type IndexService struct {
 // NewIndexServiceType initializes a new goods service
 func NewIndexService() *IndexService {
 	return &IndexService{
-		DB: model.GetDb(),
+		DB: model.DB,
 	}
 }
 

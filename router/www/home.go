@@ -21,7 +21,7 @@ type homeHandle struct {
 // NewAuthHandle initializes a new template service
 func NewHomeHandle() *homeHandle {
 	this := &homeHandle{
-		DB: model.GetDb(),
+		DB: model.DB,
 	}
 	return this
 }

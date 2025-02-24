@@ -66,7 +66,7 @@ const (
 // NewUploadService initializes the upload service
 func NewUploadService() *UploadService {
 	return &UploadService{
-		DB: model.GetDb(),
+		DB: model.DB,
 	}
 }
 

@@ -21,7 +21,7 @@ type postHandle struct {
 // NewAuthHandle initializes a new template service
 func NewPostHandle() *postHandle {
 	this := &postHandle{
-		DB: model.GetDb(),
+		DB: model.DB,
 	}
 	return this
 }

@@ -191,7 +191,10 @@ type UserChangePasswordReq struct {
 	ConfirmPassword string `json:"confirm_password" form:"confirm_password" binding:"required"`
 }
 
-var DB *gorm.DB
+var (
+	DB          *gorm.DB
+	tablePrefix string
+)
 
 func init() {
 	// InitDB()
@@ -212,11 +215,15 @@ func GetDb() *gorm.DB {
 
 // InitDB initializes the database connection based on the configured database type
 // Supported types: sqlite, mysql, postgres
-func InitDB() error {
+func InitDB(dbType ...string) error {
+	// Use the provided dbType if available, otherwise fall back to config
+	actualDBType := config.GetString("database.driver", "mysql")
+	if len(dbType) > 0 && dbType[0] != "" {
+		actualDBType = dbType[0]
+	}
 
-	dbType := config.GetString("database.driver", "sqlite")
-
-	switch dbType {
+	tablePrefix = config.GetString("database.prefix", "blog_")
+	switch actualDBType {
 	case "sqlite":
 		if err := InitSqlite(); err != nil {
 			logrus.Errorf("Sqlite InitDB Error: %v", err)
@@ -236,7 +243,7 @@ func InitDB() error {
 		}
 		logrus.Info("InitPostgres success")
 	default:
-		err := fmt.Errorf("unsupported database type: %s", dbType)
+		err := fmt.Errorf("unsupported database type: %s", actualDBType)
 		logrus.Error(err)
 		return err
 	}
@@ -283,7 +290,7 @@ func InitSqlite() error {
 	DB, err = gorm.Open(gosqlite.Open(dbSqlite), &gorm.Config{
 		Logger: newLogger,
 		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "blog_",
+			TablePrefix:   tablePrefix,
 			SingularTable: true,
 		},
 		DisableForeignKeyConstraintWhenMigrating: true,
@@ -293,6 +300,31 @@ func InitSqlite() error {
 		logrus.Errorf("InitSqlite err: %v", err)
 		return err
 	}
+
+	// Auto migrate database tables
+	if err := DB.AutoMigrate(
+		&Category{},
+		&Channel{},
+		&Collection{},
+		&Comment{},
+		&Download{},
+		&Follow{},
+		&Like{},
+		&Log{},
+		&Page{},
+		&Post{},
+		&Site{},
+		&Tag{},
+		&Ticket{},
+		&Upload{},
+		&User{},
+		&Verify{},
+	); err != nil {
+		logrus.Errorf("Failed to auto migrate tables: %v", err)
+		return err
+	}
+
+	logrus.Info("Database tables created/updated successfully")
 	return nil
 }
 
@@ -300,7 +332,6 @@ func InitSqlite() error {
 // Returns error if connection fails
 func InitMysql() error {
 	var err error
-
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		config.GetString("database.user"),
 		config.GetString("database.password"),
@@ -331,10 +362,10 @@ func InitMysql() error {
 	}), &gorm.Config{
 		Logger: newLogger, // Pass the logger configuration to GORM
 		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "blog_", // Add prefix to table names prefix_
-			SingularTable: true,    // Use singular table name
+			TablePrefix:   tablePrefix, // Add prefix to table names prefix_
+			SingularTable: true,        // Use singular table name
 		},
-		DisableForeignKeyConstraintWhenMigrating: true, // 禁用自动创建外键约束
+		DisableForeignKeyConstraintWhenMigrating: true,
 	})
 
 	if err != nil {
@@ -370,7 +401,7 @@ func InitPostgres() error {
 	DB, err = gorm.Open(postgres.Open(sqlInfo), &gorm.Config{
 		Logger: newLogger,
 		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "blog_",
+			TablePrefix:   tablePrefix,
 			SingularTable: true,
 		},
 		DisableForeignKeyConstraintWhenMigrating: true,
@@ -386,9 +417,8 @@ func InitPostgres() error {
 func GetUserId(c *gin.Context) int {
 	type MyClaims struct {
 		jwt.RegisteredClaims
-		UserId   int    `json:"userId"`
-		Account  string `json:"account"`
-		NickName string `json:"nickName"`
+		UserId  int    `json:"userId"`
+		Account string `json:"account"`
 	}
 
 	// First check if UserId is already in context
