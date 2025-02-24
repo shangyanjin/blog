@@ -213,7 +213,6 @@ func GetDb() *gorm.DB {
 // InitDB initializes the database connection based on the configured database type
 // Supported types: sqlite, mysql, postgres
 func InitDB() error {
-	logrus.Infof("Init DB ------------------------------------------------------------")
 
 	dbType := config.GetString("database.driver", "sqlite")
 

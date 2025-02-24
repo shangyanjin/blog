@@ -1,285 +1,273 @@
-package model //img  img    //api
+package model // img img //api
 import "mime/multipart"
 
 // db model
 
-// Upload img 结构体
+// Upload structure for image/file uploads
 type Upload struct {
-	Id        int    `gorm:"primarykey;comment:'主键ID'" json:"id" form:"id"`              // 主键ID
-	Cid       int    `gorm:"comment:'类目ID'" json:"cid" form:"cid"`                       // 类目ID
-	Aid       int    `gorm:"comment:'管理员ID'" json:"aid" form:"aid"`                      // 管理员ID
-	Uid       int    `gorm:"comment:'用户ID'" json:"uid" form:"uid"`                       // 用户ID
-	Type      int    `gorm:"comment:'文件类型: [10=图片, 20=视频]'" json:"type" form:"type"`     // 文件类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'文件名称'" json:"name" form:"name"`                     // 文件名称
-	Hash      string `gorm:"comment:'哈希值'" json:"hash" form:"hash"`                      // 哈希值
-	Path      string `gorm:"comment:'文件路径'" json:"path" form:"path"`                     // 文件路径
-	Url       string `gorm:"comment:'文件地址'" json:"url" form:"url"`                       // 文件地址
-	Ext       string `gorm:"comment:'文件扩展'" json:"ext" form:"ext"`                       // 文件扩展
-	Size      int    `gorm:"comment:'文件大小'" json:"size" form:"size"`                     // 文件大小
-	IsDelete  int    `gorm:"comment:'是否删除: 0=否, 1=是'" json:"is_delete" form:"is_delete"` // 是否删除: 0=否, 1=是
-	CreatedAt int    `gorm:"comment:'创建时间'" json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int    `gorm:"comment:'更新时间'" json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int    `gorm:"comment:'删除时间'" json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
+	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
+	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
+	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
+	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
+	Hash      string `gorm:"comment:'Hash Value'" json:"hash" form:"hash"`                        // Hash Value
+	Path      string `gorm:"comment:'File Path'" json:"path" form:"path"`                         // File Path
+	Url       string `gorm:"comment:'File URL'" json:"url" form:"url"`                            // File URL
+	Ext       string `gorm:"comment:'File Extension'" json:"ext" form:"ext"`                      // File Extension
+	Size      int    `gorm:"comment:'File Size'" json:"size" form:"size"`                         // File Size
+	IsDelete  int    `gorm:"comment:'Is Deleted: 0=No, 1=Yes'" json:"is_delete" form:"is_delete"` // Is Deleted: 0=No, 1=Yes
+	CreatedAt int    `gorm:"comment:'Create Time'" json:"created_at" form:"created_at"`           // Create Time
+	UpdatedAt int    `gorm:"comment:'Update Time'" json:"updated_at" form:"updated_at"`           // Update Time
+	DeletedAt int    `gorm:"comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`           // Delete Time
 }
 
 //view model
 
-// UploadListReq upload列表参数
+// UploadListReq upload list parameters
 type UploadListReq struct {
-	Id        int    `gorm:"primarykey;comment:'主键ID'" json:"id" form:"id"`              // 主键ID
-	Cid       int    `gorm:"comment:'类目ID'" json:"cid" form:"cid"`                       // 类目ID
-	Aid       int    `gorm:"comment:'管理员ID'" json:"aid" form:"aid"`                      // 管理员ID
-	Uid       int    `gorm:"comment:'用户ID'" json:"uid" form:"uid"`                       // 用户ID
-	Type      int    `gorm:"comment:'文件类型: [10=图片, 20=视频]'" json:"type" form:"type"`     // 文件类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'文件名称'" json:"name" form:"name"`                     // 文件名称
-	Hash      string `gorm:"comment:'哈希值'" json:"hash" form:"hash"`                      // 哈希值
-	Path      string `gorm:"comment:'文件路径'" json:"path" form:"path"`                     // 文件路径
-	Url       string `gorm:"comment:'文件地址'" json:"url" form:"url"`                       // 文件地址
-	Ext       string `gorm:"comment:'文件扩展'" json:"ext" form:"ext"`                       // 文件扩展
-	Size      int    `gorm:"comment:'文件大小'" json:"size" form:"size"`                     // 文件大小
-	IsDelete  int    `gorm:"comment:'是否删除: 0=否, 1=是'" json:"is_delete" form:"is_delete"` // 是否删除: 0=否, 1=是
-	CreatedAt int    `gorm:"comment:'创建时间'" json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int    `gorm:"comment:'更新时间'" json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int    `gorm:"comment:'删除时间'" json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
+	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
+	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
+	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
+	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
+	Hash      string `gorm:"comment:'Hash Value'" json:"hash" form:"hash"`                        // Hash Value
+	Path      string `gorm:"comment:'File Path'" json:"path" form:"path"`                         // File Path
+	Url       string `gorm:"comment:'File URL'" json:"url" form:"url"`                            // File URL
+	Ext       string `gorm:"comment:'File Extension'" json:"ext" form:"ext"`                      // File Extension
+	Size      int    `gorm:"comment:'File Size'" json:"size" form:"size"`                         // File Size
+	IsDelete  int    `gorm:"comment:'Is Deleted: 0=No, 1=Yes'" json:"is_delete" form:"is_delete"` // Is Deleted: 0=No, 1=Yes
+	CreatedAt int    `gorm:"comment:'Create Time'" json:"created_at" form:"created_at"`           // Create Time
+	UpdatedAt int    `gorm:"comment:'Update Time'" json:"updated_at" form:"updated_at"`           // Update Time
+	DeletedAt int    `gorm:"comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`           // Delete Time
 }
 
-// UploadDetailReq upload详情参数
+// UploadDetailReq upload detail parameters
 type UploadDetailReq struct {
-	Id int `gorm:"id;comment:'主键Id'" json:"id" form:"id"` // 主键Id
+	Id int `gorm:"id;comment:'Primary Key ID'" json:"id" form:"id"` // Primary Key ID
 }
 
-// UploadAddReq upload新增参数
+// UploadAddReq upload add parameters
 type UploadAddReq struct {
-	Id        int    `gorm:"primarykey;comment:'主键ID'" json:"id" form:"id"`              // 主键ID
-	Cid       int    `gorm:"comment:'类目ID'" json:"cid" form:"cid"`                       // 类目ID
-	Aid       int    `gorm:"comment:'管理员ID'" json:"aid" form:"aid"`                      // 管理员ID
-	Uid       int    `gorm:"comment:'用户ID'" json:"uid" form:"uid"`                       // 用户ID
-	Type      int    `gorm:"comment:'文件类型: [10=图片, 20=视频]'" json:"type" form:"type"`     // 文件类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'文件名称'" json:"name" form:"name"`                     // 文件名称
-	Hash      string `gorm:"comment:'哈希值'" json:"hash" form:"hash"`                      // 哈希值
-	Path      string `gorm:"comment:'文件路径'" json:"path" form:"path"`                     // 文件路径
-	Url       string `gorm:"comment:'文件地址'" json:"url" form:"url"`                       // 文件地址
-	Ext       string `gorm:"comment:'文件扩展'" json:"ext" form:"ext"`                       // 文件扩展
-	Size      int    `gorm:"comment:'文件大小'" json:"size" form:"size"`                     // 文件大小
-	IsDelete  int    `gorm:"comment:'是否删除: 0=否, 1=是'" json:"is_delete" form:"is_delete"` // 是否删除: 0=否, 1=是
-	CreatedAt int    `gorm:"comment:'创建时间'" json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int    `gorm:"comment:'更新时间'" json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int    `gorm:"comment:'删除时间'" json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
+	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
+	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
+	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
+	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
+	Hash      string `gorm:"comment:'Hash Value'" json:"hash" form:"hash"`                        // Hash Value
+	Path      string `gorm:"comment:'File Path'" json:"path" form:"path"`                         // File Path
+	Url       string `gorm:"comment:'File URL'" json:"url" form:"url"`                            // File URL
+	Ext       string `gorm:"comment:'File Extension'" json:"ext" form:"ext"`                      // File Extension
+	Size      int    `gorm:"comment:'File Size'" json:"size" form:"size"`                         // File Size
+	IsDelete  int    `gorm:"comment:'Is Deleted: 0=No, 1=Yes'" json:"is_delete" form:"is_delete"` // Is Deleted: 0=No, 1=Yes
+	CreatedAt int    `gorm:"comment:'Create Time'" json:"created_at" form:"created_at"`           // Create Time
+	UpdatedAt int    `gorm:"comment:'Update Time'" json:"updated_at" form:"updated_at"`           // Update Time
+	DeletedAt int    `gorm:"comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`           // Delete Time
 }
 
-// UploadEditReq upload新增参数
+// UploadEditReq upload edit parameters
 type UploadEditReq struct {
-	Id        int    `gorm:"primarykey;comment:'主键ID'" json:"id" form:"id"`              // 主键ID
-	Cid       int    `gorm:"comment:'类目ID'" json:"cid" form:"cid"`                       // 类目ID
-	Aid       int    `gorm:"comment:'管理员ID'" json:"aid" form:"aid"`                      // 管理员ID
-	Uid       int    `gorm:"comment:'用户ID'" json:"uid" form:"uid"`                       // 用户ID
-	Type      int    `gorm:"comment:'文件类型: [10=图片, 20=视频]'" json:"type" form:"type"`     // 文件类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'文件名称'" json:"name" form:"name"`                     // 文件名称
-	Hash      string `gorm:"comment:'哈希值'" json:"hash" form:"hash"`                      // 哈希值
-	Path      string `gorm:"comment:'文件路径'" json:"path" form:"path"`                     // 文件路径
-	Url       string `gorm:"comment:'文件地址'" json:"url" form:"url"`                       // 文件地址
-	Ext       string `gorm:"comment:'文件扩展'" json:"ext" form:"ext"`                       // 文件扩展
-	Size      int    `gorm:"comment:'文件大小'" json:"size" form:"size"`                     // 文件大小
-	IsDelete  int    `gorm:"comment:'是否删除: 0=否, 1=是'" json:"is_delete" form:"is_delete"` // 是否删除: 0=否, 1=是
-	CreatedAt int    `gorm:"comment:'创建时间'" json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int    `gorm:"comment:'更新时间'" json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int    `gorm:"comment:'删除时间'" json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
+	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
+	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
+	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
+	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
+	Hash      string `gorm:"comment:'Hash Value'" json:"hash" form:"hash"`                        // Hash Value
+	Path      string `gorm:"comment:'File Path'" json:"path" form:"path"`                         // File Path
+	Url       string `gorm:"comment:'File URL'" json:"url" form:"url"`                            // File URL
+	Ext       string `gorm:"comment:'File Extension'" json:"ext" form:"ext"`                      // File Extension
+	Size      int    `gorm:"comment:'File Size'" json:"size" form:"size"`                         // File Size
+	IsDelete  int    `gorm:"comment:'Is Deleted: 0=No, 1=Yes'" json:"is_delete" form:"is_delete"` // Is Deleted: 0=No, 1=Yes
+	CreatedAt int    `gorm:"comment:'Create Time'" json:"created_at" form:"created_at"`           // Create Time
+	UpdatedAt int    `gorm:"comment:'Update Time'" json:"updated_at" form:"updated_at"`           // Update Time
+	DeletedAt int    `gorm:"comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`           // Delete Time
 }
 
-// UploadDelReq upload删除参数
+// UploadDelReq upload delete parameters
 type UploadDelReq struct {
-	Id int `gorm:"id;comment:'主键Id'" json:"id" form:"id"` // 主键Id
+	Id int `gorm:"id;comment:'Primary Key ID'" json:"id" form:"id"` // Primary Key ID
 }
 
-// UploadDelsReq upload批量删除参数
+// UploadDelsReq upload batch delete parameters
 type UploadDelsReq struct {
-	Ids []int `gorm:"id;comment:'主键Id'" json:"ids" form:"ids" binding:"required"` // 主键列表
+	Ids []int `gorm:"id;comment:'Primary Key ID'" json:"ids" form:"ids" binding:"required"` // Primary Key ID List
 }
 
-// UploadResp upload返回信息
+// UploadResp upload response information
 type UploadResp struct {
-	Id        int    `gorm:"primarykey;comment:'主键ID'" json:"id" form:"id"`              // 主键ID
-	Cid       int    `gorm:"comment:'类目ID'" json:"cid" form:"cid"`                       // 类目ID
-	Aid       int    `gorm:"comment:'管理员ID'" json:"aid" form:"aid"`                      // 管理员ID
-	Uid       int    `gorm:"comment:'用户ID'" json:"uid" form:"uid"`                       // 用户ID
-	Type      int    `gorm:"comment:'文件类型: [10=图片, 20=视频]'" json:"type" form:"type"`     // 文件类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'文件名称'" json:"name" form:"name"`                     // 文件名称
-	Hash      string `gorm:"comment:'哈希值'" json:"hash" form:"hash"`                      // 哈希值
-	Path      string `gorm:"comment:'文件路径'" json:"path" form:"path"`                     // 文件路径
-	Url       string `gorm:"comment:'文件地址'" json:"url" form:"url"`                       // 文件地址
-	Ext       string `gorm:"comment:'文件扩展'" json:"ext" form:"ext"`                       // 文件扩展
-	Size      int    `gorm:"comment:'文件大小'" json:"size" form:"size"`                     // 文件大小
-	IsDelete  int    `gorm:"comment:'是否删除: 0=否, 1=是'" json:"is_delete" form:"is_delete"` // 是否删除: 0=否, 1=是
-	CreatedAt int    `gorm:"comment:'创建时间'" json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int    `gorm:"comment:'更新时间'" json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int    `gorm:"comment:'删除时间'" json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
+	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
+	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
+	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
+	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
+	Hash      string `gorm:"comment:'Hash Value'" json:"hash" form:"hash"`                        // Hash Value
+	Path      string `gorm:"comment:'File Path'" json:"path" form:"path"`                         // File Path
+	Url       string `gorm:"comment:'File URL'" json:"url" form:"url"`                            // File URL
+	Ext       string `gorm:"comment:'File Extension'" json:"ext" form:"ext"`                      // File Extension
+	Size      int    `gorm:"comment:'File Size'" json:"size" form:"size"`                         // File Size
+	IsDelete  int    `gorm:"comment:'Is Deleted: 0=No, 1=Yes'" json:"is_delete" form:"is_delete"` // Is Deleted: 0=No, 1=Yes
+	CreatedAt int    `gorm:"comment:'Create Time'" json:"created_at" form:"created_at"`           // Create Time
+	UpdatedAt int    `gorm:"comment:'Update Time'" json:"updated_at" form:"updated_at"`           // Update Time
+	DeletedAt int    `gorm:"comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`           // Delete Time
 }
 
-// UploadFileResp 上传图片返回信息
+// UploadFileResp upload file response information
 type UploadFileResp struct {
-	Id   int    `json:"id" structs:"id"`     // 主键
-	Cid  int    `json:"cid" structs:"cid"`   // 类目Id
-	Aid  int    `json:"aid" structs:"aid"`   // 管理Id
-	Uid  int    `json:"uid" structs:"uid"`   // 用户Id
-	Type int    `json:"type" structs:"type"` // 文件类型: [10=图片, 20=视频]
-	Name string `json:"name" structs:"name"` // 文件名称
-	Url  string `json:"url" structs:"url"`   // 文件路径
-	Path string `json:"path" structs:"path"` // 访问地址
-	Ext  string `json:"ext" structs:"ext"`   // 文件扩展
-	Size int64  `json:"size" structs:"size"` // 文件大小
+	Id   int    `json:"id" structs:"id"`     // Primary Key
+	Cid  int    `json:"cid" structs:"cid"`   // Category ID
+	Aid  int    `json:"aid" structs:"aid"`   // Admin ID
+	Uid  int    `json:"uid" structs:"uid"`   // User ID
+	Type int    `json:"type" structs:"type"` // File Type: [10=Image, 20=Video]
+	Name string `json:"name" structs:"name"` // File Name
+	Url  string `json:"url" structs:"url"`   // File URL
+	Path string `json:"path" structs:"path"` // Access Path
+	Ext  string `json:"ext" structs:"ext"`   // File Extension
+	Size int64  `json:"size" structs:"size"` // File Size
 }
 
-// UploadListResp 相册文件列表返回信息
+// UploadListResp album file list response information
 type UploadListResp struct {
-	Id        int    `json:"id" structs:"id"`                 // 主键
-	Cid       int    `json:"cid" structs:"cid"`               // 所属类目
-	Name      string `json:"name" structs:"name"`             // 文件名称
-	Path      string `json:"path" structs:"path"`             // 相对路径
-	Url       string `json:"url" structs:"url"`               // 文件路径
-	Ext       string `json:"ext" structs:"ext"`               // 文件扩展
-	Size      string `json:"size" structs:"size"`             // 文件大小
-	CreatedAt int64  `json:"createTime" structs:"createTime"` // 创建时间
-	UpdatedAt int64  `json:"updateTime" structs:"updateTime"` // 更新时间
+	Id        int    `json:"id" structs:"id"`                 // Primary Key
+	Cid       int    `json:"cid" structs:"cid"`               // Category
+	Name      string `json:"name" structs:"name"`             // File Name
+	Path      string `json:"path" structs:"path"`             // Relative Path
+	Url       string `json:"url" structs:"url"`               // File URL
+	Ext       string `json:"ext" structs:"ext"`               // File Extension
+	Size      string `json:"size" structs:"size"`             // File Size
+	CreatedAt int64  `json:"createTime" structs:"createTime"` // Create Time
+	UpdatedAt int64  `json:"updateTime" structs:"updateTime"` // Update Time
 }
 
-// UploadCateListResp 相册分类列表返回信息
+// UploadCateListResp album category list response information
 type UploadCateListResp struct {
-	Id        int    `json:"id" structs:"id"`                 // 主键
-	Pid       int    `json:"pid" structs:"pid"`               // 父级Id
-	Name      string `json:"name" structs:"name"`             // 分类名称
-	CreatedAt int64  `json:"createTime" structs:"createTime"` // 创建时间
-	UpdatedAt int64  `json:"updateTime" structs:"updateTime"` // 更新时间
+	Id        int    `json:"id" structs:"id"`                 // Primary Key
+	Pid       int    `json:"pid" structs:"pid"`               // Parent ID
+	Name      string `json:"name" structs:"name"`             // Category Name
+	CreatedAt int64  `json:"createTime" structs:"createTime"` // Create Time
+	UpdatedAt int64  `json:"updateTime" structs:"updateTime"` // Update Time
 }
 
-// UploadReq 上传图片参数
+// UploadFileReq upload file parameters
 type UploadFileReq struct {
-	Cid int `form:"cid" binding:"gte=0"` // 主键
+	Cid int `form:"cid" binding:"gte=0"` // Primary Key
 }
 
-// UploadImageReq 上传图片参数
+// UploadImageReq upload image parameters
 type UploadImageReq struct {
-	Cid int `form:"cid" binding:"gte=0"` // 主键
+	Cid int `form:"cid" binding:"gte=0"` // Primary Key
 }
 
-// UploadRenameReq 相册文件重命名参数
+// UploadRenameReq album file rename parameters
 type UploadRenameReq struct {
-	Id   int    `form:"id" binding:"required,gt=0"`               // 主键
-	Name string `form:"keyword" binding:"required,min=1,max=200"` // 文件名称
+	Id   int    `form:"id" binding:"required,gt=0"`               // Primary Key
+	Name string `form:"keyword" binding:"required,min=1,max=200"` // File Name
 }
 
-// UploadMoveReq 相册文件移动参数
+// UploadMoveReq album file move parameters
 type UploadMoveReq struct {
-	Ids []int `form:"ids" binding:"required"` // 主键
-	Cid int   `form:"cid,default=-1"`         // 类目Id
+	Ids []int `form:"ids" binding:"required"` // Primary Key List
+	Cid int   `form:"cid,default=-1"`         // Category ID
 }
 
-// UploadCateListReq 相册分类列表参数
+// UploadCateListReq album category list parameters
 type UploadCateListReq struct {
-	Type int    `form:"type" binding:"omitempty,oneof=10 20 30"` // 分类类型: [10=图片,20=视频]
-	Name string `form:"keyword"`                                 // 分类名称
+	Type int    `form:"type" binding:"omitempty,oneof=10 20 30"` // Category Type: [10=Image, 20=Video]
+	Name string `form:"keyword"`                                 // Category Name
 }
 
-// UploadCateAddReq 相册分类新增参数
+// UploadCateAddReq album category add parameters
 type UploadCateAddReq struct {
-	Pid  int    `form:"pid" binding:"gte=0"`                    // 父级Id
-	Type int    `form:"type" binding:"required,oneof=10 20 30"` // 分类类型: [10=图片,20=视频]
-	Name string `form:"name" binding:"required,min=1,max=200"`  // 分类名称
+	Pid  int    `form:"pid" binding:"gte=0"`                    // Parent ID
+	Type int    `form:"type" binding:"required,oneof=10 20 30"` // Category Type: [10=Image, 20=Video]
+	Name string `form:"name" binding:"required,min=1,max=200"`  // Category Name
 }
 
-// UploadCateRenameReq 相册分类重命名参数
+// UploadCateRenameReq album category rename parameters
 type UploadCateRenameReq struct {
-	Id   int    `form:"id" binding:"required,gt=0"`               // 主键
-	Name string `form:"keyword" binding:"required,min=1,max=200"` // 分类名称
+	Id   int    `form:"id" binding:"required,gt=0"`               // Primary Key
+	Name string `form:"keyword" binding:"required,min=1,max=200"` // Category Name
 }
 
-// UploadCateDelReq 相册分类删除参数
+// UploadCateDelReq album category delete parameters
 type UploadCateDelReq struct {
-	Id int `form:"id" binding:"required,gt=0"` // 主键
+	Id int `form:"id" binding:"required,gt=0"` // Primary Key
 }
 
 // db model
 
-// UploadCate uploadCate 结构体
+// UploadCate structure
 type UploadCate struct {
-	Id        int    `gorm:"primarykey;comment:'主键Id'" json:"id"`                            // 主键Id
-	Pid       int    `gorm:"comment:'父级Id'" json:"pid"`                                      // 父级Id
-	Type      int    `gorm:"comment:'类型: [10=图片, 20=视频]'" json:"type"`                       // 类型: [10=图片, 20=视频]
-	Name      string `gorm:"comment:'分类名称'" json:"name"`                                     // 分类名称
-	IsDelete  int    `gorm:"comment:'是否删除: [0=否, 1=是]'" json:"is_delete"`                    // 是否删除: [0=否, 1=是]
-	CreatedAt int64  `gorm:"created_at;comment:'创建时间'"  json:"created_at" form:"created_at"` // 创建时间
-	UpdatedAt int64  `gorm:"updated_at;comment:'更新时间'"  json:"updated_at" form:"updated_at"` // 更新时间
-	DeletedAt int64  `gorm:"deleted_at;comment:'删除时间'"  json:"deleted_at" form:"deleted_at"` // 删除时间
+	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id"`                        // Primary Key ID
+	Pid       int    `gorm:"comment:'Parent ID'" json:"pid"`                                       // Parent ID
+	Type      int    `gorm:"comment:'Type: [10=Image, 20=Video]'" json:"type"`                     // Type: [10=Image, 20=Video]
+	Name      string `gorm:"comment:'Category Name'" json:"name"`                                  // Category Name
+	IsDelete  int    `gorm:"comment:'Is Deleted: [0=No, 1=Yes]'" json:"is_delete"`                 // Is Deleted: [0=No, 1=Yes]
+	CreatedAt int64  `gorm:"created_at;comment:'Create Time'" json:"created_at" form:"created_at"` // Create Time
+	UpdatedAt int64  `gorm:"updated_at;comment:'Update Time'" json:"updated_at" form:"updated_at"` // Update Time
+	DeletedAt int64  `gorm:"deleted_at;comment:'Delete Time'" json:"deleted_at" form:"deleted_at"` // Delete Time
 }
 
 type UploadCates []UploadCate
 
 //view model
 
-// UploadCateListReq uploadCate列表参数
-//type UploadCateListReq struct {
-//	Id         int    `gorm:"id;comment:'主键Id'"  json:"id" form:"id"`                                  // 主键Id
-//	Pid        int    `gorm:"pid;comment:'父级Id'"  json:"pid" form:"pid"`                               // 父级Id
-//	Type       int    `gorm:"type;comment:'类型: [10=图片, 20=视频]'"  json:"type" form:"type"`              // 类型: [10=图片, 20=视频]
-//	Name       string `gorm:"name;comment:'分类名称'"  json:"name" form:"name"`                            // 分类名称
-//	IsDelete   int    `gorm:"is_delete;comment:'是否删除: [0=否, 1=是]'"  json:"is_delete" form:"is_delete"` // 是否删除: [0=否, 1=是]
-//	CreatedAt int64  `gorm:"created_at;comment:'创建时间'"  json:"created_at" form:"created_at"`       // 创建时间
-//	UpdatedAt int64  `gorm:"updated_at;comment:'更新时间'"  json:"updated_at" form:"updated_at"`       // 更新时间
-//	DeletedAt int64  `gorm:"deleted_at;comment:'删除时间'"  json:"deleted_at" form:"deleted_at"`       // 删除时间
-//}
-
-// UploadCateDetailReq uploadCate详情参数
+// UploadCateDetailReq uploadCate detail parameters
 type UploadCateDetailReq struct {
-	Id int `gorm:"id;comment:'主键Id'" json:"id" form:"id"` // 主键Id
+	Id int `gorm:"id;comment:'Primary Key ID'" json:"id" form:"id"` // Primary Key ID
 }
 
-// UploadCateEditReq uploadCate新增参数
+// UploadCateEditReq uploadCate edit parameters
 type UploadCateEditReq struct {
-	Id        int    `gorm:"id;comment:'主键Id'" json:"id" form:"id"`                                  // 主键Id
-	Pid       int    `gorm:"pid;comment:'父级Id'" json:"pid" form:"pid"`                               // 父级Id
-	Type      int    `gorm:"type;comment:'类型: [10=图片, 20=视频]'" json:"type" form:"type"`              // 类型: [10=图片, 20=视频]
-	Name      string `gorm:"name;comment:'分类名称'" json:"name" form:"name"`                            // 分类名称
-	IsDelete  int    `gorm:"is_delete;comment:'是否删除: [0=否, 1=是]'" json:"is_delete" form:"is_delete"` // 是否删除: [0=否, 1=是]
-	CreatedAt int64  `gorm:"created_at;comment:'创建时间'"  json:"created_at" form:"created_at"`         // 创建时间
-	UpdatedAt int64  `gorm:"updated_at;comment:'更新时间'"  json:"updated_at" form:"updated_at"`         // 更新时间
-	DeletedAt int64  `gorm:"deleted_at;comment:'删除时间'"  json:"deleted_at" form:"deleted_at"`         // 删除时间
+	Id        int    `gorm:"id;comment:'Primary Key ID'" json:"id" form:"id"`                                 // Primary Key ID
+	Pid       int    `gorm:"pid;comment:'Parent ID'" json:"pid" form:"pid"`                                   // Parent ID
+	Type      int    `gorm:"type;comment:'Type: [10=Image, 20=Video]'" json:"type" form:"type"`               // Type: [10=Image, 20=Video]
+	Name      string `gorm:"name;comment:'Category Name'" json:"name" form:"name"`                            // Category Name
+	IsDelete  int    `gorm:"is_delete;comment:'Is Deleted: [0=No, 1=Yes]'" json:"is_delete" form:"is_delete"` // Is Deleted: [0=No, 1=Yes]
+	CreatedAt int64  `gorm:"created_at;comment:'Create Time'" json:"created_at" form:"created_at"`            // Create Time
+	UpdatedAt int64  `gorm:"updated_at;comment:'Update Time'" json:"updated_at" form:"updated_at"`            // Update Time
+	DeletedAt int64  `gorm:"deleted_at;comment:'Delete Time'" json:"deleted_at" form:"deleted_at"`            // Delete Time
 }
 
-// UploadCateDelsReq uploadCate批量删除参数
+// UploadCateDelsReq uploadCate batch delete parameters
 type UploadCateDelsReq struct {
-	Ids []int `gorm:"id;comment:'主键Id'" json:"ids" form:"ids" binding:"required"` // 主键列表
+	Ids []int `gorm:"id;comment:'Primary Key ID'" json:"ids" form:"ids" binding:"required"` // Primary Key List
 }
 
-// UploadCateResp uploadCate返回信息
+// UploadCateResp uploadCate response information
 type UploadCateResp struct {
-	Id        int    `json:"id" structs:"Id"`                                                // 主键Id
-	Pid       int    `json:"pid" structs:"Pid"`                                              // 父级Id
-	Type      int    `json:"type" structs:"Type"`                                            // 类型: [10=图片, 20=视频]
-	Name      string `json:"name" structs:"Name"`                                            // 分类名称
-	IsDelete  int    `json:"is_delete" structs:"IsDelete"`                                   // 是否删除: [0=否, 1=是]
-	CreatedAt int64  `gorm:"created_at;comment:'创建时间'"  json:"created_at" form:"created_at"` // 创建时间
-	UpdatedAt int64  `gorm:"updated_at;comment:'更新时间'"  json:"updated_at" form:"updated_at"` // 更新时间
-	DeletedAt int64  `gorm:"deleted_at;comment:'删除时间'"  json:"deleted_at" form:"deleted_at"` // 删除时间
+	Id        int    `json:"id" structs:"Id"`                                                      // Primary Key ID
+	Pid       int    `json:"pid" structs:"Pid"`                                                    // Parent ID
+	Type      int    `json:"type" structs:"Type"`                                                  // Type: [10=Image, 20=Video]
+	Name      string `json:"name" structs:"Name"`                                                  // Category Name
+	IsDelete  int    `json:"is_delete" structs:"IsDelete"`                                         // Is Deleted: [0=No, 1=Yes]
+	CreatedAt int64  `gorm:"created_at;comment:'Create Time'" json:"created_at" form:"created_at"` // Create Time
+	UpdatedAt int64  `gorm:"updated_at;comment:'Update Time'" json:"updated_at" form:"updated_at"` // Update Time
+	DeletedAt int64  `gorm:"deleted_at;comment:'Delete Time'" json:"deleted_at" form:"deleted_at"` // Delete Time
 }
 
-// Chunk 分片信息
+// Chunk information
 type Chunk struct {
-	Hash  string                `json:"hash" form:"hash"`   // 文件唯一标识(md5)
-	Cid   int                   `json:"cid" form:"cid"`     // 类目ID
-	Type  int                   `json:"type" form:"type"`   // 文件类型
-	Total int                   `json:"total" form:"total"` // 总分片数
-	Index int                   `json:"index" form:"index"` // 当前分片序号
-	Name  string                `json:"name" form:"name"`   // 文件名
-	Size  int64                 `json:"size" form:"size"`   // 文件总大小
-	File  *multipart.FileHeader `json:"file" form:"file"`   // 分片文件
+	Hash  string                `json:"hash" form:"hash"`   // File Unique Identifier (md5)
+	Cid   int                   `json:"cid" form:"cid"`     // Category ID
+	Type  int                   `json:"type" form:"type"`   // File Type
+	Total int                   `json:"total" form:"total"` // Total Number of Chunks
+	Index int                   `json:"index" form:"index"` // Current Chunk Index
+	Name  string                `json:"name" form:"name"`   // File Name
+	Size  int64                 `json:"size" form:"size"`   // Total File Size
+	File  *multipart.FileHeader `json:"file" form:"file"`   // Chunk File
 }
 
-// ChunkResp 分片上传响应信息
+// ChunkResp chunk upload response information
 type ChunkResp struct {
-	Hash     string `json:"hash"`          // 文件唯一标识(md5)
-	Name     string `json:"name"`          // 文件名称
-	Size     int64  `json:"size"`          // 文件大小
-	Total    int    `json:"total"`         // 总分片数
-	Part     []int  `json:"part"`          // 已上传的分片列表
-	Complete int    `json:"complete"`      // 是否上传完成
-	Url      string `json:"url,omitempty"` // 文件访问地址(上传完成时返回)
+	Hash     string `json:"hash"`          // File Unique Identifier (md5)
+	Name     string `json:"name"`          // File Name
+	Size     int64  `json:"size"`          // File Size
+	Total    int    `json:"total"`         // Total Number of Chunks
+	Part     []int  `json:"part"`          // List of Uploaded Chunks
+	Complete int    `json:"complete"`      // Whether Upload is Complete
+	Url      string `json:"url,omitempty"` // File Access URL (returned when upload is complete)
 }
