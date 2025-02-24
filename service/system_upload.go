@@ -110,7 +110,6 @@ func (this *UploadService) uploadService(c *gin.Context, file *multipart.FileHea
 		Ext:  upRes.Ext,
 		Url:  upRes.Url,
 		Path: upRes.Path,
-		Aid:  aid,
 		Cid:  cid,
 	}
 

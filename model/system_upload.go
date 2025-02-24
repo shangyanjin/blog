@@ -7,7 +7,6 @@ import "mime/multipart"
 type Upload struct {
 	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
 	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
-	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
 	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
 	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
 	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
@@ -28,7 +27,6 @@ type Upload struct {
 type UploadListReq struct {
 	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
 	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
-	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
 	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
 	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
 	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
@@ -52,7 +50,6 @@ type UploadDetailReq struct {
 type UploadAddReq struct {
 	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
 	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
-	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
 	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
 	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
 	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
@@ -71,7 +68,6 @@ type UploadAddReq struct {
 type UploadEditReq struct {
 	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
 	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
-	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
 	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
 	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
 	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
@@ -100,7 +96,6 @@ type UploadDelsReq struct {
 type UploadResp struct {
 	Id        int    `gorm:"primarykey;comment:'Primary Key ID'" json:"id" form:"id"`             // Primary Key ID
 	Cid       int    `gorm:"comment:'Category ID'" json:"cid" form:"cid"`                         // Category ID
-	Aid       int    `gorm:"comment:'Admin ID'" json:"aid" form:"aid"`                            // Admin ID
 	Uid       int    `gorm:"comment:'User ID'" json:"uid" form:"uid"`                             // User ID
 	Type      int    `gorm:"comment:'File Type: [10=Image, 20=Video]'" json:"type" form:"type"`   // File Type: [10=Image, 20=Video]
 	Name      string `gorm:"comment:'File Name'" json:"name" form:"name"`                         // File Name
@@ -119,7 +114,6 @@ type UploadResp struct {
 type UploadFileResp struct {
 	Id   int    `json:"id" structs:"id"`     // Primary Key
 	Cid  int    `json:"cid" structs:"cid"`   // Category ID
-	Aid  int    `json:"aid" structs:"aid"`   // Admin ID
 	Uid  int    `json:"uid" structs:"uid"`   // User ID
 	Type int    `json:"type" structs:"type"` // File Type: [10=Image, 20=Video]
 	Name string `json:"name" structs:"name"` // File Name
