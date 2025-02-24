@@ -176,3 +176,18 @@ func GetFloat(key string, defaultValue ...float32) float32 {
 	}
 	return 0
 }
+
+// GetSection retrieves an entire configuration section
+// If the section doesn't exist, returns the first default value or nil
+func GetSection(sectionName string, defaultValue ...ConfigSection) ConfigSection {
+	if section, ok := DynamicConfig[sectionName]; ok {
+		if configSection, ok := section.(ConfigSection); ok {
+			return configSection
+		}
+		logrus.Warnf("Invalid section type for: %s", sectionName)
+	}
+	if len(defaultValue) > 0 {
+		return defaultValue[0]
+	}
+	return nil
+}
