@@ -4,15 +4,12 @@ import (
 	"blog/router/www"
 	"net/http"
 
-	"github.com/gin-contrib/gzip"
-
 	"github.com/gin-gonic/gin"
 )
 
 // setup www for frontend
 func setupWebRoutes(r *gin.Engine) {
 	WWW := r.Group("/")
-	WWW.Use(gzip.Gzip(gzip.DefaultCompression))
 	{ //home page
 		www.Home.RouterGroup(WWW)
 		www.Post.RouterGroup(WWW)

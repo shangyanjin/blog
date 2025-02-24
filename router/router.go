@@ -3,29 +3,19 @@ package router
 import (
 	"blog/config"
 	"blog/middleware"
+	"github.com/gin-contrib/gzip"
+	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"github.com/gin-gonic/gin"
-	"github.com/sirupsen/logrus"
 )
-
-func SetupRouter(app *gin.Engine) {
-	// Routes accessible without authentication
-	app.GET("/", func(c *gin.Context) {
-		c.HTML(200, "index", gin.H{
-			"title": "Blog Home",
-		})
-	})
-
-}
 
 func InitRouter(r *gin.Engine) {
 	r.Use(gin.Logger(), middleware.Cors(), middleware.ErrorRecover())
+	r.Use(gzip.Gzip(gzip.DefaultCompression))
 
-	// setup virtual host by domain
 	//r.Use(middleware.HostMiddleware())
 
 	setupAdminRoute(r)
@@ -34,6 +24,37 @@ func InitRouter(r *gin.Engine) {
 	setupWebRoutes(r)
 	setupTemplate(r)
 	//setupFile(r)
+}
+
+// setupTemplate configures the HTML templates for the application
+
+// initTemplate initializes templates and static files
+func setupTemplate(r *gin.Engine) {
+
+	// Setup template functions
+	funcMap := GetTemplateFuncMap()
+	r.SetFuncMap(funcMap)
+
+	// Get the default template directory from the configuration
+	defaultTemplate := config.GetString("template.dir", "template")
+	// Get the default theme from the configuration
+	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
+
+	//release mode: load templates with root and subdir
+	//tmplFiles := template.New("")
+	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
+	//	logrus.Error("Error loading root templates:", err)
+	//}
+	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/**/*.html"); err != nil {
+	//	logrus.Error("Error loading subdir templates:", err)
+	//}
+	//r.SetHTMLTemplate(tmplFiles)
+
+	// Debug mode: Load templates from disk each time, subdir only
+	r.LoadHTMLGlob(defaultTheme + "/**/*.html")
+
+	// Serve static files from configured theme
+	r.Static("/static", defaultTheme+"/static")
 }
 
 // NotFound handles gin NotFound error
@@ -100,35 +121,4 @@ func setupNoRoute(c *gin.Context) {
 
 	// If the request path does not match any base path, return a 404 error
 	c.JSON(http.StatusNotFound, gin.H{"code": http.StatusNotFound, "message": "Resource not found"})
-}
-
-// setupTemplate configures the HTML templates for the application
-
-// initTemplate initializes templates and static files
-func setupTemplate(r *gin.Engine) {
-
-	// Setup template functions
-	funcMap := GetTemplateFuncMap()
-	r.SetFuncMap(funcMap)
-
-	// Get the default template directory from the configuration
-	defaultTemplate := config.GetString("template.dir", "template")
-	// Get the default theme from the configuration
-	defaultTheme := defaultTemplate + "/" + config.GetString("template.theme", "default")
-
-	//release mode: load templates with root and subdir
-	//tmplFiles := template.New("")
-	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/*.html"); err != nil {
-	//	logrus.Error("Error loading root templates:", err)
-	//}
-	//if _, err := tmplFiles.ParseGlob(defaultTheme + "/**/*.html"); err != nil {
-	//	logrus.Error("Error loading subdir templates:", err)
-	//}
-	//r.SetHTMLTemplate(tmplFiles)
-
-	// Debug mode: Load templates from disk each time, subdir only
-	r.LoadHTMLGlob(defaultTheme + "/**/*.html")
-
-	// Serve static files from configured theme
-	r.Static("/static", defaultTheme+"/static")
 }
