@@ -4,11 +4,12 @@ import (
 	"blog/config"
 	"blog/middleware"
 	"blog/router/web"
-	"github.com/gin-contrib/gzip"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"github.com/gin-contrib/gzip"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
@@ -143,7 +144,7 @@ func setupTemplate(r *gin.Engine) {
 	//}
 	//r.SetHTMLTemplate(tmplFiles)
 
-	//debug mode: load templates from disk every time and only support subdir
+	// Debug mode: Load templates from disk each time, subdir only
 	r.LoadHTMLGlob(defaultTheme + "/**/*.html")
 
 	// Serve static files from configured theme
