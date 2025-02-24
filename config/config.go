@@ -15,8 +15,6 @@ var (
 	DynamicConfig map[string]interface{}
 )
 
-type ConfigSection map[string]interface{}
-
 func init() {
 	// Initialize configuration
 	// logrus.Info("--------------------------------------- Initializing configuration ---------------------------------------")
@@ -42,7 +40,7 @@ func InitConfig() error {
 			continue
 		}
 
-		sectionMap := make(ConfigSection)
+		sectionMap := make(map[string]interface{})
 		for _, key := range section.Keys() {
 			sectionMap[key.Name()] = key.String()
 		}
@@ -67,7 +65,7 @@ func get(key string) interface{} {
 		return nil
 	}
 
-	configSection, ok := sectionMap.(ConfigSection)
+	configSection, ok := sectionMap.(map[string]interface{})
 	if !ok {
 		logrus.Warnf("Invalid section type for: %s", section)
 		return nil
@@ -179,9 +177,9 @@ func GetFloat(key string, defaultValue ...float32) float32 {
 
 // GetSection retrieves an entire configuration section
 // If the section doesn't exist, returns the first default value or nil
-func GetSection(sectionName string, defaultValue ...ConfigSection) ConfigSection {
+func GetSection(sectionName string, defaultValue ...map[string]interface{}) map[string]interface{} {
 	if section, ok := DynamicConfig[sectionName]; ok {
-		if configSection, ok := section.(ConfigSection); ok {
+		if configSection, ok := section.(map[string]interface{}); ok {
 			return configSection
 		}
 		logrus.Warnf("Invalid section type for: %s", sectionName)
