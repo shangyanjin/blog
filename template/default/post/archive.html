@@ -1,0 +1,222 @@
+{{define "post/archive"}}
+{{template "header" .}}
+    <!-- Header Section -->
+    <header class="bg-gray-50 shadow-sm">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold text-gray-900">Blog Archive</h1>
+                <p class="mt-2 text-sm text-gray-600">Browse all posts by date</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Archive Filter -->
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center space-x-4">
+                    <select class="border-gray-300 rounded-md text-gray-700">
+                        <option>All Years</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                    </select>
+                    <select class="border-gray-300 rounded-md text-gray-700">
+                        <option>All Categories</option>
+                        <option>Technology</option>
+                        <option>Travel</option>
+                        <option>Lifestyle</option>
+                    </select>
+                </div>
+                <div class="text-sm text-gray-500">
+                    Total Posts: <span class="font-medium">42</span>
+                </div>
+            </div>
+
+            <!-- Archive List -->
+            <div class="space-y-12">
+                <!-- 2024 -->
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-bold text-gray-900 border-b border-gray-200 pb-2">2024</h2>
+                    
+                    <!-- March -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-700 flex items-center">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            March
+                            <span class="text-sm text-gray-500 ml-2">(3 posts)</span>
+                        </h3>
+                        
+                        <div class="pl-6 space-y-4">
+                            <!-- Post 1 -->
+                            <div class="group">
+                                <div class="flex justify-between items-start hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="text-sm text-gray-500">Mar 15, 2024</span>
+                                            <span class="text-gray-300">•</span>
+                                            <span class="text-sm text-blue-600 hover:text-blue-700">Technology</span>
+                                        </div>
+                                        <h4 class="text-lg font-medium text-gray-900 group-hover:text-blue-600">
+                                            <a href="#">Getting Started with Web Development</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mt-1 line-clamp-2">Learn the basics of web development including HTML, CSS, and JavaScript...</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                                        <span class="flex items-center">
+                                            <i class="far fa-eye mr-1"></i>
+                                            1.2K
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="far fa-comment mr-1"></i>
+                                            8
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 2 -->
+                            <div class="group">
+                                <div class="flex justify-between items-start hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="text-sm text-gray-500">Mar 10, 2024</span>
+                                            <span class="text-gray-300">•</span>
+                                            <span class="text-sm text-blue-600 hover:text-blue-700">Travel</span>
+                                        </div>
+                                        <h4 class="text-lg font-medium text-gray-900 group-hover:text-blue-600">
+                                            <a href="#">Exploring Hidden Gems in Southeast Asia</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mt-1 line-clamp-2">Discover amazing off-the-beaten-path destinations in Thailand, Vietnam, and Cambodia...</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                                        <span class="flex items-center">
+                                            <i class="far fa-eye mr-1"></i>
+                                            856
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="far fa-comment mr-1"></i>
+                                            12
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 3 -->
+                            <div class="group">
+                                <div class="flex justify-between items-start hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="text-sm text-gray-500">Mar 5, 2024</span>
+                                            <span class="text-gray-300">•</span>
+                                            <span class="text-sm text-blue-600 hover:text-blue-700">Lifestyle</span>
+                                        </div>
+                                        <h4 class="text-lg font-medium text-gray-900 group-hover:text-blue-600">
+                                            <a href="#">Minimalist Living: A Guide to Decluttering</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mt-1 line-clamp-2">Simple steps to organize your life and create a more peaceful living space...</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                                        <span class="flex items-center">
+                                            <i class="far fa-eye mr-1"></i>
+                                            2.1K
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="far fa-comment mr-1"></i>
+                                            15
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- February -->
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-700 flex items-center">
+                            <i class="far fa-calendar-alt mr-2"></i>
+                            February
+                            <span class="text-sm text-gray-500 ml-2">(2 posts)</span>
+                        </h3>
+                        
+                        <div class="pl-6 space-y-4">
+                            <!-- Post 4 -->
+                            <div class="group">
+                                <div class="flex justify-between items-start hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="text-sm text-gray-500">Feb 28, 2024</span>
+                                            <span class="text-gray-300">•</span>
+                                            <span class="text-sm text-blue-600 hover:text-blue-700">Technology</span>
+                                        </div>
+                                        <h4 class="text-lg font-medium text-gray-900 group-hover:text-blue-600">
+                                            <a href="#">The Future of Artificial Intelligence</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mt-1 line-clamp-2">Exploring the latest developments in AI and their impact on society...</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                                        <span class="flex items-center">
+                                            <i class="far fa-eye mr-1"></i>
+                                            3.5K
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="far fa-comment mr-1"></i>
+                                            24
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Post 5 -->
+                            <div class="group">
+                                <div class="flex justify-between items-start hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                                    <div class="flex-1">
+                                        <div class="flex items-center space-x-2 mb-1">
+                                            <span class="text-sm text-gray-500">Feb 15, 2024</span>
+                                            <span class="text-gray-300">•</span>
+                                            <span class="text-sm text-blue-600 hover:text-blue-700">Lifestyle</span>
+                                        </div>
+                                        <h4 class="text-lg font-medium text-gray-900 group-hover:text-blue-600">
+                                            <a href="#">Healthy Habits for Remote Workers</a>
+                                        </h4>
+                                        <p class="text-gray-600 text-sm mt-1 line-clamp-2">Tips and tricks for maintaining work-life balance while working from home...</p>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                                        <span class="flex items-center">
+                                            <i class="far fa-eye mr-1"></i>
+                                            1.8K
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="far fa-comment mr-1"></i>
+                                            16
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 opacity-50 cursor-not-allowed">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-white bg-blue-600">1</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">2</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">3</a>
+                    <span class="px-3 py-2 text-gray-500">...</span>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-gray-700 hover:bg-gray-100">8</a>
+                    <a href="#" class="px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+{{template "footer" .}}
+{{end}}

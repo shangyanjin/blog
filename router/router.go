@@ -3,13 +3,10 @@ package router
 import (
 	"blog/config"
 	"blog/middleware"
-	"blog/router/web"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
-
-	"github.com/gin-contrib/gzip"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
@@ -37,21 +34,6 @@ func InitRouter(r *gin.Engine) {
 	setupWebRoutes(r)
 	setupTemplate(r)
 	//setupFile(r)
-}
-
-// setup web for frontend
-func setupWebRoutes(r *gin.Engine) {
-	WWW := r.Group("/")
-	WWW.Use(gzip.Gzip(gzip.DefaultCompression))
-	{ //home page
-		web.Home.RouterGroup(WWW)
-
-	}
-
-	r.NoRoute(setupNotFound)
-	r.NoMethod(setupMethodNotAllowed)
-	r.NoRoute(setupNoRoute)
-
 }
 
 // NotFound handles gin NotFound error

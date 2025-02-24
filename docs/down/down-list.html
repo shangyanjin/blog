@@ -1,14 +1,59 @@
-{{define "post/list"}}
-{{template "header" .}}
-    <!-- Header Section -->
-    <header class="bg-gray-50 shadow-sm">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-3xl font-bold text-gray-900">Welcome to My Blog</h1>
-                <p class="mt-2 text-sm text-gray-600">Sharing Ideas, Knowledge and Experiences</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down - Course List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'down-blue': '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="flex items-center text-down-blue">
+                            <i class="fas fa-cloud-download-alt text-3xl mr-2"></i>
+                            <span class="font-bold text-xl mr-8">Down</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#" class="border-down-blue text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Browse</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Upload</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Community</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <input type="text" class="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-down-blue focus:border-down-blue sm:text-sm" placeholder="Search courses...">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Register</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Sign in</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Main Content -->
     <main class="flex-1 bg-white">
@@ -126,5 +171,18 @@
         </div>
     </main>
 
-{{template "footer" .}}
-{{end}}
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Down Learning Platform. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-down-blue">Terms</a>
+                    <a href="#" class="hover:text-down-blue">Privacy</a>
+                    <a href="#" class="hover:text-down-blue">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,140 @@
+{{define "about"}}
+{{template "header" .}}
+    <!-- Header Section -->
+    <header class="bg-gray-50 shadow-sm">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-3xl font-bold text-gray-900">Welcome to My Blog</h1>
+                <p class="mt-2 text-sm text-gray-600">Sharing Ideas, Knowledge and Experiences</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- About Me Section -->
+            <section class="mb-16 bg-gray-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">About Me</h2>
+                <div class="prose prose-blue max-w-none">
+                    <p>Hi there! I'm a passionate full-stack developer with over 5 years of experience building web applications. I love sharing my knowledge through blogging and helping others learn about technology.</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-16 bg-gray-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Skills & Expertise</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-code text-blue-600 text-xl"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Frontend Development</h3>
+                                <p class="text-sm text-gray-500">React, Vue, TypeScript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-server text-blue-600 text-xl"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Backend Development</h3>
+                                <p class="text-sm text-gray-500">Go, Node.js, Python</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-database text-blue-600 text-xl"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Databases</h3>
+                                <p class="text-sm text-gray-500">PostgreSQL, MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Stats Section -->
+            <section class="mb-16 bg-gray-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Blog Statistics</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                        <div class="text-sm text-gray-600">Total Posts</div>
+                    </div>
+                    <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">10k+</div>
+                        <div class="text-sm text-gray-600">Total Views</div>
+                    </div>
+                    <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">8</div>
+                        <div class="text-sm text-gray-600">Categories</div>
+                    </div>
+                    <div class="text-center bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">365</div>
+                        <div class="text-sm text-gray-600">Days Blogging</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-16 bg-gray-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                <div class="bg-white rounded-lg p-6">
+                    <p class="text-gray-600 mb-6">
+                        Have a question or want to collaborate? Feel free to reach out!
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Email</h3>
+                                <a href="mailto:john@example.com" class="text-blue-600 hover:text-blue-700">
+                                    john@example.com
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fab fa-twitter text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Twitter</h3>
+                                <a href="https://twitter.com/johndoe" class="text-blue-600 hover:text-blue-700">
+                                    @johndoe
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="bg-gray-50 rounded-lg p-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow-sm">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Subscribe to My Newsletter</h2>
+                    <p class="text-gray-600 mb-6">
+                        Get notified about new blog posts and exclusive content straight to your inbox.
+                    </p>
+                    <form class="max-w-md mx-auto">
+                        <div class="flex space-x-2">
+                            <input type="email" 
+                                   placeholder="Enter your email" 
+                                   class="flex-1 rounded-lg border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                            <button type="submit" 
+                                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+{{template "footer" .}}
+{{end}}

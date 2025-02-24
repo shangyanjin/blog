@@ -10,6 +10,7 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 )
 
@@ -235,4 +236,26 @@ func StructsToMaps(items interface{}) []map[string]interface{} {
 		}
 	}
 	return result
+}
+
+// GetInt retrieves an integer value from query parameters
+// If the parameter is not found or invalid, returns the defaultValue (if provided) or 0
+func GetInt(c *gin.Context, key string, defaultValue ...int) int {
+	value, ok := c.GetQuery(key)
+	if !ok {
+		if len(defaultValue) > 0 {
+			return defaultValue[0]
+		}
+		return 0
+	}
+
+	intValue, err := strconv.Atoi(value)
+	if err != nil {
+		if len(defaultValue) > 0 {
+			return defaultValue[0]
+		}
+		return 0
+	}
+
+	return intValue
 }

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Down - Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ 
+</head>
+
+<body class="bg-white flex flex-col min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#" class="flex items-center text-blue-600">
+                            <i class="fas fa-cloud-download-alt text-3xl mr-2"></i>
+                            <span class="font-bold text-xl mr-8">Down</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-blue-600 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Browse</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Upload</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Community</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="relative">
+                            <input type="text" class="block w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-blue-600 focus:border-blue-600 sm:text-sm" placeholder="Search">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Register</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Sign in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <div class="bg-gray-100 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">LEARN ANYTHING, ANYTIME</h2>
+                <p class="text-xl text-gray-600 mb-6">Your Gateway to Knowledge and Skills</p>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors duration-300">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Popular Categories Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-code text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Programming</p>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-chart-line text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Business</p>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-language text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Languages</p>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-camera text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Photography</p>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-music text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Music</p>
+                    </div>
+                </a>
+                <a href="#" class="group">
+                    <div class="bg-gray-100 rounded-lg p-6 text-center hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-dumbbell text-3xl mb-2 group-hover:text-white text-blue-600"></i>
+                        <p class="font-medium">Fitness</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Top Instructors Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Top Instructors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                    <img src="https://picsum.photos/100/100?random=1" alt="Instructor" class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h3 class="font-medium text-gray-900">John Smith</h3>
+                        <p class="text-sm text-gray-500">Web Development</p>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                    <img src="https://picsum.photos/100/100?random=2" alt="Instructor" class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h3 class="font-medium text-gray-900">Sarah Johnson</h3>
+                        <p class="text-sm text-gray-500">Digital Marketing</p>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                    <img src="https://picsum.photos/100/100?random=3" alt="Instructor" class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h3 class="font-medium text-gray-900">Mike Chen</h3>
+                        <p class="text-sm text-gray-500">Data Science</p>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+                    <img src="https://picsum.photos/100/100?random=4" alt="Instructor" class="w-16 h-16 rounded-full object-cover">
+                    <div class="ml-4">
+                        <h3 class="font-medium text-gray-900">Emma Davis</h3>
+                        <p class="text-sm text-gray-500">Graphic Design</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Courses Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Featured Courses</h2>
+                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=10" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">6h 30m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Development</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Complete Web Development Bootcamp 2024</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.8
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>12,345 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=11" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">4h 45m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Mobile Development</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">iOS App Development with Swift</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.9
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>8,921 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=12" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">5h 15m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Data Science</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Machine Learning: From Basics to Advanced</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.7
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>10,567 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=13" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">7h 20m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Cloud Computing</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Docker and Kubernetes Masterclass</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.8
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>7,834 Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Courses Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Recommended For You</h2>
+                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=20" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">4h 15m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">UI/UX Design</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">UI/UX Design Principles: From Theory to Practice</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.9
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>8,742 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=21" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">3h 45m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Data Science</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Python for Data Analysis: Complete Guide</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.7
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>6,129 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=22" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">5h 30m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Marketing</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Digital Marketing Masterclass 2024</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.8
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>9,345 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=23" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">2h 50m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Photography</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Mobile Photography: Creative Techniques</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.6
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>5,678 Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Courses Section -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Latest Courses</h2>
+                <div class="flex items-center space-x-4">
+                    <select class="text-sm border-gray-300 rounded-md focus:ring-blue-600 focus:border-blue-600">
+                        <option>Most Recent</option>
+                        <option>Most Popular</option>
+                        <option>Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=30" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">8h 20m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Web Development</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Advanced React Patterns and Best Practices</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.9
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>2,145 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=31" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">6h 45m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">AI & Machine Learning</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Introduction to Natural Language Processing</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.7
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>1,893 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=32" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">5h 30m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Cloud Computing</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">AWS Solutions Architect Certification Guide</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.8
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>3,567 Views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden group cursor-pointer">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/400/225?random=33" alt="Course thumbnail" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">4h 15m</span>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-sm text-blue-600 mb-1 group-hover:text-blue-800">Game Development</div>
+                        <h3 class="font-medium text-gray-900 mb-3 truncate group-hover:text-blue-600 transition-colors duration-300">Unity Game Development: Build 2D & 3D Games</h3>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-star text-yellow-400 mr-1"></i>
+                                4.6
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>4,231 Views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Topics Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Topics</h2>
+            <div class="flex flex-wrap gap-3">
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    JavaScript
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    React.js
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Python
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Machine Learning
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Digital Marketing
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Graphic Design
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Photography
+                </a>
+                <a href="#" class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-blue-600 hover:text-white transition-colors duration-300">
+                    Business Strategy
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-gray-600 mt-auto border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Careers</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Press</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-600">Documentation</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Help Center</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Tutorials</a></li>
+                        <li><a href="#" class="hover:text-blue-600">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-600">Forums</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Events</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Discord</a></li>
+                        <li><a href="#" class="hover:text-blue-600">GitHub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-900">Subscribe</h3>
+                    <p class="text-gray-600 text-sm mb-4">Get the latest updates and offers</p>
+                    <div class="flex">
+                        <input type="email" class="flex-1 bg-white border border-gray-300 text-gray-900 px-4 py-2 rounded-l focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-600" placeholder="Email">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Down Learning Platform. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-blue-600">Terms</a>
+                    <a href="#" class="hover:text-blue-600">Privacy</a>
+                    <a href="#" class="hover:text-blue-600">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,4 +1,4 @@
-package web // router api
+package www // router api
 
 import (
 	"blog/model"
@@ -31,6 +31,7 @@ func NewHomeHandle() *homeHandle {
 func (this *homeHandle) RouterGroup(r *gin.RouterGroup) {
 	//router for frontend
 	r.GET("/", this.Index)
+	r.GET("/about", this.About)
 	r.GET("/home/index", this.Index)
 	r.GET("/home/list", this.List)
 	r.GET("/home/page", this.Page)
@@ -60,7 +61,7 @@ func (this *homeHandle) Index(c *gin.Context) {
 func (this *homeHandle) About(c *gin.Context) {
 
 	h := gin.H{}
-	c.HTML(http.StatusOK, "about/us", h)
+	c.HTML(http.StatusOK, "about", h)
 }
 
 // NotFound handles gin NotFound error

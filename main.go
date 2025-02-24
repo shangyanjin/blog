@@ -46,7 +46,7 @@ func initLogger() {
 
 // initSession initializes the types for session storage
 func initSession() {
-	//gob.Register(web.CartType{})
+	//gob.Register(www.CartType{})
 }
 
 // initConfig initializes the application configuration
