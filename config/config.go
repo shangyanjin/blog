@@ -2,9 +2,6 @@ package config
 
 import (
 	"fmt"
-	"log"
-	"os"
-	"path"
 	"strconv"
 	"strings"
 	"time"
@@ -20,14 +17,13 @@ var (
 
 type ConfigSection map[string]interface{}
 
-func Init() {
+func init() {
 	// Initialize configuration
-	if err := InitConfig(); err != nil {
-		log.Fatal("Failed to initialize configuration:", err)
-	}
+	// logrus.Info("--------------------------------------- Initializing configuration ---------------------------------------")
+	// if err := InitConfig(); err != nil {
+	// 	log.Fatal("Failed to initialize configuration:", err)
+	// }
 
-	// Initialize database
-	InitDB()
 }
 
 // InitConfig loads and parses the configuration file
@@ -51,18 +47,6 @@ func InitConfig() error {
 			sectionMap[key.Name()] = key.String()
 		}
 		DynamicConfig[sectionName] = sectionMap
-	}
-
-	// Ensure public path is absolute
-	publicPath := GetString("server.public")
-	if publicPath != "" && !path.IsAbs(publicPath) {
-		workingDir, err := os.Getwd()
-		if err != nil {
-			return fmt.Errorf("failed to get working directory: %w", err)
-		}
-		if sectionMap, ok := DynamicConfig["server"].(ConfigSection); ok {
-			sectionMap["public"] = path.Join(workingDir, publicPath)
-		}
 	}
 
 	return nil

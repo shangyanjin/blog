@@ -21,7 +21,7 @@ const axiosInstance = axios.create({
  * - Handles error responses
  * - Standardizes error format
  */
-axiosInstance.interceptors.response.use(
+axiosInstance.interceptors.model.use(
     (response) => {
         const { data } = response;
         
@@ -88,7 +88,7 @@ window.request = {
      */
     async get(relativeUrl, params = {}) {
         const response = await axiosInstance.get(relativeUrl, { params });
-        return response.data;
+        return model.data;
     },
 
     /**
@@ -99,7 +99,7 @@ window.request = {
      */
     async post(relativeUrl, payload) {
         const response = await axiosInstance.post(relativeUrl, payload);
-        return response.data;
+        return model.data;
     },
 
     /**
@@ -131,7 +131,7 @@ window.request = {
                     onProgress(percentCompleted);
                 } : undefined
             });
-            return response.data;
+            return model.data;
         } catch (error) {
             console.error('Upload error:', error);
             throw new Error('Failed to upload file');

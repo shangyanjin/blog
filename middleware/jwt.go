@@ -2,10 +2,14 @@ package middleware
 
 import (
 	"blog/config"
+	"blog/model"
 	"errors"
+	"fmt"
 	"net/http"
 	"strings"
 	"time"
+
+	"github.com/sirupsen/logrus"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
@@ -23,13 +27,13 @@ var (
 
 // Claims represents the JWT claims
 type Claims struct {
-	UserID uint   `json:"user_id"`
+	UserID int    `json:"user_id"`
 	Role   string `json:"role"`
 	jwt.RegisteredClaims
 }
 
 // GenerateToken generates a new JWT token
-func GenerateToken(userID uint, role string) (string, error) {
+func GenerateToken(userID int, role string) (string, error) {
 	claims := Claims{
 		UserID: userID,
 		Role:   role,
@@ -109,4 +113,72 @@ func GetUserRole(c *gin.Context) string {
 		return ""
 	}
 	return role.(string)
+}
+
+// GenerateJWT generates a JWT token
+func GenerateJWT(userId int, userName string, userRole string) (string, error) {
+	const tokenExpiration = 24 * time.Hour
+
+	if len(userRole) < 1 {
+		return "", errors.New("userType cannot be empty")
+	}
+
+	var user model.User
+	if err := model.DB.Model(&model.User{}).Where("id = ?", userId).First(&user).Error; err != nil {
+		logrus.Errorf("Failed to GenerateJWT user detail for ID %d: %v", userId, err)
+		return "", err
+	}
+
+	claims := Claims{
+		UserID: userId,
+		Role:   userRole,
+		RegisteredClaims: jwt.RegisteredClaims{
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(24 * time.Hour)), // Token expires in 24 hours
+			IssuedAt:  jwt.NewNumericDate(time.Now()),
+			NotBefore: jwt.NewNumericDate(time.Now()),
+		},
+	}
+
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	return token.SignedString([]byte(config.GetString("server.jwt_secret_key", "mix-jwt-secret-key")))
+}
+
+// parseJWT parses and validates the JWT token
+func parseJWT(tokenString string) (*Claims, error) {
+	if len(tokenString) < 32 {
+		return nil, errors.New("token length is too short")
+	}
+
+	// Get JWT secret key from config
+	secretKey := []byte(config.GetString("server.jwt_secret_key", "mix-jwt-secret-key"))
+
+	// Parse token with custom validation
+	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
+		// Validate signing method
+		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
+			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
+		}
+		return secretKey, nil
+	})
+
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse token: %v", err)
+	}
+
+	// Type assert and validate claims
+	claims, ok := token.Claims.(*Claims)
+	if !ok || !token.Valid {
+		return nil, errors.New("invalid token claims")
+	}
+
+	// Additional validation
+	if claims.UserID <= 0 {
+		return nil, errors.New("invalid user ID in token")
+	}
+
+	if claims.Role == "" {
+		return nil, errors.New("missing role in token")
+	}
+
+	return claims, nil
 }
